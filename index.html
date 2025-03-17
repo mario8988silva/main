@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Silva : Main Page</title>
+
+    <style>
+        /* reset de estilos */
+
+        *{
+            text-decoration: none;
+            text-align: center;
+            font-family: Helvetica, Arial, sans-serif;
+
+            list-style: none;
+
+            padding: 0;
+            border: none;
+            margin: 0;           
+            box-sizing: border-box;
+
+            /* variáveis */
+            /* cor */
+            --c1:#ffe;
+            --c2:#888;
+            --c3:#333;
+            --c4:#333;
+            --c5:#333;
+            --c6:#333;
+
+            /* font-size */
+            --fs1: 2em;
+            --fs2: 1.5em;
+            --fs3: 1.2em;
+            --fs4: 1em;
+            --fs5: .8em;
+            --fs6: .6em;
+            
+            /* medidas fixas */
+            --m1: 10px;
+            --m2: 25px;
+            --m3: 50px;
+            --m4: 100px;
+            --m5: 300px;
+            --m6: 600px;
+        }
+
+        html{
+            background-color: var(--c1);
+        }
+
+        /* tipografia */
+        h1, h2, a{
+            color: var(--c5);
+        }
+
+        h1{
+            font-size: var(--fs3);
+        }
+
+
+        h2 a{
+            font-size: 2.4em;
+        }
+
+        h2 a:hover{
+            color: var(--c2);
+        }
+
+
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: var(--m4);
+
+            margin: 25vh 10vh 10vh;           
+        }
+
+        /* nav */
+        /* ul */
+
+        main nav ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 60px;
+
+            width: 100%;
+            height: auto;
+        }
+
+        nav a{            
+            background-color: var(--c2);            
+
+            text-transform: uppercase;
+            text-align: center;
+            color: var(--c1);
+
+            font-size: var(--fs1);
+            font-weight: 600;           
+
+            padding: var(--fs6) var(--fs1);
+        }
+
+        nav a:hover{
+            background-color: var(--c4);
+        }
+
+        @media (min-width: 960px){
+
+            h2 a{
+                font-size: 3em;
+            }
+
+            main nav ul{
+                flex-direction: row;
+                gap: 30px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <main>
+        <article>
+            <h1>FLAG Fullstack Devolper</h1>
+            <h2><a href="https://github.com/mario8988silva">Mário Silva</a></h2>
+        </article>
+
+        <nav>
+            <ul>
+                <li><a href="https://mario8988silva.github.io/07_modulo-css/0_exercicios/index_repositorio.html">html</a></li>
+                <li><a href="https://mario8988silva.github.io/07_modulo-css/0_exercicios/index_repositorio.html">css</a></li>
+                <li><a href="https://mario8988silva.github.io/07_modulo-css/0_exercicios/index_repositorio.html">JavaScript</a></li>
+            </ul>
+        </nav>
+    </main>
+    
+</body>
+</html>
