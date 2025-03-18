@@ -25,7 +25,7 @@
             --c1:#ffe;
             --c2:#888;
             --c3:#333;
-            --c4:#333;
+            --c4:#ccc;
             --c5:#333;
             --c6:#333;
 
@@ -59,7 +59,6 @@
             font-size: var(--fs3);
         }
 
-
         h2 a{
             font-size: 2.4em;
         }
@@ -68,6 +67,13 @@
             color: var(--c2);
         }
 
+        .long_txt{
+            font-size: var(--fs2);
+        }
+
+        .long_txt2{
+            font-size: var(--fs3);
+        }
 
         main{
             display: flex;
@@ -75,7 +81,7 @@
             justify-content: center;
             gap: var(--m4);
 
-            margin: 25vh 10vh 10vh;           
+            margin: 3vh 6vh 12vh 6vh;  
         }
 
         /* nav */
@@ -85,8 +91,10 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 60px;
-
+            gap: 60px;      
+            
+            flex-wrap: wrap;
+            
             width: 100%;
             height: auto;
         }
@@ -105,6 +113,14 @@
         }
 
         nav a:hover{
+            background-color: var(--c3);
+        }
+
+        nav a.null{
+            background-color: var(--c4);
+        }
+
+        nav a.null:hover{
             background-color: var(--c4);
         }
 
@@ -116,7 +132,7 @@
 
             main nav ul{
                 flex-direction: row;
-                gap: 30px;
+                gap: 80px;
             }
         }
         
@@ -132,9 +148,16 @@
 
         <nav>
             <ul>
-                <li><a href="https://github.com/mario8988silva/06_modulo-html">html</a></li>
+                
+                <li><a href="https://github.com/mario8988silva/06_modulo-html" class="long_txt">html repository</a></li>    
+                <li><a href="https://github.com/mario8988silva/06_modulo-html/index_html.html">html</a></li>
+
+                <li><a href="https://github.com/mario8988silva/07_modulo-css"  class="long_txt">css repository</a></li>
                 <li><a href="https://mario8988silva.github.io/07_modulo-css/0_exercicios/index_repositorio.html">css</a></li>
-                <li><a href="https://github.com/mario8988silva/modulo_javascript">JavaScript</a></li>
+
+                <li><a href="https://github.com/mario8988silva/modulo_javascript" class="long_txt2">JavaScript repository</a></li>                 
+                <li><a href="" class="null">JavaScript</a></li>
+                
             </ul>
         </nav>
     </main>
