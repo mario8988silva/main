@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* reset de estilos */
+
+        *{
+            text-decoration: none;
+            font-family: Helvetica, Arial, sans-serif;
+
+            padding: 0;
+            border: none;
+            margin: 0;           
+            box-sizing: border-box;
+
+            /* variáveis */
+            /* cor */
+            --c1:#ffe;
+            --c2:#888;
+            --c3:#333;
+            --c4:#333;
+            --c5:#333;
+            --c6:#333;
+
+            /* font-size */
+            --fs1: 2em;
+            --fs2: 1.5em;
+            --fs3: 1.2em;
+            --fs4: 1em;
+            --fs5: .8em;
+            --fs6: .6em;
+            
+            /* medidas fixas */
+            --m1: 10px;
+            --m2: 25px;
+            --m3: 50px;
+            --m4: 100px;
+            --m5: 300px;
+            --m6: 600px;
+        }
+
+        html{
+            background-color: var(--c1);
+        }
+
+        /* tipografia */
+        h1, p, a{
+            font-size: var(--fs3);
+            color: var(--c5);
+        }
+
+        /* nav */
+        nav{
+            margin: var(--m4);
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: var(--m2);
+            row-gap: var(--m1);
+
+            justify-content: center;
+        }
+
+        nav a{
+            padding: var(--fs6) var(--fs1);
+            background-color: var(--c2);
+
+            text-align: center;
+        }
+
+        a._home{
+            background-color: var(--c2);
+
+            color: var(--c1);            
+
+            position: sticky;
+
+            left: auto;
+            right: auto;            
+        }
+
+        a._home:hover{
+            background-color: var(--c3);
+        }
+        
+        /* main */
+        main{
+            margin: 10%;
+            display: flex;
+        }        
+
+        /* section - geral */
+        section{            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row-reverse;
+            flex-wrap: wrap-reverse;
+
+            gap: var(--m2);
+        }
+        
+        section a{
+            background-color: var(--c2);
+            background-repeat: no-repeat;
+            background-size: cover;           
+
+            height: var(--m5);
+            width: var(--m5);
+
+            align-content: end;
+
+            height: 300px;
+            width: 300px;
+
+            display: flex;
+            flex-direction: row;
+
+            justify-content: center;
+            align-items: center;
+
+            font-size: var(--fs2);
+            color: var(--c1);
+        }
+
+        section a:hover{
+            background-color: var(--c3);
+        }
+
+
+
+
+        /*
+        section a p{
+            opacity: 0;
+            
+            transition-property: background-color;
+            transition-delay: 500ms;
+            transition-timing-function: ease-in-out;
+        }
+
+        section a :hover{
+            opacity: 1;  
+        }
+        */
+
+    </style>
+
+    <title>HTML : Respositorio</title>
+</head>
+<body>
+
+    <nav>
+        <a href="https://mario8988silva.github.io/main/index.html" class="_home">HOME</a>
+    </nav>
+
+
+    <main class="container">
+
+        <section id="s_html" class="_html">
+
+            <a href="1_structure/index.html" target="_blank" class="html">01_Structure
+                <!--
+                <p>box model</p>
+                -->
+            </a>
+
+            <a href="2_text/text.html" target="_blank" class="html">02_Text
+                <!--
+                <p>box model</p>
+                -->
+            </a>
+
+            <a href="3_lists/lists.html" target="_blank" class="html">03_Lists
+                <!--
+                <p>box model</p>
+                -->
+            </a>
+
+            <a href="4_links/index.html" target="_blank" class="html">04_Links
+                <!--
+                <p>box model</p>
+                -->
+            </a>
+
+            <a href="5_images/images.html" target="_blank" class="html">05_Images
+                <!--
+                <p>box model</p>
+                -->
+            </a>
+
+            <a href="6_extras/in_block/in_block_tags.html" target="_blank" class="html">06.1_Extras : In-Block
+                <!--
+                <p>box model</p>
+                -->
+            </a>
+            
+            <a href="6_extras/in_line/" target="_blank" class="html">06.2_Extras : In-Line
+                <!--
+                <p>box model</p>
+                -->
+            </a>
+
+            <a href="7_media/" target="_blank" class="html">07_Media
+                <!--
+                <p>box model</p>
+                -->
+            </a>
+
+            <a href="8_forms/" target="_blank" class="html">08_Forms
+                <!--
+                <p>box model</p>
+                -->
+            </a>
+
+            <a href="9_tables/tables.html" target="_blank" class="html">09_Tables
+                <!--
+                <p>box model</p>
+                -->
+            </a>
+            
+            <a href="10_form-para-email/" target="_blank" class="html">10_Form to mail
+                <!--
+                <p>box model</p>
+                -->
+            </a>            
+
+        </section>
+    </main>    
+</body>
+</html>

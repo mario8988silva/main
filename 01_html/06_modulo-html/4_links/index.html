@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Links em HTML</title>
+    </head>
+    <body>
+        <h1>Links em HTML</h1>
+        
+        <hr><hr>
+
+        <!-- 
+        hiperligação absoluta: ficheiros e documentos alojados na internet;
+        hiperligação relativa: ficheiro e documentos alojados localmente, que fazem parte do projecto, ainda que alojados em servidor.
+        -->
+
+        <h2>Hiperligação para Documentos Internos</h2>
+        
+        <ul>
+            <li><a href="movies.html">Movies</a></li><!-- hiperligação interna para uma ficheiro dentro da mesma pasta que o index.html -->
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <li><a href="livros/livros.html">Livros</a></li><!-- hiperligação interna para um ficheiro dentro de uma pasta-filho dentro da mesma pasta-pai que o documento index.html -->
+            <!--
+            <a href="../index.html"> x </a>
+            é usado ../ por cada "subida" de nível
+            -->
+        </ul>
+
+        <!-- 
+        ul>li*3>a 
+        faz uma UNORGANIZED LIST com três LIST ITEM com uma ANCHOR cada uma delas 
+        -->
+
+        <h2>Hiperligação para outros sites</h2>
+
+        <p>
+            <!-- hiperligação para documentos e ficheiros na internet -->
+            Veja os nossos cursos na <a href="https://flag.pt/">Flag</a> <!-- tudo aquilo que está dentro da linha "ancor" fica inserido à hiperligação -->
+        </p>
+
+        <h2>Hiperligação Para Outros Sites Num Novo Separador</h2>
+        <p>
+            Veja os nossos cursos na <a href="https://flag.pt/"
+            target="_blank">Flag</a> <!-- target define="_blank" define que a hiperligação seja aberta num novo separador -->
+        </p>
+
+        <hr>
+        <hr>
+
+        <h2>Link para e-mail</h2>
+
+        <p>Qualquer dúvida, envie-me uma mensagem por <a href="mailto:x@y.z?cc=a@b.c&subject=título de mensagem&body=texto no conteúdo do e-mail">e-mail</a></p><!-- convém que o utilizador tenha instalado um protocolo de e-mail, embora por meio de chrome, direcciona para a hiperligação do site do gmail 
+        mailto: envia mail para x@y.z
+        ? faz a separação entre mail destino e as próximas "referências"
+        cc= define outros destinatários, neste caso a@b.c
+        & faz a separação entre estes conteúdos
+        subject= automatiza a mensagem que surge no título da mensagem
+        &
+        body= automatiza a mensagem que surge no corpo da mensagem
+        -->
+
+        <hr>
+
+        <h2>Link para número de telefone</h2>
+
+        <p>Qualquer dúvida, ligue para <a href="tel:0123456789">01 234 567 89</a></p><!-- para não ter que copiar o texto do número de contacto para eventualmente poder ligar, existe a opção de automarizar a ligação -->
+
+        <hr>
+
+        <p>Link para a <a href="links-internos.html#dois"></a> 2 do ficheiro Link-Iternos</p>
+    </body>
+</html>

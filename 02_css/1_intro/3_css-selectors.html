@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Selectors</title>
+
+		<style>
+			/* SELECTORES DE CSS:
+				/* Selector universal; influencia todas as tags: */ /*
+					*{
+					font-family: impact;
+					}
+
+				/* Selector de Elementos (tags de html): */
+
+					body{
+						font-family: arial; /* herança */
+					}
+
+					/*influencia h1, h2 e h3 */
+					h1, h2, h3{
+						color:darkgreen
+					}
+
+					/* influencia h1, e h3 existentes dentro de h2:
+					h1, h2 h3{
+						color:darkgreen
+					}
+
+					*/
+
+					p{
+						font-family: courier;
+					}
+				
+				/* Classes de Formatação: */
+
+						/* Classes Independentes (chama a class em questão independetemente da tag): */
+							.destaque{ 
+							color: tomato;
+							font-style: italic;
+							margin: 10ps 50px;
+							}
+
+						/* Classes Dependentes (chama a class existente numa tag específica): */
+							p.destaque{ 
+							color: tomato;
+							font-style: italic;
+							margin: 10ps 50px;
+							}
+
+							.xpto{
+								font-weight: bold;
+								background-color: crimson;
+							}
+
+						/* Selectores a ID's (A EVITAR - melhores para JavaScript): */
+							#introduction{
+								background-color: aqua;
+							}
+
+						/*  Selectores contextuais ou descendentes: */
+						/* Neste caso específica a edição de todos os p existentes na section com uma classe "noticias" definida */
+							section.noticias p{
+								background-color: chocolate;
+								color: antiquewhite;
+							}
+
+						/*  Selectores descendentes de primeiro nível: */
+							section.noticias > h1{
+								color: tomato;
+							}
+
+							ul > li a{
+								text-decoration: none;
+								color: brown;
+							}
+
+						/* ESPECIFICIDADE das regras: */
+							/* 1 */
+							main.conteudos section.noticias p a{
+								color: red;
+							}
+
+							/* 2 */
+							#conteudos p a.btn{
+								color: blue;
+							}
+
+							/* calcular especificidade: 
+
+									A          B            C
+									(ID)    (Classes)   (Elementos)
+								1:   0          2            4
+								2:   1          1            2
+
+								ganha o número 2, pelo valor superior após a soma destas temáticas
+								ID valem centenas; Classes valem dezenas; Elementos valem unidades;
+							
+							*/
+								
+							
+							
+		</style>
+	</head>
+	<body>
+		<h1><a id="top">Kitchen Garden Calendar</a></h1>
+		<p id="introduction">Here you can read our handy guide about what to do when.</p>
+		<h2 class="destaque xpto">Spring</h2> <!-- é possível aplicar uma ou mais class a uma tag -->
+		<ul>
+			<li><a href="../../_css_inicio_parte1/1_intro/mulch.html">Spring mulch vegetable beds</a></li>
+			<li><a href="../../_css_inicio_parte1/1_intro/potato.html">Plant out early potatoes</a></li>
+			<li><a href="../../_css_inicio_parte1/1_intro/tomato.html">Sow tomato seeds</a></li>
+			<li><a href="../../_css_inicio_parte1/1_intro/beet.html">Sow beet seeds</a></li>
+			<li><a href="../../_css_inicio_parte1/1_intro/zucchini.html">Sow zucchini seeds</a></li>
+			<li><a href="../../_css_inicio_parte1/1_intro/rhubarb.html">Deadhead rhubarb flowers</a></li>
+
+			<ol>
+				<li a href="../../_css_inicio_parte1/1_intro/mulch.html">x</li>
+				<li a href="../../_css_inicio_parte1/1_intro/mulch.html">y</li>
+				<li a href="../../_css_inicio_parte1/1_intro/mulch.html">z</li>
+			</ol>
+		</ul>
+		<p class="note">This page was written by <a href="mailto:jon@example.org">jon@example.org</a> for <a href="http://www.wiley.com">Wiley</a>.</p>
+		<p><a href="#top">Top of page</a></p>
+
+		<section class="noticias">
+			<h1>Secção de Notícias</h1>
+			<p class="destaque">Área de Notícias, blah, blah, blah...</p>
+
+			<article>
+				<h1>Título da Notícia 1</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero a repellendus enim adipisci reprehenderit voluptate incidunt quo numquam iure sint, earum, iusto accusamus itaque vero quidem expedita ea aliquam fugiat!</p>
+				
+				<h1>Título da Notícia 2</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero a repellendus enim adipisci reprehenderit voluptate incidunt quo numquam iure sint, earum, iusto accusamus itaque vero quidem expedita ea aliquam fugiat!</p>
+			</article>
+		</section>
+		<section>
+			<p class="xpto"></p>
+			<p class="xpto"></p>
+			<p class="xpto"></p>
+		</section>
+	</body>
+</html>

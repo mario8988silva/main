@@ -1,0 +1,340 @@
+/* GENERAL SETTINGS ----------------------------------------------------------------------------------------------- */
+*{
+    padding: 0;
+    border: none;
+    margin: 0;           
+    box-sizing: border-box;
+
+    text-decoration: none;
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.4em;
+    color: #000;
+}
+
+:root{
+    --green: #67e1ac;
+    --darkgreen: #5f987b;
+    --orange: #d56d17;                    
+}
+
+h1{
+    font-size: 1.8em;
+    font-weight: 300;
+}
+
+/* BUTTON */
+.btn{
+    font-weight: 600;
+
+    padding: .4em 1em;
+    border: .2em #000 solid;
+    border-radius: 10px;            
+
+    align-self: flex-start;
+
+    cursor: pointer;
+}
+
+/* .BTN_WHITE */
+.btn_white{
+    background-color: none;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* .BTN_GREEN */
+.btn_green{
+    background-color: #fff;
+    color: var(--green);
+    border-color: var(--green);    
+}
+
+
+/* ** BREAKPOINT S / BASIS ** --------------------------------------------------------------------------------------- */
+/* HEADER ----------------------------------------------------------------------------------------------------------- */
+header{
+    background-color: var(--green);
+
+    padding: 1em;
+}
+
+/* HEADER > CONTAINER */        
+header nav.nav_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* HEADER > NAV.NAV_CONTAINER (LINKS)*/
+header * a.link{
+    display: none; 
+}
+
+header nav.nav_container nav.link_container a.logo{
+    display: flex;
+    background-image: url(../images/ui/Logo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    height: 45px;
+    width: 201px;
+}
+
+/* HEADER > NAV.NAV_CONTAINER > BUTTON.BTN_MENU */
+header nav.nav_container button.btn_menu{
+    height: 48px;
+    width: 48px;
+
+    background-color: var(--green);
+    background-image: url(../images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70%;
+
+    border: .1em #000 solid;
+    border-radius: 5px;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;  
+}
+
+/* MAIN ----------------------------------------------------------------------------------------------------------- */
+main, aside{
+    padding: 1.2em 1em;
+}
+
+/* MAIN > FIGURE.BANNER */
+main figure.banner{
+    background-color: #ccc;
+    background-image: url(../images/landing-page-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    height: auto;
+    padding: 8% 20% 16% 5%;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .8em;
+}
+
+/* MAIN > FIGURE.BANNER > TEXT / FONT */
+main figure.banner *{
+    color: #fff;
+}
+
+main figure.banner p{
+        margin-bottom: 1em;
+}
+
+/* MAIN > SECTION.SECTION_CARDS */
+section.section_cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    text-align: center;
+
+    gap: 4em;
+    
+    margin: 2em 0 4em 0;
+}
+
+/* MAIN > SECTION.SECTION_CARDS > ARTICLE.CARD */
+section.section_cards article.card{
+    width: 80%;
+}
+
+/* MAIN > SECTION.SECTION_CARDS > ARTICLE.CARD > FIGURE.IMG_CONTAINER */
+section.section_cards article.card figure.img_container{
+    overflow: hidden;
+    height: 6.5em;
+
+    text-align: center;
+}
+
+/* MAIN > SECTION.SECTION_CARDS > ARTICLE.CARD > MAIN.TEXT_CONTAINER */
+section.section_cards article.card main.text_container{
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+
+    padding: 0;
+    margin-bottom: 1.4em;
+}
+
+section.section_cards article.card main.text_container h1{
+    font-weight: 500;
+    color: #262550;
+}
+
+section.section_cards article.card main.text_container p{
+    text-align: center;
+    color: #777;
+}
+
+
+
+/* FOOTER ----------------------------------------------------------------------------------------------------------- */
+footer{
+    background-color: #222;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding: 1em;
+}
+
+/* FOOTER > P.FOOTER_TEXT */
+footer p.footer_text{
+    display: none;   
+    color: #888;
+    font-size: .8em;
+
+    padding-top: .5em;
+}
+
+/* FOOTER > NAV.ICONS_CONTAINER */
+footer nav.icons_container{
+    display: flex;
+    flex-direction: row;
+    gap: .4em;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+
+/* ** BREAKPOINT M ** ----------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 768px){
+    /* HEADER ------------------------------------------------------------------------------------------------------------------- */
+    header{
+        padding: 0em 2em 0em 2em;
+    }
+
+    /* HEADER > LINKS */
+
+    header * a.link{
+        display: flex;
+        align-content:flex-end;
+        padding: 2em .4em 2em .4em;
+
+        color: #fff;
+        font-weight: 600;
+    }
+
+    /* HEADER > NAV.NAV_CONTAINER > NAV.LINK_CONTAINER */
+    header nav.nav_container nav.link_container{
+        display: flex;
+        gap: 1em;
+    }
+
+    header nav.nav_container nav.link_container a.logo{
+        display: flex;
+        align-self: center;
+    }
+
+    header * a.link_active{
+        background-color: var(--darkgreen);
+    }
+
+    /* HEADER > NAV.NAV_CONTAINER > BUTTON.BTN_MENU */
+    header nav.nav_container button.btn_menu{
+        display: none;
+    }
+
+    /* MAIN --------------------------------------------------------------------------------------------------------------- */
+    main{
+        padding: 1.9em 2em;
+    }
+
+    /* MAIN > FIGURE.BANNER */
+    main figure.banner{
+        padding-right: 40%;
+
+        gap: 1em;
+    }
+
+    /* MAIN > FIGURE.BANNER > TEXT / FONT */
+    main figure.banner h1{
+        font-size: 3em;
+        line-height: 1.2em;
+    }
+
+    main figure.banner p{
+        margin-bottom: 1.6em;
+    }
+
+    /* MAIN > SECTION.SECTION_CARDS > ARTICLE.CARD */
+    section.section_cards article.card{
+        width: 40%;
+    }
+
+    /* FOOTER ----------------------------------------------------------------------------------------------------------- */
+    footer{
+        justify-content: space-between;
+
+        padding: 2em 4em ;
+    }
+
+    /* FOOTER > P.FOOTER_TEXT */
+    footer p.footer_text{
+        display: flex;
+    }
+
+    /* FOOTER > NAV.ICONS_CONTAINER */
+    footer nav.icons_container{
+        gap: .6em;
+    }
+    
+    /* ------------------------------------------------------------------------------------------------------------------- */      
+}
+
+
+/* ** BREAKPOINT L ** ---------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 1100px){
+    /* MAIN -------------------------------------------------------------------------------------------------------------- */
+    main{
+        padding: 2em 2em;
+    }
+
+    /* MAIN > FIGURE.BANNER */
+    main figure.banner{
+        padding-right: 50%;
+
+        gap: 1em;
+    }
+
+    /* MAIN > FIGURE.BANNER > TEXT / FONT */
+    main figure.banner h1{
+        font-size: 3.2em;
+        line-height: 1em;
+    }
+
+    main figure.banner p{
+        margin-bottom: 1em;
+    }
+
+    /* MAIN > SECTION.SECTION_CARDS > ARTICLE.CARD */
+    section.section_cards article.card{
+        width: 18%;
+    }  
+
+    footer{
+        height: 12vh;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------------------- */  
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */

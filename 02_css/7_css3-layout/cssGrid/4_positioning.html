@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="basic.css">
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 3px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 80px 200px 80px;
+        }
+
+        .header {
+            /*
+            /* vai do ponto 1 ao ponto 3 *//*
+            grid-column-start: 1;
+            grid-column-end: 3;
+            */
+            /* forma resumida */
+            grid-column: 6 / -1;
+
+        }
+
+        .menu {
+            /* ocupa 2 células, iniciando da primeira da tabela */
+            grid-column: 1 / span 2;
+
+            grid-row: 1 / -1;
+            
+        }
+
+        .content {
+            /* ocupa 10 células, idependentemente de onde começa */
+            grid-column: span 10;
+
+            grid-row: 3 / -1;
+        }
+
+        .footer {
+            grid-column: 1 / -1;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">HEADER</div>
+        <div class="menu">MENU</div>
+        <div class="content">CONTENT</div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>
+</html>

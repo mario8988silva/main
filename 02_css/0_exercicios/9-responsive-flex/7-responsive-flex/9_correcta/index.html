@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        .header, .footer{background-color: lightsalmon;}
+        .aside1{background-color: aquamarine;}
+        .aside2{background-color: rgb(111, 178, 85);}
+        .main{background-color: rgb(146, 138, 139);}
+
+        body{
+            margin: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+        }
+
+        .flex-container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex-container > * {
+            padding: .7em;
+            flex: 1 1 100%;
+        }
+
+        @media screen and (min-width:600px){
+            .aside{
+                flex: 1;
+            }
+        }
+
+        @media screen and (min-width:900px){
+            .main{
+                flex: 3;
+                order: 2;
+            }
+
+            .aside1{
+                order: 1;
+            }
+
+            .aside2{
+                order: 3;
+            }
+
+            .footer{
+                order: 4;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <header class="header">Header</header>
+        <article class="main">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aliquam modi, fuga provident et officia possimus quo voluptatum impedit veritatis iure, consequatur neque ullam tempore cum. Nesciunt reprehenderit repudiandae dolorem!</p>
+        </article>
+
+        <aside class="aside aside1">Aside 1</aside>
+        <aside class="aside aside2">Aside 2</aside>
+        <footer class="footer">Footer</footer>  
+    </div>  
+</body>
+</html>

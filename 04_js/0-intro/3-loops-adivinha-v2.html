@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCTIPT - Intro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1> JS - Jogo da adivinha</h1>
+    <hr>
+    <main>
+        <section id="output"></section>
+    </main>
+    
+    <script src="../js/biblioteca.js"></script>
+    <script>
+        let texto = '';
+
+        let numAleatorioInteiro = randomIntBetweenNumbers(0, 20);
+
+
+        //pedir numero ao utlizador:
+        let numero = Number(prompt("Tente adivinhar um numero entre 0(zero) e 20(vinte) ?"));
+        
+        
+        //1 tentativa
+        let tentativas = 1;
+
+        while( numero !== numAleatorioInteiro){
+            if (numero < numAleatorioInteiro){
+                alert(`o numero ${numero}, é demasiado BAIXO...`)
+            } else {
+                alert(`o numero ${numero}, é demasiado ALTO...`)
+            }
+
+            texto += `<h3> ${numero} </h3>`;
+
+            numero = Number(prompt("Tente adivinhar um numero entre 0(zero) e 20(vinte) ?"));
+            tentativas ++;
+
+        }
+
+        texto += `
+            <hr>
+            <p>🥳🥳 Parabens acertou no numero: ${numAleatorioInteiro} 🥳🥳.</p>
+            <p>Em ${tentativas} tentativas. </p>
+        `;
+
+
+        // escrever dentro da section output
+       let output = document.getElementById('output');
+       output.innerHTML = texto;
+    </script>
+</body>
+</html>

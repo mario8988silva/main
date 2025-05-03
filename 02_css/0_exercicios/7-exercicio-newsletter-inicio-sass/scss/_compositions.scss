@@ -1,0 +1,55 @@
+
+// callings :
+
+@use 'colours' as *;
+@use 'font' as *;
+@use 'measures' as *;
+
+
+// measure compositions :
+
+$s_x_0: $m-s $m-0;
+$m_x_0: $m-m $m-0;
+$lx_x_s: $m-lx $m-s;
+
+
+// aligments : 
+
+%center_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+
+// borders :
+
+$border: $m-sx4 solid; 
+
+// others :
+
+%shadow {box-shadow: $m-sx3 $m-sx3 $m-sx2 $c-shade_l};
+
+// buttons :
+
+%btn{
+    text-decoration: none;
+    text-transform: capitalize;
+
+    width: $m-lx2;
+    height: $m-lx;
+
+    background-color:$c-gr;
+    display: block;
+    margin: $fz-lx auto;        
+    border-radius: $fz-s;
+
+    @extend %shadow;
+            
+    font-size: $fz-s;
+        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    

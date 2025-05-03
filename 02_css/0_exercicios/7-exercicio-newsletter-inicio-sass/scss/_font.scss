@@ -1,0 +1,28 @@
+
+// callings :
+
+@use 'measures' as *;
+
+// Font-Families : 
+
+$font-main: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+// Font Sizes : 
+
+$fz: 16px;
+
+$fz-sx: .3em;
+$fz-s: .8em;
+$fz-l: 1.2em;
+$fz-lx: 2em;
+
+// formated text : 
+
+%h_all-caps{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: $fz-l;            
+    letter-spacing: $fz-sx;
+    font-weight: normal;
+}

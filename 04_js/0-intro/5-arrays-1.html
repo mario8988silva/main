@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCTIPT - Intro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1> JS - Exercicio 1 Arrays</h1>
+    <hr>
+    <main>
+        <section id="output"></section>
+    </main>
+    
+    
+    <script>
+        /* 
+        1 - peça através do método prompt nomes de alunos, guarde esses nomes numa array, apresente os mesmos ordenados por ordem crescente. 
+
+        */
+       let texto = '';
+
+
+       // declarar as variaveis
+       let numAlunos, listaAlunos;
+       listaAlunos = [];
+
+       //perguntar quantos aalunos tem a turma
+       numAlunos = Number(prompt('Quantos Alunos ?'));
+
+       for (let i = 0 ; i < numAlunos ; i++){
+            //perguntar pelo nome dos alunos
+            let aluno = prompt(`Inserir nome do ${i+1}º Aluno:`);
+            
+            listaAlunos.push(aluno.toUpperCase());
+       }
+
+
+       // ordenar os alunos
+       listaAlunos.sort();
+       //console.log('Alunos:', listaAlunos);
+
+       //apresentar os Nomes da Lista de alunos
+       texto += `<h1> Lista de Alunos: </h1>`;
+
+       for (let aluno of listaAlunos) {
+        texto += `
+            <p> ${aluno} </p>
+        `;
+       }
+
+
+        // escrever dentro da section output
+       let output = document.getElementById('output');
+       output.innerHTML = texto;
+    </script>
+</body>
+</html>

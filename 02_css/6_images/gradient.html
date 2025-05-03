@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gradient</title>
+		<style type="text/css">
+			#gradient {
+				/* fallback color */
+				background-color: #66cccc; 
+				/* fallback image */
+				background-image: url("images/fallback-image.png"); 
+				/* Firefox 3.6+ */
+				background-image: -moz-linear-gradient(#336666, #66cccc);
+				/* Safari 4+, Chrome 1+ */
+				background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#66cccc), to(#336666));
+				/* Safari 5.1+, Chrome 10+ */
+				background-image: -webkit-linear-gradient(#336666, #66cccc); 
+				/* Opera 11.10+ */
+				background-image: -o-linear-gradient(#336666, #66cccc);
+   				height: 150px;
+				width: 300px;}
+
+				/* para inserir gradients, vai-se a um site ou aplicação apropriado:
+				
+				https://cssgradient.io/
+				
+				edita-se e copia-se o eventual código disponibilizado:
+
+				background: rgb(2,0,36);
+				background: linear-gradient(288deg, rgba(2,0,36,1) 0%, rgba(151,151,196,1) 17%, rgba(208,42,137,1) 40%, rgba(164,208,172,1) 70%, rgba(0,212,255,1) 100%);
+		
+		</style>
+	</head>
+	<body>
+		<div id="gradient">
+		</div>
+	</body>
+</html>

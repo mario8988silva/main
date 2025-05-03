@@ -1,0 +1,158 @@
+/* NORMALIZAÇÃO DE ESTILOS */
+@import url(reset.css);
+
+/* TIPOGRAFIA */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: Montserrat, sans-serif;
+}
+
+/* <BODY> ------------------------------ */
+body{
+    background-color: #ddd;
+}
+
+/* <MAIN> ------------------------------ */
+main{
+    background-color: #fff;
+
+    width: 640px;
+    padding: 20px;
+    margin: 12px auto;
+}
+
+/* <HEADER> ---------------------------- */
+header{
+    position: relative;
+
+    text-align: center;
+
+    /*
+    background-color: green;
+    */
+}
+
+h1.flag_logo{
+    text-align: center;
+    text-shadow: .6px .6px 2px  #222;
+
+    color: #ff8800;
+
+    padding: 1.5em 8em;
+    margin: 1em;
+
+    position: absolute;
+
+    /*
+    background-color: red;
+    */
+}
+
+.header_text{
+    font-weight: 550;
+
+    text-align: center;
+    text-shadow: 1px .1px 1px  #fff;
+
+    padding: 1em 6em;
+
+    position: absolute;
+    top: 8em;
+
+    /*
+    background-color: yellow;
+    */
+}
+
+.btn_header{
+    font-weight: 500;
+    color: #fff;
+
+    background-color: #ff8800;
+    box-shadow: .6px .6px 6px  #222;
+
+    padding: 1em;
+    margin: 2em;
+    border: 0;
+    border-radius: 12px;
+
+    position: absolute;
+    top: 13em;
+    left: 232px; /* Dado que tive dificuldade em deixar o elemento botão centralizado "automaticamente" no container "header", fiz a colocação por meio do seguinte cálculo com em px (pixels): considerando como base o centro horizontal do container "header" (640/2=320) com a subtracção da metade da largura do botão btn_header (~112/2=56), dando um valor de (264), retirando depois deste resultado o valor de um dos lados do margin do botão (2em=32px, segundo o inspector do Chrome), (264-32=232px). */
+}
+
+.header_img{
+    background-color: #edc8a1;
+    width: 640px;
+
+    z-index: -1;
+}
+
+/* <ARTICLE> --------------------------- */
+article{
+    border-bottom: 3px solid #aaa;
+
+    /*
+    background-color: cyan;
+    */
+}
+
+/* <FIGURE> ---------------------------- */
+div.img_container{ 
+    padding-bottom: 30px;
+    opacity: .6;
+
+    /*
+    background-color: red;
+    */
+}
+
+h2{
+    font-variant: small-caps;
+    font-size: 2em;
+
+    letter-spacing: .1em;
+
+    text-align: center;
+}
+
+figure{
+    margin: 0;
+
+    text-align: center;
+
+    /*
+    background-color: green;
+    */
+}
+
+
+img.thumbnail{
+    width: 150px;
+    height: 84px;
+
+    /* Dado que não consegui fazer com que as imagens ficassem distribuídas dentro do container "figure" de forma automatica, recorri a valores absolutos para conseguir um efeito visual similar */
+    padding: 4px;
+    border: 1px solid #aaa;
+    margin: 0px 25px;
+
+    vertical-align: middle;
+}
+
+/* <FOOTER> ---------------------------- */
+main footer{
+    clear: both;
+
+    font-weight: 600;
+
+    text-align: center;
+    color: #fff;
+
+    background-color: #ff8800;
+
+    padding: 4em;
+}
+
+/* ------------------------------ */
+/* Mário Silva, 9/2/2025 */

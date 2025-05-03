@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Centering Content</title>
+        <style type="text/css">
+
+            p{
+                width: 400px;
+                background-color: aquamarine;
+                padding: 1em;
+
+                /*define 10px topo+baixo (para não colapsar, dado que no exemplo o tamanho do body está dependente destas duas caixas) e auto/igual valor para ambos os lados esquerdo e direito*/
+                margin: 10px auto;
+            }
+
+            /*ao definir margens de uma imagem com recurso à tag img não funciona, dado que se trata de uma tag de linha*/
+            img{
+                margin: 10px auto;
+            }
+
+            /* podemos no entanto dar volta a essa situação, transformando este elemento num elemento de bloco:*/
+            img{
+                display: block;
+                margin: 10px auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <p>Analog synthesizers are often said to have a "warmer" sound than their digital counterparts.</p>
+        <p class="example">Analog synthesizers are often said to have a "warmer" sound than their digital counterparts.</p>
+
+        <img src="images/clavinet.jpg" alt="x">
+    </body>
+</html>

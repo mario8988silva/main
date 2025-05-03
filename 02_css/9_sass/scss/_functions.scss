@@ -1,0 +1,18 @@
+/* function */
+
+@function set-text-color($color){
+    @if (lightness($color) > 50){
+        @return #333;
+    } @else{
+        @return #fff;
+    }
+}
+
+/* mixin */
+
+@mixin transform($property){
+    -webkit-transform: $property; // dedicado ao chrome
+    -ms-transform: $property; // dedicado ao edge 
+    -o-transform: $property; // dedicado ao opera
+    transform: $property; // sem dedicação focada a nenhum browser, a modos de preservar para o futuro, para quando a função estover standarizada.
+}

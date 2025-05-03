@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Width Height</title>
+        <style type="text/css">
+            body {
+                font-family: Arial, Verdana, sans-serif;
+                color: #111111;}
+
+            div{
+                background-color: bisque;
+
+                /*WIDTH*/
+                width: auto; /*definido por defeito*/
+                width: 500px; /*define tamanho fixo; má prática*/
+                width: 20em;/*tamanho relativo ao tamanho de fonte definido ou existente por defeito;*/
+                width: 80%;/*define tamanho relativo ao tamanho do container em que está inserido (relativo a caixas dentro de caixas);*/
+                width: 80vw;/*define tamanho relativo ao viewport(sempre relativo ao tamanho do ecrã);*/
+
+                min-width: 800px;/*define tamanho mínimo de largura;*/
+                max-width: 1240px;/*define tamanho máximo de largura*/
+
+                /*HEIGHT*/
+                height: 300px;/*de evitar, dado que nunca sabemos a altura que um bloco irá ter. Isto pode levar à sobreposição de conteúdos*/
+                overflow: auto;/*faz um scroll dentro de uma caixa de tamanho definido*/
+                
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>The Moog company pioneered the commercial manufacture of modular voltage-controlled analog synthesizer systems in the early 1950s.</p>
+        </div>
+    </body>
+</html>

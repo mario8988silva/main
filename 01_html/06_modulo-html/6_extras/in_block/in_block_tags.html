@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- as tags em bloco, in block, destinam-se a estabelecer uma organização hierarquica-->
+     
+    <header>
+        <hgroup> <!-- Define um conjunto de títulos -->
+            <h1>Tag's semânticas de Bloco em HTML5</h1>
+            <hr>
+        </hgroup>
+    </header>
+
+    
+
+    <section>
+        <header><!-- Define um cabeçalho para a página; Neste caso está definido para a section -->
+            <h1>Título da Section</h1><!-- O h1 dentro de uma section, fica menor que o h1 convencional, por defeito -->
+            <h2>Sub-Título da Section</h2><!-- o h2 eventualmente fica maior que o h1, ainda que ambos denro da section -->
+        </header>
+
+        <article>
+            <h1>Título do Article, dentro da section</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro praesentium suscipit atque et voluptate odit omnis libero natus reiciendis temporibus minus in dolorum quo, iusto aperiam est eos beatae quibusdam.</p>
+        </article>
+
+        <footer>
+            <p>Rodapé da Section</p>
+        </footer>
+    </section>
+
+    <main><!-- informação primária -->
+        <section>
+            <header><!-- Define um cabeçalho para a página; Neste caso está definido para a section -->
+                <h1>Título da Section</h1><!-- O h1 dentro de uma section, fica menor que o h1 convencional, por defeito -->
+                <h2>Sub-Título da Section</h2><!-- o h2 eventualmente fica maior que o h1, ainda que ambos denro da section -->
+            </header>
+
+            <article>
+                <h1>Título do Article, dentro da section</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro praesentium suscipit atque et voluptate odit omnis libero natus reiciendis temporibus minus in dolorum quo, iusto aperiam est eos beatae quibusdam.</p>
+            </article>
+
+            <footer>
+                <p>Rodapé da Section</p>
+            </footer>
+        </section>
+    </main>
+
+    <aside> <!-- informação secundária -->
+        <h1>Informação Secundária</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nihil necessitatibus at sequi. Ea itaque et cumque debitis minus maiores deserunt inventore. A nam laborum modi provident velit, earum officiis.</p>
+    </aside>
+
+    <nav><!-- bloco para navegação. Deve ficar no fim do código, embora possa ficar no cabeçalho na página, por meio de CSS -->
+        <ul>
+            <li><a href="#">UM</a></li>
+            <li><a href="#">DOIS</a></li>
+            <li><a href="#">TRÊS</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>O footer serve para informação institucional, contactos e copyright</p>
+    </footer>
+</body>
+</html>

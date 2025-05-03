@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCTIPT - Intro</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .reprovado{color: tomato}
+        .aprovado{color: green;}
+    </style>
+</head>
+<body>
+    <h1> JS - Exercicio 1 Arrays</h1>
+    <hr>
+    <main>
+        <section id="output"></section>
+    </main>
+    
+    
+    <script>
+        /* 
+      2 - Crie um script que pergunte pelo nome de um aluno, numero de disciplinas que tem, por cada disciplina pergunta pela nota que obteve, no final apresente em formato HTML legível, nome do aluno, lista de disciplinas e notas respectivas, assim média final. 
+
+        */
+       let texto = '';
+
+       //declarar variaveis
+       let nomeAluno, numDisciplinas, listaDisciplinas, listaNotas, somaNotas, media;
+
+       //inicializar variaveis
+       nomeAluno        = prompt('Qual o nome do Aluno?');
+       numDisciplinas   = Number(prompt(`Quantos Disciplinas tem o(a) ${nomeAluno}`));
+       listaDisciplinas = [];
+       listaNotas       = [];
+       somaNotas        = 0;
+       media            = 0;
+
+
+       //Logica do Algoritmo, "Business Logic"
+       // estrutura de repeticao, para guardar nome e nota da disciplina
+       for (let i = 0; i < numDisciplinas ; i++){
+        /* perguntar pelo nome da disciplina */  
+        let disciplina = prompt(`Qual o nome da ${i+1}ª Disciplina?`);
+        // acrescentar a array de disciplinas
+        listaDisciplinas.push(disciplina);
+
+        let nota = Number(prompt(`Que nota teve a ${disciplina} ?`));
+        listaNotas.push(nota);
+
+        somaNotas += nota;
+
+       }
+
+       //calcular a media Final
+       media = somaNotas / numDisciplinas;
+
+       /* console.log('Disciplainas', listaDisciplinas);
+       console.log('Notas: ', listaNotas);
+       console.log('soma: ', somaNotas);
+       console.log('media: ', media); */
+
+       //// Outpu para a varialvel texto escrever na pagina
+
+       /**
+        * ! afasfaf
+        * ?asfasffsfasf
+        * *asfasfasfaf
+        */
+
+       texto += `
+        <h1> Ficha de Avaliação do Aluno: </h1>
+        <hr>
+        <ul>
+       `;
+
+       for( let i = 0 ; i < listaDisciplinas.length; i++){
+        texto += `<li> ${listaDisciplinas[i]} - ${listaNotas[i]} </li>`;
+       }
+
+       texto += `
+        </ul>
+        <h2> A média do aluno: ${nomeAluno} é de ${media.toFixed(1)} </h2>
+       `;
+
+        /* 
+        3 - ao exercício anterior acrescente se o aluno ficou aprovado ou reprovado caso tenha tido uma média inferior ou superior a 10.
+        */
+
+        if (media >= 9.5) {
+            texto+= `<h3 class='aprovado'> O Aluno, ficou APROVADO com media de ${media.toFixed(1)} </h3>`;
+        } else {
+            texto+= `<h3 class='reprovado'> O Aluno, ficou REPROVADO com media de ${media.toFixed(1)} </h3>`;
+        }
+
+
+        // escrever dentro da section output
+       let output = document.getElementById('output');
+       output.innerHTML = texto;
+    </script>
+</body>
+</html>

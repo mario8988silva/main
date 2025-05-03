@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/transitions.css"> 
+
+    <title>Exercício 10 - contacts : Mário Silva</title>
+
+    <style>
+        main.main_contact figure.banner{    
+            background-image: url(../images/contact-banner.jpg);
+
+            padding: 2em;
+            border-radius: 20px 20px 0 0;       
+        }
+
+        main.main_contact figure.banner h1{   
+            font-size: 2em;
+            color: #fff;         
+        }
+
+        main.main_contact article.contact_article{
+            margin: 1em 0;
+        }
+        
+        main.main_contact article.contact_article p{
+            color: #777;
+        }
+
+        main.main_contact form.input_container{
+            display: flex;
+            flex-direction: column;
+            gap: .4em;
+
+            padding: 1em 0 4em;
+        }
+
+        main.main_contact form.input_container label{
+            font-size: 1.2em;
+            color: #777;
+        }       
+
+        main.main_contact form.input_container input.input_inside-txt, textarea.input_inside-txt{
+            font-size: .7em;
+            color: #aaa;
+
+            padding: .8em 1em;
+            border: .2em #ccc solid;
+            border-radius: 10px;
+            margin-bottom: 2em;            
+
+            align-self: stretch;
+
+            cursor: pointer;
+        }
+
+        textarea.input_inside-txt{
+            height: 12vh;
+            margin-bottom: 3em;
+        }
+
+        main.main_contact form.input_container input.btn{
+            
+            align-self: center;
+        }
+
+        
+        /* ** BREAKPOINT M ** ----------------------------------------------------------------------------------------------------------- */
+        @media screen and (min-width: 768px){
+            main.main_contact{
+                padding-left: 10%;
+                padding-right: 10%;
+            }         
+
+            main.main_contact figure.banner h1{
+                font-size: 2.5em;
+                line-height: 1em;
+
+                padding-top: .6em;                
+            }
+        } 
+        
+        /* ** BREAKPOINT L ** ---------------------------------------------------------------------------------------------------- */
+        @media screen and (min-width: 1100px){
+            main.main_contact{
+                padding-left: 20%;
+                padding-right: 20%;
+            } 
+
+            main.main_contact figure.banner h1{
+                font-size: 3em;              
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <!-- HEADER > NAV.NAV_CONTAINER ----------------------------------------------------------------------------------->
+        <nav class="nav_container">   
+
+            <nav class="link_container">
+
+                <a href="../index.html" class="logo"></a>  
+
+                <a href="#" class="link">New Features</a>
+                <a href="gallery.html" class="link">Gallery</a>
+                <a href="articles.html" class="link">Articles</a>                
+            </nav>
+
+            <a href="#" class="link link_active">Contact</a>
+
+            <!-- HEADER > NAV.NAV_CONTAINER > BUTTON.BTN_MENU --------------------------------------------------------------->
+            <button class="btn_menu"></button>
+        </nav>
+    </header>
+
+    <main class="main_contact">
+        <figure class="banner">
+            <h1>Tell us what you think!</h1>
+        </figure>
+
+        <article class="contact_article">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis maxime sit vero doloremque consequatur dicta fugit atque quisquam suscipit ipsum?</p>
+        </article>
+
+        <form class="input_container">
+            <label for="contact_name" class="input-txt">Name: </label>
+            <input type="text" id="contact_name" name="contact_name" value="Your Name here" class="input_inside-txt">
+
+            <label for="contact_pass" class="input-txt">Password: </label>
+            <input type="password" id="contact_pass" name="contact_pass" value="0123"  class="input_inside-txt">
+
+            <label for="contact_msg" class="input-txt">Message: </label>
+            <textarea id="contact_msg" name="contact_msg" value="Write your message here..."  class="input_inside-txt">Write your message here...</textarea>
+
+            <input type="button" value="Submit" class="btn btn_green">
+        </form>
+        
+
+    </main>
+
+    <!-- FOOTER -------------------------------------------------------------------------------------------->
+    <footer>
+
+        <p class="footer_text">Learn to build websites using CSS</p>
+
+        <nav class="icons_container">
+            <a href="#"><img src="../images/ui/icon_facebook.png" alt="facebook" class="icon_s"></a>
+            <a href="#"><img src="../images/ui/icon_twitter.png" alt="twitter" class="icon_s"></a>
+            <a href="#"><img src="../images/ui/icon_google.png" alt="google" class="icon_s"></a>            
+        </nav>
+    </footer>
+
+    <!------------------------------------------------------------------------------------------------------>
+</body>
+</html>

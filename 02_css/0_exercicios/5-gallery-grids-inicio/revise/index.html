@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Grids : Revisão</title>
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border:  none;
+            box-sizing:  border-box;
+        }
+
+        body{
+            background-color: rgb(39, 37, 37);
+            font-family:'Courier New', Courier, monospace;
+            color: whitesmoke;
+        }
+
+        header{
+            height: 20vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        main{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-auto-rows: 20vh;
+        }
+
+        section{
+            background-color: rgb(71, 69, 69);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        section a{
+            text-decoration: none;
+            color: tomato;
+        }
+
+        /* faz com que a imagem proveniente de html se submeta ao container */
+        figure img{
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        /* ao invés de fazer uma classe para cada um dos elementos, é possível chegar a uma solução mais dinâmica, fazendo as classes das dimensões e aplicando-as mediante as imagens */
+
+        .c2xr1{
+            grid-column: span 2;
+        }
+
+        .c2xr2{
+            /* independentemente de onde se inicia o elemento, este ocupará 2 células de altura e 2 células linha */
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .c3xr2{
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+
+        .c3xr1{
+            grid-column: span 3;
+        }
+
+        .c3xr1{
+            grid-column: span 3;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>&hearts; Galeria com CSS Grid &hearts;</h1>
+    </header>
+
+    <main>
+        <section class="c2xr2">
+            <h1>Título</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#">more...</a>
+        </section>
+        <!-- site que chama imagens de forma alternada, mediante as dimensões atribuídas no link -->
+        <figure class="c3xr2"><img src="https://picsum.photos/600/450" alt=""></figure>
+        <figure><img src="https://picsum.photos/650/430" alt=""></figure>
+        <figure><img src="https://picsum.photos/500/450" alt=""></figure>
+        <figure><img src="https://picsum.photos/600/480" alt=""></figure>
+        <figure><img src="https://picsum.photos/400/350" alt=""></figure>
+        <figure class="c2xr1"><img src="https://picsum.photos/700/450" alt=""></figure>
+        <section class="c2xr1">
+            <h1>Título</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#">more...</a>
+        </section>
+        <figure class="c3xr1"><img src="https://picsum.photos/430/350" alt=""></figure>
+        <figure  class="c3xr1"><img src="https://picsum.photos/700/480" alt=""></figure>
+    </main>
+</body>
+</html>

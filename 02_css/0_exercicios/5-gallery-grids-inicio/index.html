@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 CSS : Mário Silva</title>
+
+    <style>
+
+        /* 
+        images from: https://unsplash.com/s/photos/wine */
+        *{
+            padding: 0;
+            border:  none;
+            margin: 0;           
+            box-sizing: border-box;
+        }
+
+        html, main.container, ._1{
+            background-color: #444;
+        }
+
+        h1, h2, p {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+
+        main.container{
+            margin: 30px auto;
+            justify-content: center;
+
+            display: grid;
+            grid-template-columns: repeat(6, 150px);
+            grid-template-rows: repeat(5, 150px);
+            gap: 6px;
+        }
+
+        main.container *{          
+            align-content: center;
+        }
+
+        main div{
+            background-color: #888;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        main div._2, main div._9{
+            background-color: #222;
+            padding: 12px;
+        }
+
+        main div._1{
+            text-align: center;
+
+            grid-column: 1 / span 6;
+            grid-row: 1 / 1;
+        }
+        
+        main div._2{
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 2;
+        }
+
+        main div._3{
+            background-image: url(https://picsum.photos/1200/901);
+            
+            grid-column: 3 / span 3;
+            grid-row: 2 / span 2;
+
+            /*
+            background-color: #00f;
+            */
+        }
+
+        main div._4{
+            background-image: url(https://picsum.photos/1200/902);
+            
+            grid-column: 6;
+            grid-row: 2;
+
+            /*
+            background-color: #ff0;
+            */
+        }
+
+        main div._5{
+            background-image: url(https://picsum.photos/1200/903);
+
+            grid-column: 6;
+            grid-row: 3;
+
+            /*
+            background-color: #f0f;
+            */
+        }
+    
+        main div._6{
+            background-image: url(https://picsum.photos/1200/904);
+
+            grid-column: 1;
+            grid-row: 4;
+
+            /*
+            background-color: #0ff;
+            */
+        }
+    
+        main div._7{
+            background-image: url(https://picsum.photos/1200/905);
+
+            grid-column: 2;
+            grid-row: 4;
+
+            /*
+            background-color: #f00;
+            */
+        }
+    
+        main div._8{
+            background-image: url(https://picsum.photos/1200/906);
+
+            grid-column: 3 / span 2;
+            grid-row: 4;
+
+            /*
+            background-color: #0f0;
+            */
+        }
+    
+        main div._9{
+            grid-column: 5 / span 2;
+            grid-row: 4;
+        }
+    
+        main div._10{
+            background-image: url(https://picsum.photos/1200/907);
+
+            grid-column: 1 / span 3;
+            grid-row: 5;
+
+            /*
+            background-color: #ff0;
+            */
+        }
+    
+        main div._11{
+            background-image: url(https://picsum.photos/1200/908);
+
+            grid-column: 4 / span 3;
+            grid-row: 5;
+
+            /*
+            background-color: #f0f;
+            */
+        }
+
+        main div:hover{
+            background-size: 150% auto;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="_1"><h1>Galeria com CSS Grids</h1></div>
+        <div class="_2"><h2>Lorem</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, possimus!</p></div>
+        <div class="_3"></div>
+        <div class="_4"></div>
+        <div class="_5"></div>
+        <div class="_6"></div>
+        <div class="_7"></div>
+        <div class="_8"></div>
+        <div class="_9"><h2>Ipsum</h2><p>Lorem ipsum dolor sit, amet consectetur.</p></div>
+        <div class="_10"></div>
+        <div class="_11"></div>
+    </main>    
+</body>
+</html>

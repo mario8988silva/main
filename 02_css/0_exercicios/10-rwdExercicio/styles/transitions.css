@@ -1,0 +1,57 @@
+/* ANIMATIONS / TRANSFORMS */
+
+a.btn, a.link, header nav.nav_container button.btn_menu{
+    transition: .1s ease-out 50ms;
+}
+
+/* HEADER > NAV.NAV_CONTAINER */
+a.link:hover{
+    color: var(--orange);
+}
+
+a.link:active{
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+
+a.themes:active{
+    color: var(--orange);
+    text-shadow: 0 0 10px var(--orange);
+}
+
+/* HEADER > NAV.NAV_CONTAINER > BUTTON.BTN_MENU */
+header nav.nav_container button.btn_menu:hover{
+    cursor: pointer;
+    background-image: url(../images/menu_24dp_24d56d17_FILL0_wght400_GRAD0_opsz.svg);
+
+    transition: 10ms;
+}
+
+header nav.nav_container button.btn_menu:active{
+    background-color: #fff;
+    background-image: url(../images/menu_24dp_24d56d17_FILL0_wght400_GRAD0_opsz.svg);
+}
+
+/* .BTN */
+.btn:hover{
+    color: var(--orange);
+    border-color: var(--orange);
+}
+
+/* .BTN_WHITE */
+.btn_white:active{
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+    border-color: #fff;
+    box-shadow: 0 0 10px #fff;
+}
+
+/* .BTN_GREEN */
+.btn_green:active{
+    color: var(--green);
+    text-shadow: 0 0 10px var(--green);
+    border-color: var(--green);
+    box-shadow: 0 0 10px var(--green);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */

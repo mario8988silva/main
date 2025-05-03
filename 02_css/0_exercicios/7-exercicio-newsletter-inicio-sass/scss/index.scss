@@ -1,0 +1,90 @@
+
+// callings :
+
+@use 'reset' as *;
+@use 'colours' as *;
+@use 'font' as *;
+@use 'measures' as *;
+@use 'compositions' as *;
+@use 'anim' as *;
+
+body {
+    font-family: $font-main;
+    font-size: $fz;
+    color: $c-shade_l;
+    background-color: $c-shade_s;
+    padding: $m-m;
+}
+
+section.newsletter{
+    width: $m-lx4;
+    background-color: $c-shade_s;
+    margin: auto;
+    padding: $m-m;
+}
+
+header{
+    background-image: url(../images/reuniao.jpg);
+
+    background-size: cover;
+    height: $m-lx3;   
+    padding: $lx_x_s; 
+    
+    color: $c-shade_l;
+    
+    text-align: center;
+
+    h1 {    
+        font-size: $fz-lx;    
+    }
+
+    a{
+        @extend %btn;
+        color: $c-shade_s;        
+    }
+}
+
+article{
+    &.textos{
+        font-size: $fz-s;
+        
+        padding: $s_x_0;
+        border-bottom: $border $c-shade_l;
+    
+        p {
+            margin: $s_x_0; 
+        }
+    }
+
+    &.miniaturas{
+        h2 {
+            @extend %h_all-caps;
+            color: $c-shade_l;        
+
+            margin: $m_x_0;            
+        }
+    }
+}
+
+div.imagens{
+    display: flex; 
+    justify-content: space-between;
+
+    & img {
+        padding: $m-sx3;
+        border: $border $c-shade_l;        
+        @extend %thumb_rest;        
+    
+        &:hover{
+            @extend %thumb_hover;
+        }
+    }
+}
+
+footer {
+    background-color: $c-gr;
+    color: $c-shade_s;
+    padding: $m-lx;
+    text-align: center;
+    margin: $m_x_0;
+}

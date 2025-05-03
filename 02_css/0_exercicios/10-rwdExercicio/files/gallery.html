@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/transitions.css"> 
+
+    <title>Exercício 10 - Gallery : Mário Silva</title>
+
+    <style>
+
+        .arrow, .circle_nav{
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 70%;
+
+            display: flex;
+            align-content: center;
+            justify-content: center;
+
+            opacity: .7;
+            transition: 10ms;
+        }
+
+        .arrow{
+            height: 52px;
+            width: 52px;
+        }
+
+        .l_arrow{
+            background-image: url(../images/chevron_left_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg);
+        }
+
+        .r_arrow{
+            background-image: url(../images/chevron_right_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg);
+        }
+
+        .arrow:hover, .circle_nav:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .button_container{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .circle_nav{
+            height: 18px;
+            width: 18px;
+
+            background-image: url(../images/circle_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg)           
+        }
+
+        .circle_nav:hover{
+            background-image: url(../images/circle_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg);
+        }
+
+        .circle_nav-selected{
+            background-image: url(../images/circle_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg);
+        }
+
+        main.main_gallery{
+            display: grid;
+            grid-template-columns: auto; 
+            grid-template-rows: auto; 
+            grid-gap: 1em;
+        }
+
+        main figure.banner{            
+            background-image: url(../images/gallery-1.jpg);           
+
+            height: auto;
+            padding: 12vh 0 4% 0;
+            border-radius: 20px;
+            
+            margin: .8em 0 0 0;
+            
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);             
+        }
+
+        main figure.banner button.l_arrow{
+            grid-column: 1;
+            justify-self: left;
+        }
+
+        main figure.banner button.r_arrow{
+            grid-column: 3;
+            justify-self: right;
+        }
+
+        main figure.banner nav.button_container{
+            grid-column: span 3;
+            grid-row: 2;      
+
+            justify-self: center;
+            align-self: flex-end;
+        }
+
+        main.main_gallery figure.img2, main.main_gallery figure.img3, main.main_gallery figure.img4{
+            display: none;
+        }
+
+        main.main_gallery figure.img2{
+            background-image: url(../images/gallery-sm-1.jpg);
+        }
+
+        main.main_gallery figure.img3{
+            background-image: url(../images/gallery-sm-2.jpg);
+        }
+
+        main.main_gallery figure.img4{
+            background-image: url(../images/gallery-sm-3.jpg);
+        }
+
+        main.main_gallery{
+            margin-bottom: 6em;
+        }
+
+        main.main_gallery article.articles_subject{
+            max-height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            
+            gap: .4em;
+
+            margin: .8em 0 0 0;            
+        }
+
+        main.main_gallery article.articles_gallery h1{
+            font-size: 2em;
+            font-weight: 500;
+            color: var(--orange);
+        }
+
+        main.main_gallery article.articles_gallery p{
+            color: #777;
+        }
+
+        @media screen and (min-width: 768px){
+            .arrow{
+            height: 58px;
+            width: 58px;
+            }
+
+            .circle_nav{
+            height: 20px;
+            width: 20px;   
+            }
+
+        main.main_gallery figure.articles_banner{
+            margin-bottom: .8em;
+            }
+
+        main.main_gallery{
+            gap: .8em;
+            }       
+
+        }
+
+        @media screen and (min-width: 1100px){
+
+            .arrow, .circle_nav{
+                display: none;
+            }
+
+            main.main_gallery figure.img2, main.main_gallery figure.img3, main.main_gallery figure.img4{
+                display: flex;
+            }
+
+            main{
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            main.main_gallery{
+                display: grid;
+                grid-template-columns: 3, 1fr;
+                grid-template-rows: 1fr .2fr 1fr;  
+                column-gap: 1em;
+            }
+
+            main.main_gallery figure.articles_banner{
+                height: auto;
+            }
+
+            main.main_gallery figure.articles_banner figure.banner{            
+                background-image: url(../images/gallery-3.jpg);
+
+                height: 30vh;
+                border-radius: 20px;
+            }
+
+            main figure.banner{            
+                height: auto;
+                
+                padding: 0;                
+                margin: 0;         
+            }
+            
+
+            main.main_gallery figure.img1{
+                grid-column: span 3;
+            }
+
+            main.main_gallery figure.banner{
+                min-height: 10vh;
+                border-radius: 0;               
+            }        
+
+            main.main_gallery article.artc1{
+                grid-column: span 2;
+
+                padding-right: 2em;
+            } 
+
+            main.main_gallery article.articles_gallery{
+                padding-top: .5em;
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <!-- HEADER > NAV.NAV_CONTAINER ----------------------------------------------------------------------------------->
+        <nav class="nav_container">   
+
+            <nav class="link_container">
+
+                <a href="../index.html" class="logo"></a>  
+
+                <a href="#" class="link">New Features</a>
+                <a href="#" class="link link_active">Gallery</a>
+                <a href="articles.html" class="link">Articles</a>                  
+            </nav>
+
+            <a href="contact.html" class="link">Contact</a>
+
+            <!-- HEADER > NAV.NAV_CONTAINER > BUTTON.BTN_MENU --------------------------------------------------------------->
+            <button class="btn_menu"></button>
+        </nav>
+    </header>
+
+    <main class="main_gallery">
+
+        <figure class="articles_banner img1">
+            <figure class="banner">
+                <button class="arrow l_arrow"></button>
+                <button class="arrow r_arrow"></button>
+                <nav class="button_container">
+                    <button class="circle_nav circle_nav-selected"></button>
+                    <button class="circle_nav"></button>
+                    <button class="circle_nav"></button>
+                </nav>
+            </figure>
+            
+        </figure>
+
+        <figure class="banner img2"></figure>
+        <figure class="banner img3"></figure>
+        <figure class="banner img4"></figure>
+        
+        <article class="articles_gallery artc1">
+            <h1>Where does it come from?</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit quasi vel et deserunt rerum eum, cupiditate voluptatum aliquid quibusdam aut nostrum, consectetur quia sit ducimus facilis, quas fugiat doloribus deleniti repellat temporibus expedita iure sunt. Itaque iusto est iure, vitae voluptatibus quam possimus autem aut. Est assumenda labore aut iusto.</p>
+        </article>
+        
+        <article class="articles_gallery artc2">
+            <h1>Resources</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi itaque odit modi ipsa incidunt dolore excepturi, praesentium adipisci alias iure, vero explicabo maiores similique dolorem ea! Accusantium consequatur, nihil et consectetur at a suscipit eveniet natus commodi placeat ducimus odit quam quas dolorum. Quo, voluptatibus id reiciendis natus cupiditate vitae?</p>
+        </article>
+    </main>
+
+    <!-- FOOTER -------------------------------------------------------------------------------------------->
+    <footer>
+
+        <p class="footer_text">Learn to build websites using CSS</p>
+
+        <nav class="icons_container">
+            <a href="#"><img src="../images/ui/icon_facebook.png" alt="facebook" class="icon_s"></a>
+            <a href="#"><img src="../images/ui/icon_twitter.png" alt="twitter" class="icon_s"></a>
+            <a href="#"><img src="../images/ui/icon_google.png" alt="google" class="icon_s"></a>            
+        </nav>
+    </footer>
+
+    <!------------------------------------------------------------------------------------------------------>
+    
+</body>
+</html>

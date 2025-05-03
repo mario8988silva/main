@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teashop Newsletter : Correcta</title>
+
+    <style>
+
+        /* ESTILOS GLOBAIS ---------------------- */
+        *{
+            padding: 0;
+            border:  none;
+            margin: 0;           
+            box-sizing: border-box;
+            
+            text-decoration: none;
+        }
+
+        img{
+            max-width: 100%;
+        }
+
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        main, footer{
+            width: 640px;
+            padding: 15px;
+            margin:  20px auto;
+        }
+
+        main{
+            background-color: #e8e8e6;
+            text-align: center;
+        }
+
+        header img{
+            margin: 10px 0;
+        }
+
+        /* SECTION TEAS ------------------------------- */
+
+        section.teas h1{
+            font-size: 3em;
+            font-weight: normal;            
+        }
+
+        section.teas header{
+            padding: 20px 70px;
+        }
+
+        section.tea-types{
+            display: flex;
+            gap: 15px;
+        }
+
+        article.tea{
+            height: 650px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            flex: 1;
+        }
+
+        article.tea h1{
+            font-size: 1.5em;
+        }
+
+        article.tea > *{
+            flex: 1;
+            gap: 5px;
+        }
+
+        article.tea a{
+            background-color: black;
+            color: white;
+            text-decoration:  none;
+            padding: 10px 20px;
+
+            flex: 0;
+        }
+
+        section.promo{
+            border-top: 2px solid gray;
+            margin-top: 50px;
+            padding: 35px 0;
+        }
+
+        footer{
+            text-align: center;
+        }
+
+        footer ul{
+            list-style: none;
+
+            display: flex;
+            gap: 10px;
+
+            margin-bottom: 50px;        
+        }
+
+        footer ul li{
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+        <header>
+            <figure>
+                <img src="images/logo-teashop.png" alt="logo"><img src="images/destaque.jpg" alt="destaque">
+            </figure>
+        </header>
+    
+        <section>
+            <header>
+                <h1>
+                    sigo cuidando...
+                </h1>
+            </header>
+            <section class="tea-types">
+                <article class="tea">
+                    <img src="images/icon-manana.png" alt="">
+                    <h2>por la mañana</h2>
+                    <img src="images/earlgrey.png" alt="">
+                    <h1>Earl Grey Crème</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, optio.</p>
+                    <a href="#">leva</a>
+                </article>
+    
+                <article class="tea">
+                    <img src="images/icon-manana.png" alt="">
+                    <h2>por la mañana</h2>
+                    <img src="images/earlgrey.png" alt="">
+                    <h1>Earl Grey Crème</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, optio.</p>
+                    <a href="#">leva</a>
+                </article>
+    
+                <article class="tea">
+                    <img src="images/icon-manana.png" alt="">
+                    <h2>por la mañana</h2>
+                    <img src="images/earlgrey.png" alt="">
+                    <h1>Earl Grey Crème</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, optio.</p>
+                    <a href="#">leva</a>
+                </article>
+            </section>
+        </section>
+    
+        <section class="promo">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <h1>Happy Pumpkin</h1>
+            <img src="images/happy-pumpkin.png" alt="">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li>
+                <img src="images/icon-muestra.png" alt="">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </li>
+            <li>
+                <img src="images/icon-entrega.png" alt="">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </li>
+            <li>
+                <img src="images/icon-seguro.png" alt="">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </li>
+            <li>
+                <img src="images/icon-cliente.png" alt="">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    </footer>
+    
+</body>
+</html>

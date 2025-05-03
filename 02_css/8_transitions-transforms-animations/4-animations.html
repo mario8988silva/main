@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations em CSS3</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes anim{
+            0%{
+                background-color: yellow;
+            }
+
+            100%{
+                background-color: brown;
+                border-radius: 50%;
+
+                transform: scale(3) rotate(720deg);
+            }
+        }
+
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box, .box2{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+
+            border: 2px solid white;
+
+            /* nome da animação a ser chamada */
+            animation-name: anim;
+            /* duração no tempo */
+            animation-duration: 5s;
+            /* gráfico/ "solavancos"*/
+            animation-timing-function: ease-in;
+            /* repete 3 vezes */
+            animation-iteration-count: calc(3);
+            /* repete infinitamente */
+            animation-iteration-count: infinite;
+            /* alternate = quando chega ao fim, a animação faz rewind até ao início */
+            animation-direction: alternate;
+        }
+
+        .box2{
+            animation: anim 1s ease-out alternate infinite;
+        }
+
+        .box2:hover{
+            cursor: pointer;
+            animation-play-state: paused;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!--
+    <h1>Animations em CSS3</h1>
+    <hr>
+    -->
+
+    <div class="box2"></div>
+    <div class="box"></div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+- Dados de Entrada:
+
+> Condutor/Utilizador;
+> Carro;
+> Roda 1 - Pneu Furado;
+> Roda 2 - Pneu Subselente;
+> Colete;
+> Macaco;
+> Triângulo;
+> Chave de Rodas;
+
+- Processamento:
+
+> Parar carro;
+>>
+
+> Sair do Carro;
+
+> Retirar ferramentas;
+
+> Levantar Carro;
+
+> Mudar Roda;
+
+> Baixar Carro;
+
+> Arrumar Ferramentas;
+
+> 
+
+
+- Dados de Saída:

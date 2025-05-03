@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="basic.css">
+    <style>
+        .container {
+            border: 5px solid #ffcc5c;
+            display: flex;
+
+            /* organizar os conteúdos numa linha ou coluna */
+            justify-content: center;
+            justify-content: flex-end;
+            justify-content: space-around; /* justifica elementos */
+            justify-content: space-evenly; /* justifica elementos comendo espaço uns aos outros */
+            justify-content: space-between; /* justifica desde os limites */
+
+            /* inserir um espaçamento entre elementos */
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="container">
+        <div class="home">Home</div>
+        <div class="search">Search</div>
+        <div class="logout">Logout</div>
+    </nav>
+</body>
+</html>

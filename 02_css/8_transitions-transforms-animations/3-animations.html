@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations em CSS3</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes bg-anim{
+            0%{
+                background-color: aquamarine;
+            }
+
+            40%{
+                background-color: brown;
+            }
+
+            80%{
+                background-color: blue;
+            }
+
+            100%{
+                background-color: aquamarine;
+            }
+        }
+
+        .box{
+            width: 100vw;
+            height: 100vh;
+            background-color: aquamarine;
+
+            animation: bg-anim 6s infinite;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!--
+    <h1>Animations em CSS3</h1>
+    <hr>
+    -->
+
+    <div class="box"></div>
+    
+</body>
+</html>

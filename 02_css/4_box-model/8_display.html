@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Display</title>
+        <style type="text/css">
+            body {
+                font-family: Arial, Verdana, sans-serif;
+                color: #111111;
+            }
+
+            ul{
+                width: 600px;
+                background-color: aquamarine;
+                margin: 10px auto;
+            }
+            
+            /*transformar elementos de bloco em elementos de linha, no entanto cria conflictos*/
+            li{
+                display: inline;
+
+                border: 1px solid orangered;
+                padding: 5px 10px;
+                margin: 15px 15px;
+            }
+
+            /*elementos comportam-se como elementos de linha, mas respeitam as regras de elementos de bloco*/
+            li{
+                display: inline-block;
+            }
+
+            /* esconde da visualização e do fluxo da página o elemento editado *//*
+            li.coming-soon{
+                display: none;
+            }
+            */
+
+            /* esconde da visualização e mas mantém o espaço na página o elemento editado */
+            li.coming-soon{
+                visibility: hidden;
+            }
+
+            /*os elementos não têm que ser propriamente links para serem reactivos*/
+            li:hover{
+                background-color: bisque;
+                cursor: pointer;
+            }           
+            
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>Home</li>
+            <li>Products</li>
+            <li class="coming-soon">Services</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,286 @@
+/* feito até ao dia da revisão do exercício */
+
+/* teste de conexão */
+/*
+body{
+    background-color: red;
+}
+*/
+
+/* RESET Á LÁ JOÃO */
+/*
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+*/
+/* LAYOUT */
+/*
+main{
+    background-color: white;
+
+    width: 80%;
+    min-width: 800px;
+
+    padding: 2em;
+
+    border: 5px;
+    border-radius: 10px;
+    border-style: double;
+
+    margin: 2em;
+}
+
+ul{
+    padding: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;   
+    margin: 1em auto;
+        
+}
+
+li{
+    display: inline-block;
+
+    padding: .5em;
+}
+
+.logo_text{
+    background-color: red;
+    text-align: center;
+}
+
+h1{
+    background-color: greenyellow;
+}
+
+p{
+    padding: 1em;
+    border-bottom: 2px solid black;
+}
+
+div.menu{
+    padding: center;
+    margin: 2em;
+}
+
+strong{
+    padding: 2em;
+}
+*/
+/* DEFINIÇÃO E EDIÇÃO DE FONTE */
+/*
+*{
+    font-family: 'Roboto Mono', Arial, sans-serif;
+    font-weight: 400;
+}
+
+h1{
+    font-weight: 500;
+    font-size: 4em;
+
+    margin-bottom: -0.4em;
+}
+
+h2, h3{
+    font-weight: 450;
+
+    margin-bottom: -1em;
+}
+
+
+h2{
+    font-size: 2.4em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+*/
+/* COR & INTERACÇÃO */
+/*
+body{
+    background-color: #ddd;
+}
+
+a{
+    text-decoration: none;
+}
+
+.selected_page{
+    color: orange;
+}
+
+a:visited{
+    color: darkslateblue;
+}
+
+li:hover, a:hover, a:focus{
+    color: orange;
+    cursor: pointer;
+}
+
+a:active{
+    color: white;
+    background-color: orange;
+}
+
+
+*/
+/* CONTEÚDOS ESPECÍFICOS */
+/* IMAGEM PÁGINA FOR-SALE.HTML */
+/* podemos no entanto dar volta a essa situação, transformando este elemento num elemento de bloco:
+img{
+    display: block;
+    margin: 10px auto;
+}
+*/
+
+/* -----------------------------------------------*/
+/* -----------------------------------------------*/
+
+/* feito no dia da revisão do exercício */
+
+/* ESTILOS GLOBAIS */
+
+/* - mini reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Inconsolata, monospace;
+    font-weight: 400;
+
+    background-color: lightgray;
+}
+
+/* -- dar padding e centrar */
+.center-pad-top{
+    padding: 20px 0;
+
+    text-align: center;
+}
+
+/* - links */
+/* -- pseudo-classes */
+a:link{
+    text-decoration: none;
+    color: darkslategray;
+}
+
+a:visited{
+    color: darkgray;
+}
+
+a:hover{
+    color: tomato;
+}
+
+/* -- classes */
+a.active{
+    color: tomato;
+    font-weight: 800;
+}
+
+/* ------- <main> -------- */
+
+main{
+    /* color */
+    background-color: white;
+
+    /* box structure */
+
+    width: 80%;
+    min-width: 800px;
+    max-width: 1240px;
+
+    margin: 50px auto;
+
+    padding: 2em;
+
+    border: 8px double darkslategray;
+    border-radius: 12px;    
+}
+
+/* main contents */
+main > *{
+    width: 600px;
+    margin: 20px auto;
+}
+/* ------- </main> ------ */
+
+
+/* ------- <header> -------- */
+/* logo */
+header{
+    text-align: center;
+}
+
+header span{
+    display: block;
+    line-height: .7em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+header span.analog_{
+    font-weight: 700;
+    letter-spacing: .2em;
+    font-size: 1.2em;
+}
+/* ------- </header> -------- */
+
+
+/* ------- <nav> -------- */
+
+nav ul{
+    padding: 10px 0;
+
+    border-top: 2px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+nav li{
+    list-style-type: none;
+    display: inline-block;
+
+    width: 20%;
+}
+/* ------- </nav> -------- */
+
+
+/* ------- <section> -------- */
+/* ------- <article> -------- */
+/* bloco section contents */
+section.contents{
+    text-align: justify;
+}
+
+section.contents h1{
+    text-align: center;
+}
+
+section.contents img{
+    filter: grayscale(.9);
+}
+/* ------- </article> -------- */
+/* ------- </section> -------- */
+
+
+/* ------- <footer> -------- */
+
+footer{
+    padding: 20px 0;
+    border-top: 1px solid gray;
+
+    text-align: center;
+}
+/* ------- </footer> -------- */
+/* --------------- */

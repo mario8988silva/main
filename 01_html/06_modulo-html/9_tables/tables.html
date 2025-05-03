@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+<body>
+
+    <h1>HTML Tables</h1>
+    <hr>
+
+    <table border="1"><!-- define abertura de uma tabela; border é uma "associação" html, obsoleta - sem esta não é possível ver os limites da mesma -->
+        <tr><!-- table row, define linha -->
+            <td><!-- table x, define coluna -->
+            </td>
+        </tr>
+    </table>
+
+    <table border="1" width="80%" height="400"
+    cellpadding="10"
+    cellspacing="10"
+    bgcolor="tomato">
+    <!-- tags obsoletas em cima -->
+     
+        <thead><!-- define o cabeçalho da tabela -->
+            <th colspan="2">1</th><!-- th define table header, cabeçalho da tabela; conteúdos localizados ao centro-meio por defeito; colspan para unir colunas--> -->
+            <th>2</th>
+        </thead>
+
+        <tbody>
+            <td align="right" valign="bottom" bgcolor="yellow">4</td> <!-- align para localização de conteúdos em x, valign para em y; obsoletos-->
+            <td>5</td><!-- conteúdos localizados à esquerda-meio por defeito -->
+            <td rowspan="2">6</td><!-- rowspan para unir linhas-->
+        </tr>
+
+        <tr>
+            <td colspan="2" rowspan="2">7</td>
+        </tr>
+
+        <tr>
+            <td>12</td>
+        </tbody>
+
+        <tfoot><!-- footer da tabela -->
+            <tr>13</tr>
+            <tr>14</tr>
+            <tr>15</tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>

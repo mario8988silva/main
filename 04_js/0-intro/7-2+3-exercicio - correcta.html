@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #bbb;
+
+            height: 100vh;
+        }
+
+        h1{
+            text-align: left;
+        }
+
+        main{
+            border: 4px double #333;
+            margin: 1em 2em;
+            padding: 2em;
+            border-radius: 12px;
+            background-color: #eee;
+        }
+
+        .reprovado{
+            color:  tomato;
+        }
+
+        .aprovado{
+            color: rgb(0, 189, 126);
+        }
+    </style>
+    <title>JavaScript - Intro</title>
+</head>
+<body>
+    <h1>JS - </h1>
+    <main>
+        <section id="output"></section>
+    </main>
+
+    <script>
+        // variável para output:
+        let texto='';
+
+        // declarar variáveis:
+        let nomeAluno, numDisciplinas, listaDisciplinas, listaNotas, somaNotas, media;
+
+        // inicializar as variáveis:
+        // pergunta o nome do aluno:
+        nomeAluno = prompt('Qual o nome do aluno?');
+
+        // pergunta o número de disicplinas:
+        numDisciplinas = Number(prompt(`Quantas Disciplinas tem @ ${nomeAluno}`));
+
+        // arrays vazias:
+        listaDisciplinas = [];
+        listaNotas = [];
+
+        // deixar a zeros as variáveis com valores numéricos:
+        somaNotas = 0;
+        media = 0;
+
+        // Lógica de Algoritmo, a.k.a. Business Logic:
+        // estrutura de repetição, para guardar nome e nota da disciplina:
+        for (let i = 0; i < numDisciplinas; i++){
+            // pergunta o nome da disciplina:
+            let disciplina = prompt(`Qual o nome da ${i+1}º disciplina?`);
+
+            // acrescenta à array de disciplinas:
+            listaDisciplinas.push(disciplina);
+
+            // pergunta qual a nota dada na disciplina, criando uma nova variável para definir o conteúdo:
+            let nota = Number(prompt(`Que nota teve na ${disciplina}?`));
+            // adiciona o valor à array notas:
+            listaNotas.push(nota);
+
+            // acresce a nota à array somaNotas:
+            somaNotas += nota;
+        }
+
+        // calcular a média final:
+        media = somaNotas / numDisciplinas;
+
+        // Output para a variável "texto" escrever na página:
+        texto += `
+            <h1>Ficha da avaliação do Aluno:</h1>
+            <hr>
+            <ul>
+        `;
+
+
+        for (let i = 0; i < listaDisciplinas.length; i++){
+            texto += `<li> ${listaDisciplinas[i]} - ${listaNotas[i]}</li>`;
+        }
+
+        texto += `
+            </ul>
+            <h2>${nomeAluno} teve uma média de ${media.toFixed(1)}</h2><br>
+        `;   
+        
+        if (media >= 9.5){
+            texto += `<h3 class= aprovado> Aprovado!`
+        } else{
+            texto += `<h3 class= reprovado> Reprovado...`
+        }
+        
+        // escrever dentro da section output:
+        
+        let output = document.getElementById('output');        
+        output.innerHTML = texto;
+
+    </script>  
+</body>
+</html>

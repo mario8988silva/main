@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* variáveis css */
+        /* podem ser aplicadas apenas num elemento ou classe específico
+        html{}
+        */
+        /* ou podem ser aplicadas no :root; este está acima de tudo o resto, é a hierarquia maior */
+        :root{
+            --cor-principal: rgb(211, 138, 173);
+            --cor-secundaria: rgb(93, 158, 118);
+
+            --font-principal: courier;
+
+            --margem-large: 200px;
+            --margem-small: 50px;
+        }
+
+        /* scope das variáveis */
+        /* variáveis só são aplicadas dentro dos conteúdos do main */
+        main{
+            --bg-color: yellow;
+
+            width: calc(100vw - 200px);
+            width: calc(100vw - var(--margem-large));
+            margin: 20px auto;
+        }
+
+        h1{
+            background-color: var(--bg-color);
+        }
+
+        p[class*='destaque']{
+            font-family: var(--font-principal);
+        }
+
+        input{
+            background-color: var(--cor-principal);
+        }
+
+        /* 
+        Selectores de Atributos:
+        evita o recurso de classes, dado que os elementos input já têm em si bastantes parâmetros identificáveis aos quais podemos recorrer nas css.
+        */
+        input[type='text']{
+            background-color: lightblue;
+        }
+
+        /* aplica a todos e quaisquer p cuja class contenha, algures no seu valor, 'taq' - desTAQue */
+        p[class*='taq']{
+            background-color: var(--cor-secundaria);
+        }
+
+        /* aplica esta formatação sempre que encontrar um 'a' que acabe em .pdf - 
+        <a href="relatorio .PDF ">relatório</a>*/
+        /*
+        a[href$='.pdf']{
+            padding-right: 1.2em;
+            background-image: url("pdf.png");
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+        */
+
+        /* PESUDO-ELMENTOS */
+
+        /* sempre que encontrar elemento a cujo href termine em .pdf, aplicar a formatação depois */
+        a[href$='.pdf']::after{
+            content: url(pdf.png);
+            margin-left: 1px;
+        }
+
+        /* sempre que encontrar elemento a cujo href termine em .pdf, aplicar a formatação antes */
+        a[href$='.pdf']::before{
+            content: url(pdf.png);
+            margin-right: 1px;
+        }
+
+        /* sempre que um a cujo href inicie em http://, aplica as seguintes características logo de seguida */
+        a[href^='https://']::after{
+            content: url(open_npage.png);
+        }
+
+        input::placeholder{
+            color: tomato;
+        }
+
+        p::selection{
+            background-color: yellowgreen;
+        }
+
+        ::grammar-error{
+            background-color: tomato;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Selectores Atributos, Pesudo, Variáveis</h1>
+    <hr>
+    <main>
+        <h1>titulo main</h1>
+        <p>
+            <input type="text" value="joao"><br>
+            <input type="email" placeholder="inserir email">
+        </p>
+        
+        <p>Ler o nosso <a href="relatorio.pdf">relatório</a></p>
+
+        <p>Visite o site da Flag <a href="https://flag.pt"></a></p>
+
+        <p class="destaque">Consequuntur dolorum consequatur laboriosam quia nostrum quod dignissimos nobis.</p>
+
+        <p class="xpto destaque">Perspiciatis, eius voluptatem quod dignissimos voluptates quis recusandae. Fuga explicabo illum illo cumque quibusdam exercitationem reprehenderit inventore modi incidunt sunt.</p>
+    </main>
+</body>
+</html>

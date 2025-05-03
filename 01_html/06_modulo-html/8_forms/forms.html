@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms / Formulários</title>
+</head>
+<body>
+
+    <h1>HTML Forms / Formulários</h1>
+    <hr>
+
+    <!-- 
+    form é a tag de bloco que define um formulário.
+    action define o servidor. neste caso temos um servidor online para testes.
+
+    -->
+    <form action="https://httpbin.org/anything" method="get">
+        
+        <article>
+            
+            <label for="nome">Nome: </label><br><!-- é uma boa prática criar uma tag "label" para criar uma relação entre conteúdo prestado e conteúdo inserido; boa prática também fazer queras de linha, a modos de permitir uma leitura da esquerda para a direita mais facilitada; -->
+
+            <!-- tag input define espaço de conteúdo onde o utilizador insere dados -->
+
+            <input 
+            id="nome" 
+            name="nome"
+            type="text"
+            size="10"
+            maxlength="10"
+            placeholder="inserir nome"
+            autocomplete="off"
+            autofocus
+            required>
+
+            <!-- 
+            id="x" define uma identificação a modos de poder ser referenciada por outras funcionalidades em questão de frontend; name"x" define uma identifição para que a base de dados a resolva, questões de backend; type="text" define uma caixa de preenchimento; size define a largura da campo; maxlength define o tamanho do campo; placeholder serve como exemplo dentro do campo de preenchimento; autocomplete corta o preenchimento automático de preenchimento, "ajuda/proposta" de preenchimento. Este pode ser inserido na tag "form";
+            autofocus faz com que o cursor esteja já pronto a preencher o campo conforme entramos na página;
+            required define um preenchimento automático. Este deve ser sempre acompanhado de uma referência para o preenchimento do mesmo;
+            -->
+            
+            <br>
+        
+            <label for="apelido" disabled>Apelido:</label><br> <!-- disabled fecha um campo, impossibilitanto o seu preenchimento; -->
+            <input type="text" id="apelido" name="apelido">
+        </article>
+
+        <article>
+            <label for="comentarios">Comentários</label>
+            <textarea name="comentarios" id="comentarios" cols="50" rows="10"></textarea>
+        </article><!-- textearea define um campo para comentários; cols define numero de colunas; rows define numero de linhas; quando um valor numérico é inserido sem definição (10, ao invés de 10px), refere-se a um número de caracteres -->
+
+        <article>
+            <!-- 
+            formulários de escolha única
+            for define tipo de input;
+            id define identificação a ser interligada com a label - em radio deve ter o mesmo valor, é o que define a escolha única de uma de várias opções;
+            name define a gama de opções para uma mesma questão;
+            value define o nome da resposta/opção em termos de interpretação backend;
+            -->
+            <h1>Que estilo de música prefere?</h1>
+
+            <input for="radio" id="rock" name="musica" value="rock">
+            <label for="rock">Rock</label><br>
+
+            <input for="radio" id="pop" name="musica" value="pop">
+            <label for="pop">Pop</label><br>
+
+            <input for="radio" id="triphop" name="musica" value="trip-hop">
+            <label for="triphop">trip-Hop</label><br>
+        </article>
+
+        <!--
+        formulário de escolha multipla
+        -->
+        <article>
+            <h1>Que serviço utiliza para ouvir música?</h1>
+
+            <input type="checkbox" name="servico" id="spotify" value="spotify" checked><!-- checkbox define uma caixa de selecção; checked define um preenchimento por defeito -->
+            <label for="spotify">Spotify</label><br>
+            
+            <input type="checkbox" name="servico" id="apple" value="apple">
+            <label for="apple">Apple Music</label><br>
+
+            <input type="checkbox" name="servico" id="youtube" value="youtube">
+            <label for="youtube">Youtube</label><br>
+        </article>
+
+        <!--
+        formulário de escolha em aba
+        -->
+        <article>
+            <h1>Em que Device costuma ouvir Musica</h1>
+            <label for="device">Device:</label>
+            <select name="device" id="device">
+                <option value="none">...</option>
+                <option value="walkman">Walkman</option>
+                <option value="discman">Discman</option>
+                <option value="ipod">iPod</option>
+                <option value="radio">Radio</option>
+            </select>
+        </article>
+
+        <!--
+        formulário de escolha multipla em aba
+        -->
+        <article>
+            <h1>Em que Device costuma ouvir Musica - 2</h1>
+            <label for="device2">Device:</label><br>
+            <p>pode escolher vários com a tecla "ctrl"</p>
+            <select name="device2" id="device2" multiple size="10"
+            maxlength="10"><!-- "multiple" define a selecção multipla -->
+                <option value="none">...</option>
+                <option value="walkman">Walkman</option>
+                <option value="discman">Discman</option>
+                <option value="ipod">iPod</option>
+                <option value="radio">Radio</option>
+                <option value="pc">Computador</option>
+                <option value="tv">Televisão</option>
+            </select>
+        </article>
+
+        <!--
+        formulário de preenchimento em caixa de texto com opções de selecção
+        -->
+        <article>
+            <h1>Qual o Browser que mais utiliza?</h1>
+            <label for="browser">Browser:</label>
+            <input type="text" id="browser" name="browser_back" list="browser_select">
+            <datalist id="browser_select">
+                <option value="edge">Edge</option>
+                <option value="chrome">Chrome</option>
+                <option value="firefox">Firefox</option>
+                <option value="explorer">Explorer</option>
+            </datalist>
+        </article>
+
+        <article>
+            <h1>Opções de input</h1>
+            <input type="color" name="color"><!-- selecção de cor -->
+            <input type="date" name="date"><!-- selecção de dia mediante calendário -->
+            <input type="time" name="time"><!-- selecção de hora -->
+            <input type="password" name="password"><!-- palavra-passe-->
+            <input type="number" name="number"><!-- campo de preenchimento numérico -->
+            <input type="email" name="email">
+            <input type="url" name="url">
+            <input type="search" name="search">
+            <input type="range" name="range" min="0" max="10" value="8" step="2"><!-- barra "arrastar"; valor min e max definem os limites; value define o valor definido por defeito; step define os incrementos mediante o "arrastão" -->
+        </article>
+        
+
+        <input type="reset" value="Enganei-me"><!-- botão para limpar o formulário-->
+        <input type="submit" value="Enviar"><!-- submit define um botão para a inserção de dados no servidor; value define o valor a ser apresentado no botão -->
+
+        <button>Botão</button><!-- botão dentro de um formulário serve para fazer submit; não é boa prática usar este método; button serve para outro tipo de interacções para com o utilizador, com interactividade conseguida por meio de javascript -->
+
+    </form> 
+    
+</body>
+</html>

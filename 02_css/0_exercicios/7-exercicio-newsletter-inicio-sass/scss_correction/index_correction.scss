@@ -1,0 +1,157 @@
+@use 'variables' as *;
+@use 'reset' as *;
+
+
+body {
+
+    font: {
+        family: $font-stack;
+        size: 16px;
+    };
+    color: $dark-color;
+
+    background-color: #eee;
+    padding: $inner-space;    
+
+    /*
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    color:#333;
+    background-color: #eee;
+    padding: 20px;
+    */
+}
+
+section{
+    &.newsletter{
+        width: 640px;
+        background-color: $light-color;
+        margin: auto;
+        padding: $inner-space;
+    }
+}
+
+header{
+    height: 300px;
+    background: {
+        image: url(../images/reuniao.jpg);
+        size: cover;
+        color: bisque;
+    };
+
+    color: $dark-color;
+    padding: $default-font-size *3 $default-font-size;
+    text-align: center;
+
+    /*
+    height: 300px;
+    background-image: url(../images/reuniao.jpg);
+    background-size: cover;
+    color: #333;
+    padding: 50px 10px;
+    text-align: center;
+    */
+
+    h1 {
+    
+        font-size: $default-font-size * 2;
+    }
+
+    a {
+        text: {
+            decoration: none;
+            transform: capitalize;
+        }
+        color: $light-color;
+
+        background-color: $bg-color;
+        display: inline-block;
+        width: 100px;
+        height: 50px;       
+        margin: $default-font-size * 3 auto;
+        border-radius: $tiny-font-size * 3;
+        font-size: $default-font-size * .8;
+
+        /*
+        color:#fff;
+        text-decoration: none;
+        width: 100px;
+        height: 50px;
+        background-color:#446655;
+        display: block;
+        margin: 50px auto;
+        text-transform: capitalize;
+        border-radius: 8px;
+        box-shadow: 2px 2px 4px #333;
+        font-size: .8em;
+        */
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+}
+
+article{
+    &.textos{
+        font-size: $default-font-size;
+        border-bottom: 1px solid $dark-color;
+        padding: $inner-space 0;
+
+        p {
+            margin: $tiny-font-size * 5 0;
+        }
+    }
+
+    &.miniaturas{
+        h2 {
+            text: {
+                align: center;
+                transform: uppercase;
+            }
+    
+            font: {
+                family: courier, monospace;
+                font-size: $default-font-size * 1.2;
+                weight: normal;
+            }    
+    
+            color:$dark-color;
+            letter-spacing: $tiny-font-size;
+    
+            margin: $inner-space 0 ;
+        }
+
+        div{
+            &.imagens{
+                display: flex; 
+                justify-content: space-between;
+            }
+        
+            img{
+                padding: $tiny-font-size;
+                border:1px solid $dark-color;
+                opacity: .7;
+                transition: all 0.3s ease-out;
+        
+                &:hover{
+                    transform: scale(1.2);
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $bg-color;
+    color: $light-color;
+
+    height: 100px;
+    margin: $inner-space;
+
+    display: flex;
+    justify-content: fixed;
+    align-items: center;
+}

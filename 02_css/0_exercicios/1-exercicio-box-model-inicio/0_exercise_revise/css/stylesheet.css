@@ -1,0 +1,140 @@
+/* ESTILOS GLOBAIS */
+
+/* - mini reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Inconsolata, monospace;
+    font-weight: 400;
+
+    background-color: lightgray;
+}
+
+/* -- dar padding e centrar */
+.center-pad-top{
+    padding: 20px 0;
+
+    text-align: center;
+}
+
+/* - links */
+/* -- pseudo-classes */
+a:link{
+    text-decoration: none;
+    color: darkslategray;
+}
+
+a:visited{
+    color: darkgray;
+}
+
+a:hover{
+    color: tomato;
+}
+
+/* -- classes */
+a.active{
+    color: tomato;
+    font-weight: 800;
+}
+
+/* ------- <main> -------- */
+
+main{
+    /* color */
+    background-color: white;
+
+    /* box structure */
+
+    width: 80%;
+    min-width: 800px;
+    max-width: 1240px;
+
+    margin: 50px auto;
+
+    padding: 2em;
+
+    border: 8px double darkslategray;
+    border-radius: 12px;    
+}
+
+/* main contents */
+main > *{
+    width: 600px;
+    margin: 20px auto;
+}
+/* ------- </main> ------ */
+
+
+/* ------- <header> -------- */
+/* logo */
+header{
+    text-align: center;
+}
+
+header span{
+    display: block;
+    line-height: .7em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+header span.analog_{
+    font-weight: 700;
+    letter-spacing: .2em;
+    font-size: 1.2em;
+}
+/* ------- </header> -------- */
+
+
+/* ------- <nav> -------- */
+
+nav ul{
+    padding: 10px 0;
+
+    border-top: 2px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+nav li{
+    list-style-type: none;
+    display: inline-block;
+
+    width: 20%;
+}
+/* ------- </nav> -------- */
+
+
+/* ------- <section> -------- */
+/* ------- <article> -------- */
+/* bloco section contents */
+section.contents{
+    text-align: justify;
+}
+
+section.contents h1{
+    text-align: center;
+}
+
+section.contents img{
+    filter: grayscale(.9);
+}
+/* ------- </article> -------- */
+/* ------- </section> -------- */
+
+
+/* ------- <footer> -------- */
+
+footer{
+    padding: 20px 0;
+    border-top: 1px solid gray;
+
+    text-align: center;
+}
+/* ------- </footer> -------- */
+/* --------------- */

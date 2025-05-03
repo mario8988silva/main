@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset CSS</title>
+
+    <!-- FAZ RESET DO CSS, faz-se copy do código para uma folha de .css e linka-se na folha .html
+    https://meyerweb.com/eric/tools/css/reset/
+    -->
+    <!--
+    <link rel="stylesheet" href="reset.css">
+    -->
+    
+
+    <!-- FAZ UM RESET MAIS "SOFT" DO CSS, faz-se copy do código para uma folha de .css e linka-se na folha .html
+    https://necolas.github.io/normalize.css/
+    -->
+    <!--
+    <link rel="stylesheet" href="normalize.css">
+    -->
+
+    <!-- MINI RESET Á LÁ JOÃO, resolve uma enorme parte dos problemas/conflitos existentes nos browsers, isto quando não se deseja usar um ficheiro de css reset --><!--
+     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-sizing: border-box;
+        }
+
+     </style>
+
+     -->
+
+     <style>
+        p{
+            width: 400px;
+            background-color: beige;
+            padding: 40px;
+            border: 2px solid tomato;
+
+            box-sizing: content-box;
+        }
+
+        p.two{
+            box-sizing: border-box;
+        }
+
+     </style>
+</head>
+<body>
+
+    
+
+
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ex voluptatibus aut, ipsa ullam repellendus, soluta consequatur ratione placeat expedita dolor non explicabo, harum nam deserunt. Tenetur illo dignissimos qui est laborum officiis dicta excepturi consectetur voluptatibus magni ullam quas et itaque aut, tempore perferendis eos, voluptatum vitae provident. Harum.</p>
+        <p class="two">Eveniet excepturi quaerat molestias facere vitae dolores ut a repellat aspernatur nihil temporibus id alias fugit, velit minima nobis eligendi consequuntur, aperiam et eaque voluptatibus. Quos molestiae soluta perspiciatis, atque laborum nemo labore et officiis quis cumque asperiores accusantium maiores magni quasi assumenda! Deleniti suscipit nesciunt iusto praesentium est atque.</p>
+        <p>Expedita iste a earum, eaque blanditiis amet incidunt debitis, ratione, corporis nesciunt eveniet cumque asperiores quaerat beatae adipisci. Dolores voluptatem ipsa mollitia eligendi? Minima tenetur, ratione ut laborum, harum quia explicabo adipisci ducimus enim eum velit eveniet porro! Repudiandae veniam officia autem ab placeat inventore ipsum, ex quos eum amet?</p>
+    </section>
+    
+</body>
+</html>

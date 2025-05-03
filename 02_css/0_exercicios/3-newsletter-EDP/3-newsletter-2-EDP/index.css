@@ -1,0 +1,160 @@
+
+/* GENERAL SETTINGS  -------------------------------------- */
+*{
+    padding: 0;
+    margin: 0;            
+    border:  none;
+    box-sizing: border-box;
+
+    /* --------------------------- */
+    
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+/* FONT & TEXT -------------------------------------- */
+h1, a{
+    font-size: 1em;
+    font-variant: small-caps;
+    color: #f00;
+}
+
+h2{
+    font-size: 2em;
+    line-height: 1em;
+                
+    color: rgb(97, 204, 168);
+}
+
+a.btn{
+    color: #fff;
+    background-color: #f00;
+    padding:.8em 1.5em;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.link{
+    text-decoration: underline;
+}
+
+/* BOXES & CONTENTS -------------------------------------- */
+section{
+    padding: 4vw;
+    display: flex;
+    gap: 5vw;
+}
+
+article *{
+    margin: .5em 0;
+}
+
+img, video{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+section > img {
+    width: 40vw;
+}
+
+/* HEADER -------------------------------------- */
+header h2{
+    font-size: 3em;
+}
+
+header p{
+    font-size: 1.2em;
+}
+
+header section{
+    background-image: linear-gradient(#fff, #eee);
+    justify-content: center;  
+}
+
+header section article{
+    text-align: center;
+}
+
+header section, main{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+/* MAIN -------------------------------------- */
+main section article{
+    align-content: center;
+}
+
+main section.alt_order{
+    flex-direction: row-reverse;
+}
+
+main section.beneficio{
+    background-color: #eee;
+}
+
+/* FOOTER -------------------------------------- */
+footer{
+    display: flex;
+    flex-direction: column;
+}
+
+footer section{
+    background-color: rgb(193, 244, 227);
+    
+    padding: 0vw;
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+
+footer section .dl_text *{
+    text-align: center;
+    font-variant: none;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+footer h1{
+    font-size: 1.5em;
+}
+
+footer h2{
+    font-weight: 200;
+}
+
+footer section .dl_text p{
+    padding: 1.5em 0;
+}
+
+footer section .dl_text figure *{
+    height: 4vh;      
+}
+
+footer .folha_1{                
+    order: calc(-1);
+}
+
+footer .logo_edp{
+    background-color: rgb(71, 71, 71);
+    padding: 3vw;
+    display: flex;
+    justify-content: center;
+}
+
+footer section.footer_{
+    background-color: #222;
+    color: #fff;
+    padding: 6vw 12vw 12vw;
+    flex-direction: column;
+}
+
+/* ------------------------------------------ */

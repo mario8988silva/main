@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #bbb;
+
+            height: 100vh;
+        }
+
+        h1{
+            text-align: left;
+        }
+
+        main{
+            border: 4px double #333;
+            margin: 1em 2em;
+            padding: 2em;
+            border-radius: 12px;
+            background-color: #eee;
+        }
+
+        table{
+            border: 2px;
+        }
+    </style>
+    <title>JavaScript - Intro</title>
+</head>
+<body>
+    <h1>JS - </h1>
+    <main>
+        <section id="output"></section>
+    </main>
+
+    <script>
+        // variável para output:
+        let texto='';
+
+        // array para alunos:
+        let alunos = [];
+
+        // número de alunos:
+        let quantidade = Number(prompt('Quantos alunos tem a turma?'));
+
+        // contador:
+        let contador = 0
+
+        do{
+            // prgunta pelo nome de cada aluno:
+            alunos.push(prompt('Qual o nome d@ aluno@?'));
+
+            // adiciona uma volta ao contador:
+            contador ++;  
+        // repete o processo enquanto o contador tiver um valor inferior àquele da quantidade de alunos:          
+        } while (contador < quantidade);
+        
+        // dispõe por ordem crescente:
+        let turma=alunos.sort();
+
+        // apresenta a lista ordenada: 
+        for (let aluno of turma) {
+            texto+=`
+            <h3>Aluno: ${aluno}</h3>
+            `;            
+        }
+        
+        // escrever dentro da section output:        
+        let output = document.getElementById('output');        
+        output.innerHTML = texto;
+
+    </script>  
+</body>
+</html>

@@ -1,0 +1,119 @@
+/*
+@import 'variables'; ñ se usa o _underscore nem .extensão; @import está a entrar em desuso e possivelmente ilgegível nas próximas versões;
+*/
+
+/*
+@use 'variables';
+*/
+
+@use 'variables' as *;
+@use 'functions' as *;
+@use "sass:color";
+
+*{
+    margin: 0;
+    padding:  0;
+    border: none;
+    box-sizing: border-box;
+}
+
+/*
+body{
+    background-color: variables.$light-color;
+    color: variables.$dark-color;
+    font-family: variables.$font-stack;
+    line-height: 1.5;
+}
+*/
+
+body{
+    background-color: $light-color;
+    color: $dark-color;
+
+    /*
+    font-family: $font-stack;
+    font-size: 18px;
+    */
+    // Nested Properties
+    font: {
+        family: $font-stack;
+        size: 18px;
+    };
+
+    line-height: 1.5;
+}
+
+header{
+    background-color: $dark-color;
+    /* chama a function : mediante o brilho da cor de fundo, a cor de texto muda entre dois valores */
+    color:  set-text-color($dark-color);
+    padding: 1rem;
+
+    h1{
+        text-align: center;
+    }
+}
+
+.section{
+    padding:  3rem;
+
+    /* &-a diz o mesmo que .section-a
+    & repete a descrição do elemento, tudo o que vem depois é especificação;*/
+
+    &-a{
+        background-color: $primary-color;
+        color:  set-text-color($primary-color);
+    }
+
+    &-b{
+        background-color: $secondary-color;
+        color:  set-text-color($secondary-color);
+    }
+
+    /*
+    a{
+        color: #000;
+
+        &:hover{
+            color: orange;
+        }
+    }
+    */
+}
+
+// EXTEND; criar includes noutras propriedades
+
+%btn-shared{
+    display: inline-block;
+    border: none;
+    padding:  .7rem 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.btn{
+    &-light{
+        /* chama o extend */
+        @extend %btn-shared;
+        background-color: $light-color;
+        color: set-text-color($light-color);
+
+        &:hover{
+            /* chama o mix-in */
+            @include transform(rotate(10deg));
+        }
+    }
+
+    &-dark{
+        /* chama o extend */
+        @extend %btn-shared;
+        background-color: $dark-color;
+        color: set-text-color($dark-color);
+
+        &:hover{
+            /* chama o mix-in */
+            @include transform(rotate(-30deg));
+        }
+    }
+}

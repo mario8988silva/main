@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/transitions.css"> 
+
+    <title>Exercício 10 - Articles : Mário Silva</title>
+
+    <style>
+        main.main_subject figure.banner{        
+            background-image: url(../images/article-banner.jpg);
+            height: 20vh;      
+        }
+
+        main.main_subject article.articles_subject{
+            max-height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            
+            gap: .4em;
+
+            margin: .8em 0 0 0;            
+        }
+
+        main.main_subject article.articles_subject h1{
+            font-size: 2em;
+            font-weight: 500;
+            color: var(--orange);
+        }
+
+        main.main_subject article.articles_subject h2{
+            color: #333;
+        }
+
+        main.main_subject article.articles_subject p{
+            color: #777;
+        }
+
+        aside.articles_aside{            
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+
+            gap: .8em;
+        }
+
+        aside.articles_aside a, aside.articles_aside p, input{
+            color: #777;
+            font-weight: 400;
+        }
+
+        aside.articles_aside nav.themes_container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            gap: .2em;
+        }
+
+        aside.articles_aside nav.themes_container a{
+            padding: .4em .8em;
+        }
+
+        aside.articles_aside nav.themes_container a.selected{
+            color: #fff;
+            background-color: var(--orange);
+        }
+
+        aside.articles_aside form.input_container{
+            background-color: #eee;
+
+            padding: 1em .8em 2em;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1em;            
+        }
+
+        aside.articles_aside form.input_container label.input-txt{
+            font-size: .85em;
+        }
+
+        aside.articles_aside form.input_container input.input_inside-txt{
+            font-size: .7em;
+            color: #aaa;
+
+            padding: .8em 1em;
+            border: .2em #ccc solid;
+            border-radius: 10px;            
+
+            align-self: stretch;
+
+            cursor: pointer;
+        }
+
+        aside.articles_aside form.input_container input.btn{
+            align-self: center;
+        }
+
+        /* ** BREAKPOINT M ** ----------------------------------------------------------------------------------------------------------- */
+        @media screen and (min-width: 768px){
+            main.main_subject article.articles_subject{
+                gap: .8em;
+            }
+
+            main.main_article main.main_subject h1{
+                font-size: 2.5em;
+                line-height: 1em;
+            }
+        } 
+
+        /* ** BREAKPOINT L ** ---------------------------------------------------------------------------------------------------- */
+        @media screen and (min-width: 1100px){
+            main.main_article{
+                height: 77.9vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            main.main_subject article.articles_subject{
+                gap: 1em;
+            }
+
+            main.main_article main.main_subject h1{
+                font-size: 3em;
+                
+            }
+
+            main.main_subject{        
+                width: 50%;      
+            }
+
+            aside.articles_aside{
+                width: 30%;
+                justify-content: flex-start;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <!-- HEADER > NAV.NAV_CONTAINER ----------------------------------------------------------------------------------->
+        <nav class="nav_container">   
+
+            <nav class="link_container">
+
+                <a href="../index.html" class="logo"></a>  
+
+                <a href="#" class="link">New Features</a>
+                <a href="gallery.html" class="link">Gallery</a>
+                <a href="#" class="link link_active">Articles</a>                
+            </nav>
+
+            <a href="contact.html" class="link">Contact</a>
+
+            <!-- HEADER > NAV.NAV_CONTAINER > BUTTON.BTN_MENU --------------------------------------------------------------->
+            <button class="btn_menu"></button>
+        </nav>
+    </header>
+
+    <main class="main_article">
+        <main class="main_subject">
+
+            <!-- MAIN > FIGURE.BANNER ------------------------------------------------------------------------------------------>
+            <figure class="banner"></figure>
+            
+            <article class="articles_subject">
+                <h1>Where does it come from?</h1>
+                <h2>By Lipsum.com</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officiis distinctio dolor repellendus soluta reiciendis placeat quisquam cupiditate, voluptates, similique id doloribus quis, numquam veniam nihil ipsa! Autem eveniet facere cupiditate voluptatem provident, commodi voluptatum beatae optio ipsa, aliquam aut ad sapiente quibusdam id nobis corrupti saepe impedit dicta eaque?</p>
+
+            </article>
+        </main>
+
+        <aside class="articles_aside">
+            <nav class="themes_container">
+                <a href="#" class="themes link">What is Lorem Ipsum?</a>
+                <a href="#" class="themes link">Why do we use it?</a>
+                <a href="#" class="themes link selected">Where does it come from?</a>
+                <a href="#" class="themes link">Where can I get some?</a>
+            </nav>
+
+            <form class="input_container">
+                <label for="articles_form" class="input-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quo perspiciatis nisi maxime assumenda quibusdam nihil ducimus dolor natus recusandae?</label>
+
+                <input type="text" id="articles_form" name="articles_form" value="Enter Keywords here" class="input_inside-txt">
+                <input type="button" value="Submit" class="btn btn_green">
+            </form>            
+        </aside>     
+    </main>  
+
+    <!-- FOOTER -------------------------------------------------------------------------------------------->
+    <footer>
+
+        <p class="footer_text">Learn to build websites using CSS</p>
+
+        <nav class="icons_container">
+            <a href="#"><img src="../images/ui/icon_facebook.png" alt="facebook" class="icon_s"></a>
+            <a href="#"><img src="../images/ui/icon_twitter.png" alt="twitter" class="icon_s"></a>
+            <a href="#"><img src="../images/ui/icon_google.png" alt="google" class="icon_s"></a>            
+        </nav>
+    </footer>
+
+    <!------------------------------------------------------------------------------------------------------>
+</body>
+</html>

@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/reset.css">
+
+    <title>Exercício 6 CSS : Mário Silva</title>
+
+    <style>
+        /* passar css para documento à parte */
+
+        :root{
+            /* colours */
+
+            --shade_0: #fff;
+            --shade_1: #f4f4f4;
+            --shade_2: #7f7f7f;
+            --shade_3: #333;
+            --shade_4: #292b2c;
+            --shade_5: #000;
+
+            --r: #ba0216;
+            --b: #0071bc;     
+
+
+            /* font weights; sizes & lenghts */
+
+            --weight_s: 100;
+            --weight_m: 400;
+            --weight_l: 500;
+            --weight_xl: 700;
+
+            --size_12: 12px;
+            --size_15: 15px;
+            --size_16: 16px;
+            --size_17: 17px;
+            --size_18: 18px;
+            --size_20: 20px;
+            --size_22: 22px;
+            --size_24: 24px;
+            --size_28: 28px;
+            --size_31: 31px;
+            --size_32: 32px;
+            --size_33: 33px;
+            --size_35: 35px;
+            
+            /* fonts & type -------------------------- */  
+
+            font-family: Lato, Arial, Helvetica, sans-serif;
+            font-size: var(--size_16);
+            line-height: var(--size_24);
+        }
+
+        *{
+            text-decoration: none;
+            transition-duration: 100ms;
+        }
+
+        h1, h2{
+            color: var(--shade_4);
+        }
+
+        h1{
+            text-transform: uppercase;
+        }
+
+        h1, a{
+            font-weight: var(--weight_l);line-height: var(--size_35);
+
+            text-transform: uppercase;
+        }
+
+        a{
+            font-size: var(--size_24);
+        }
+
+        /*
+        section h1{
+            border-bottom: 5px solid var(--r);
+        }
+        */
+
+        h2{
+            font-size: var(--size_18);
+            line-height: var(--size_31);
+        }
+
+        strong{
+            font-weight: var(--weight_xl);
+            color: var(--shade_4);
+        }
+
+        p{
+            line-height: var(--size_22);
+            color: var(--shade_2);
+        }
+
+        a:hover{
+            color: var(--r);
+        }
+
+
+        /*
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        */
+
+        /*
+        input[class='input_box']::after{
+            content: url(images/envelope-solid.svg);
+            margin-left: 1px;
+
+            background-color: red;
+        }
+        */
+
+        /* header -------------------------- */
+
+        header *{
+            color: var(--shade_0);
+        }
+
+        /* header > figure.banner -------------------------- */
+        header figure.banner{
+            background-color: var(--shade_2);
+            background-image: url(images/index-banner.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            /*
+            height: 50vh;
+            */
+
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            justify-content:flex-end;
+            align-items: stretch; 
+            
+            text-align: center;
+        }
+
+        header figure.banner img.logo_xl{
+            min-width: 400px;
+            width: 40%;
+            margin-top: 15%;
+            
+
+            display: flex;
+            align-self: center;
+        }
+
+        header figure.banner h1.banner_txt{
+            font-size: var(--size_20);
+
+            margin-bottom: 5%;
+
+            display: flex;
+            align-self: center;
+        }
+
+        header figure.banner nav.banner_nav{
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: center;
+            
+            width: 100%;
+        }
+
+        div.container{
+            display: flex;
+            flex-direction: row;
+
+            width: 100%;
+        }
+        
+        div.corner{
+            height: 60%;
+            width: 100px;
+
+            display: flex;
+            align-self: flex-end;
+        }
+
+        div.corner_l{
+            background: linear-gradient(-135deg, transparent 25px, rgba(255, 255, 255, .5) 0);
+        }
+
+        header figure.banner nav.banner_nav img.mouse{
+            height: 100px;
+        }
+
+        div.corner_r{
+            background: linear-gradient(135deg, transparent 25px, rgba(255, 255, 255, .5) 0);
+        }
+
+        header figure.banner nav.banner_nav a.link_tab{
+            
+            background-color: rgba(255, 255, 255, .5);
+   
+            width: 100%;
+            height: 60%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: flex-end;
+        }      
+
+        
+        /* header > header_nav -------------------------- */
+
+        header nav.header_nav{
+            background-color: var(--shade_3);            
+
+            /*
+            display: grid;
+            grid-template-columns: repeat(6 / 10wh);
+            grid-template-rows: 20% 50% 30%;
+            */
+            display: flex;
+            flex-direction: column;
+
+            padding: 0 5%;
+            padding-bottom: .5em;
+        }
+
+        header nav.header_nav *{
+            color: var(--shade_0);
+            text-decoration: none;
+        }
+
+        header nav.header_nav div.nav_row1{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+        }
+
+        header nav.header_nav div.nav_row1 a.link_en{
+            font-size: var(--size_14);
+            font-weight: var(--weight_xl);
+
+            background-color: var(--r);
+            padding: .1em 1em;
+        }
+
+        header nav.header_nav div.nav_row2{
+            display: flex;
+            flex-direction: row;
+        }
+
+        header nav.header_nav div.nav_row2 figure.logo_m{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+            width: 50%;
+        }
+
+        header nav.header_nav div.nav_row2 figure.logo_m img{
+
+            height: 80px;
+            width: max-content;
+
+            padding-bottom: 2%;            
+        }
+
+        header nav.header_nav div.nav_row2 nav.nav_link{
+            display: flex;
+            flex-direction: column;
+
+            width: 50%;         
+        }        
+
+        header nav.header_nav div.nav_row2 nav.nav_link ul.btm_link{
+
+            height: 100%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: end;
+            gap: 2vw;            
+
+            padding-left: 6vw;
+        }
+
+        header nav.header_nav div.nav_row2 nav.nav_link ul.btm_link li a{
+            padding-bottom: .2em;
+
+            transition-duration: 100ms;
+        }
+
+        header nav.header_nav div.nav_row2 nav.nav_link ul.btm_link li a:hover{
+            border-bottom: .3em solid var(--r);
+        }
+
+        header nav.header_nav div.nav_row2 nav.nav_link ul.btm_link a.link_memb{
+            margin-left: 6vw;
+        }        
+        
+        /* main -------------------------- */
+
+        main > *, footer{
+            padding: var(--size_32) 10%;
+        }
+        
+        /* article -------------------------- */
+
+        main{
+            display: flex;
+            flex-direction: column;            
+        }
+
+        main article, main section.destaques, main section.parceiros{
+            margin-top: 5vh;
+            display: flexbox;
+            justify-items: center;
+
+        }
+
+        article.h1_container{
+            width: 100px;
+            border-bottom: 5px solid var(--r);
+
+            margin-bottom: 4em;
+        }
+
+        h1.section_h1{
+            /*
+            font-size: 3em;
+            line-height: 1.5em;
+            border-bottom: .12em solid var(--r);
+            /*
+            text-decoration: .2em underline var(--r);
+            *//*
+            margin-bottom: 1.4em;
+
+            display: block;
+
+            */
+            font-size: 3em;
+            line-height: 1.5em;            
+
+        }
+
+        main article p{
+            color: var(--shade_3);
+            margin-bottom: 1.2em;
+        }
+
+        .btn{
+            background-color: var(--r);
+
+            font-size: var(--size_16);
+            font-weight: var(--weight_xl);
+            color: var(--shade_0);
+            
+            padding: .2em 2em;
+            margin: 4em 0 2em;
+
+            display: block;
+        }
+
+        .btn:hover{
+            color: var(--shade_0);
+        }
+        
+        /* section destaques ---------------------------*/
+
+        main section.destaques{
+            background-color: var(--shade_1);
+        }
+
+        /* section noticias -------------------------- */
+
+        /*
+        main section{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;           
+        }
+
+        */
+
+        h2.section_h2{
+            text-transform: capitalize;
+            font-size: 2em;
+            line-height: 1.5em; 
+
+            width: 50px;
+            border-bottom: 5px solid var(--r);
+
+            margin-bottom: 1em;
+        }
+
+        nav.nav_cards{
+            display: flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+
+            align-content: stretch;
+            justify-content: center;
+
+            gap: var(--size_35);
+
+            margin-bottom: 10vh;
+        }
+
+        a.card{
+            text-transform: none;
+
+            width: 300px;           
+
+            display: flex;
+            flex-direction: column;
+
+            box-shadow: 0 10px 50px rgba(51, 51, 51, .1);
+            transition-delay: 150ms ease-in;
+
+            background-color: transparent;
+        }
+
+        figure.card_img{
+            height: 300px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            background-color: var(--shade_2);
+        }
+
+        a.noticias_card figure.img_1{
+            background-image: url(images/Imagem01N.png);
+        }
+
+        a.noticias_card figure.img_2{
+            background-image: url(images/stomach.png);
+        }
+
+        a.noticias_card figure.img_3{
+            background-image: url(images/wod_logo.png);
+        }
+
+        a.noticias_card figure.img_4{
+            background-image: url(images/ImagemDestaque.jpg);
+            background-size: 100%;
+            background-position: center -95px;
+        }
+        
+        /* CORRIGIR HOVER, SOMBRA E DATA SEMPRE NO FUNDO INDEPENDENTEMENTE DA ALTURA */
+        a.card:hover{
+            box-shadow: 0 0 10px 2px rgba(51, 51, 51, 1);
+        }
+
+        article.card_des{
+            background-color: var(--shade_0);
+
+            display: flex;
+            flex-direction: column;
+
+            padding: .4em .8em .4em;
+            border-top: 5px solid var(--r);
+            margin-top: 0;
+        }
+
+        article.card_txt{
+            margin-top: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-items: stretch;
+        }
+
+        a.card h1{
+            font-weight: 600;
+            font-size: 1em;
+            line-height: 1.2em;            
+
+            padding-right: 2em;
+            margin-bottom: .4em;
+        }
+
+        /*
+        a.card p{}
+        */
+
+        h2.card_date{
+            text-transform: uppercase;
+
+            font-weight: 600;
+            font-size: 1.1em;
+
+            color: var(--r);  
+        }
+        
+        /* section imprensa -------------------------- */
+
+        /* section newsletter -------------------------- */
+        
+        section.newsletter{
+            background-color: var(--r);
+
+            margin-top: 0;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        article.t_nl{
+            border: none;
+        }        
+        
+        section.newsletter *{
+            color: var(--shade_0);
+            text-align: center;
+        }
+        
+        form.form_container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2.5em;
+
+            margin-bottom: 10vh;
+        }
+
+        /*
+        form div.input_box *{
+            color: var(--shade_3);
+            text-align: start;
+            width: 300px;
+            height: 1.5em;
+            height: 50px;
+        }
+        */
+        
+        label.form_txt{
+            font-size: var(--size_20);
+            line-height: var(--size_24);
+        }
+
+        div.input_box{        
+            display: flex;
+            flex-direction: row;
+
+            width: 100%;
+        }
+
+        form.form_container div.input_box input.input_user_mail{/*
+            background-image: url(images/icons/envelope_7f7f7f.svg);
+            background-repeat: no-repeat;
+            background-position: 95%;
+            */
+
+            font-size: var(--size_18);
+            color: var(--shade_3);
+            text-align: left;
+
+            width: 90%;
+
+            padding: 16px;            
+
+            border: none;
+
+            background-color: var(--shade_0);
+        }
+
+        input.input_icon{            
+            background-image: url(images/icons/envelope_7f7f7f.svg);
+            
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-position: center center;
+
+            background-color: var(--shade_0);
+
+            width: 14%;
+            height: auto;
+
+            padding-right: 5px;
+            border: none;
+        }
+
+        input.input_icon:hover{
+            cursor: pointer;
+        }
+        /* nav -------------------------- */
+
+        /* section parceiros -------------------------- */
+
+        main section.parceiros{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin-top: 0;
+        }
+
+        main section.parceiros nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            width: 100%;
+        }
+
+        main section.parceiros a img.thumb_logo{
+            height: 120px;
+            width: auto;
+            padding: 54px 0;
+        }
+
+        /* footer -------------------------- */
+
+        footer{
+            background-color: var(--shade_3);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: var(--size_32);
+            flex-wrap: wrap;
+
+            padding: 5% 10%;
+        }
+
+        footer h1{
+            font-size: var(--size_28);
+            font-weight: var(--weight_xl);
+
+            margin-bottom: 1em;
+        }
+
+        footer a, footer li, footer label{
+            font-size: var(--size_20);
+            text-transform: none;
+
+            margin-bottom: .4em;
+        }
+
+        footer article{
+            display: flex;
+            flex-direction: column;
+
+            width: 400px;
+            margin-bottom: 5vh;
+        }
+
+        footer article *{
+            color: var(--shade_0);
+
+        }          
+        
+        footer article a :hover{
+            color: var(--r);
+        }
+
+        /* article informações -------------------------- */
+
+        footer article.info li{
+            list-style-position: inside;
+            list-style-type: square;
+            text-indent: -1.4em;
+            padding-left: 1.4em;
+
+            color: var(--r);
+        }      
+        
+        /* article newsletter -------------------------- */
+
+        footer article.newsl{
+            /*
+            text-align: center;   
+            */     
+
+            justify-content: space-between;
+            align-items: center;      
+        }
+
+        footer div.newsl_container{
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer article.newsl form.form_container{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2em;
+
+            width: 90%;
+        }
+
+        footer article.newsl form.form_container div.input_box{
+            /*
+            width: 90%;
+            */
+        }
+        footer article.newsl form.form_container div.input_box input.input_user_mail{
+            padding: 8px;
+
+            border-bottom: 4px solid var(--r);
+        }
+
+        footer article.newsl form.form_container div.input_box input.input_icon{
+            background-size: 50%;
+
+            width: 52px;
+            border-bottom: 4px solid var(--r);
+        }
+
+        /*
+        div.corner_l{
+            background: linear-gradient(-135deg, transparent 25px, rgba(255, 255, 255, .5) 0);
+        }
+        */
+
+        footer article.newsl div.social{
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+        }
+
+        footer article.newsl div.social a.icon_m-container{
+            display: flex;
+            align-self: flex-end;
+            height: fit-content;
+        }
+
+        footer article.newsl div.social a.icon_m-container{
+            height: 120px;
+        }
+
+        footer article.newsl div.social a.icon_m-container2{
+            height: 80px;
+        }
+
+        footer article.newsl div.social a.icon_m-container figure.icon_m{
+            height: 50px;
+            width: 65px;
+
+            padding: 15px;
+
+            background-color: var(--shade_0);
+
+            clip-path: polygon(50% -50%, 100% 50%, 50% 150%, 0 50%);
+            
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 50%;
+        }
+
+        footer article.newsl div.social a.icon_m-container figure.icon_m:hover{
+            background-color: var(--b);
+        }
+
+        footer article.newsl div.social a.icon_m-container figure.icon_facebook{
+            background-image: url(images/icons/facebook-f-brands_333.svg);
+            background-size: 35%;
+        }
+        footer article.newsl div.social a.icon_m-container figure.icon_twiter{
+            background-image: url(images/icons/twitter-brands_333.svg);
+        }
+        footer article.newsl div.social a.icon_m-container figure.icon_youtube{
+            background-image: url(images/icons/youtube-brands_333.svg);
+        }
+
+            
+
+        /* TENTATIVAS DE FAZER PERCEPÇÃO VISUAL DE CAIXA HEXAGONAL COM IMAGEM E BORDER:
+        container hexagonal maior que a imagem (hexagonal), a modos de virtualizar uma border; container hexagonal apenas com border;
+        /*
+        .icon_m{
+            height: var(--size_28);
+            padding: var(--size_24);
+
+
+            background-color: red;
+        
+        }       
+        *//*
+        .hexagon {
+            --b: 50px; /* adjust to control the border  *//*
+            height: 200px; /* adjust to control the size  *//*
+            aspect-ratio: 1/cos(30deg);
+            clip-path: 
+                polygon(0 50%,50% -50%,100% 50%,50% 150%,0 50%,
+                var(--b) 50%,
+                calc(25% + var(--b)*cos(60deg)) calc(100% - var(--b)*sin(60deg)),
+                calc(75% - var(--b)*cos(60deg)) calc(100% - var(--b)*sin(60deg)),
+                calc(100% - var(--b)) 50%,
+                calc(75% - var(--b)*cos(60deg)) calc(var(--b)*sin(60deg)),
+                calc(25% + var(--b)*cos(60deg)) calc(var(--b)*sin(60deg)),
+                var(--b) 50%);
+            background: red;
+            }
+            /*
+
+        img.hexagon_img{
+            height: 100px; /* adjust to control the size  *//*
+            aspect-ratio: 1/cos(30deg);
+            clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+            background: #3B8686;                }
+            */
+        
+        
+        /* article onde estamos -------------------------- */
+        
+        footer article.location a{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+
+            width: 75%;         
+        }
+    
+        a img.icon_s{
+            height: 24px;
+            width: 24px;
+            
+            margin: 12px;
+        }
+
+        footer article.location iframe.map{
+            height: 200px;
+            width: 100%;
+
+            margin-top: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <figure class="banner">
+            <img src="images/LogotipoSPEO.png" alt="logótipo SPEO" class="logo_xl">
+            <h1 class="banner_txt">sociedade portuguesa para o estudo da obesidade</h1>
+
+            <nav class="banner_nav">
+                <div class="container">
+                    <a href="#" class="link_tab">sobre a speo</a>
+                    <div class="corner corner_l"></div>  
+                </div>              
+                <img src="images/icons/IconMouse.png" alt="mouse" class="mouse">
+                <div class="container">
+                    <div class="corner corner_r"></div>
+                    <a href="#" class="link_tab">membros</a> 
+                </div>
+                               
+            </nav>
+        </figure>
+
+        <nav class="header_nav">
+
+            <div class="nav_row1">
+                <a href="#" class="link link_en">en</a>                
+            </div>
+            
+            <div class="nav_row2">
+
+                <figure class="logo_m">
+                    <img src="images/LogotipoSPEO.png" alt="logótipo SPEO">
+                </figure>
+                
+                <nav class="nav_link">
+                    
+                    <ul class="btm_link">
+                        <li><a href="#" class="link link_speo">speo</a></li>
+                        <li><a href="#" class="link link_dest">destaques</a></li>
+                        <li><a href="#" class="link link_act">actividades</a></li>
+                        <li><a href="#" class="link link_memb">membros</a></li>
+                    </ul>                    
+                </nav>
+            </div>
+        </nav>        
+    </header>
+
+    <main>
+        <article>
+            <article class="h1_container">
+                <h1 class="section_h1">speo</h1>
+            </article>
+                    
+            <p><strong>Fundada em 1989,</strong> a <strong>Sociedade Portuguesa para o Estudo da Obesidade (SPEO),</strong> com sede em Lisboa, tem como objectivo principal promover a investigação e a divulgação de conhecimento relacionado com a obesidade e os aspectos com ela relacionados, com relevância para a sociedade e comunidade científica (p.ex., epidemiologia, comportamento alimentar e actividade física, complicações médicas, etc.).</p>
+
+            <p>A organização de reuniões científicas, nomeadamente o <strong>Congresso Português de Obesidade,</strong> assumem para a <strong>SPEO</strong> um papel decisivo na sua esfera de acção e muitos dos seus recursos são dedicados a este evento anual. A <strong>SPEO</strong> assegura também a representação nacional das sociedades científica e organizações afins internacionais dedicadas ao tema da obesidade, como a <strong>International Society for the Study of Obesity,</strong> e a <strong>European Association for the Study of Obesity.</strong></p>
+
+            <a href="#" class="btn">ler mais</a>
+        </article>
+
+        <section class="destaques">
+
+            <article class="h1_container">
+                <h1 class="section_h1">destaques</h1>
+            </article>            
+
+            <section class="noticias">
+                <h2 class="section_h2">notícias</h2>
+
+                <nav class="nav_cards nav_noticias">
+
+                    <a href="#" class="noticias_card card">
+                        <figure class="card_img img_1"></figure>
+                        <!--
+                        <img src="images/Imagem01N.png" alt="#">
+                        -->
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>ico/eco 2020 to be held in dublin</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
+                            </article>
+                            <h2 class="card_date">12 jul 2017</h2>
+                        </article>
+                    </a>
+
+                    <a href="#" class="noticias_card card">
+                        <figure class="card_img img_2"></figure>
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>obesidade infantil</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
+                            </article>
+                            <h2 class="card_date">18 set 2017</h2>
+                        </article>
+                    </a>
+        
+                    <a href="#" class="noticias_card card">
+                        <figure class="card_img img_3"></figure>
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>world obesity day</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
+                            </article>                        
+                            <h2 class="card_date">25 out 2017</h2>                        
+                        </article>
+                    </a>
+    
+                    <a href="#" class="noticias_card card">
+                        <figure class="card_img img_4"></figure>
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>21º congresso português de obesidade</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
+                            </article>
+                            <h2 class="card_date">24 nov 2017</h2>
+                        </article>
+                    </a>  
+
+                </nav>
+            </section>
+
+            <section class="imprensa">
+                <h2 class="section_h2">imprensa</h2>
+
+                <nav class="nav_cards nav_imprensa">
+
+                    <a href="#" class="imprensa_card card">
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>jornal i</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus.</p>
+                            </article>
+                            <h2 class="card_date">28 jun 2017</h2>
+                        </article>
+                    </a>
+
+                    <a href="#" class="imprensa_card card">
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>eurostat</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            </article>
+                            <h2 class="card_date">28 jun 2017</h2>
+                        </article>
+                    </a>
+
+                    <a href="#" class="imprensa_card card">
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>yahoo news</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus. Adipisicing.</p>
+                            </article>
+                            <h2 class="card_date">28 set 2017</h2>
+                        </article>
+                    </a>
+
+                    <a href="#" class="imprensa_card card">
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>expresso</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus, harum ea eius.</p>
+                            </article>
+                            <h2 class="card_date">17 nov 2017</h2>
+                        </article>
+                    </a>
+
+                </nav>
+            </section>               
+        </section>
+
+        <section class="newsletter">
+
+            <article class="h1_container t_nl">
+                <h1 class="section_h1">newsletter</h1>
+            </article>
+            
+            <form action="" class="form_container">
+                <label for="user_mail" class="form_txt">Gostaria de ser assinante da nossa Newsletter?<br>Insira o seu endereço de correio electrónico aqui!</label>
+
+                <div class="input_box">
+                    <input type="text" id="user_mail" name="user_mail" placeholder="Email" class="input_user_mail">
+                    <input type="submit" value="" class="input_icon">
+                </div>
+
+            </form>
+        </section>
+
+        <section class="parceiros">
+            <article class="h1_container">
+                <h1 class="section_h1">parceiros</h1>
+            </article>
+            
+            <nav>
+                <a href="#"><img src="images/LogoSonae.png" alt="sonae" class="thumb_logo"></a>
+                <a href="#"><img src="images/LogoBayer.png" alt="bayer" class="thumb_logo"></a>
+                <a href="#"><img src="images/LogoMinisterioSaude.png" alt="saude" class="thumb_logo"></a>
+                <a href="#"><img src="images/LogoLibertySeguros.png" alt="liberty" class="thumb_logo"></a>
+                <a href="#"><img src="images/LogoMedinfar.png" alt="medinfar" class="thumb_logo"></a>
+            </nav>
+        </section>        
+    </main>
+
+    <footer>
+        <article class="info">
+            <h1>informações</h1>
+
+            <ul>
+                <li>
+                    <a href="#">ADEXO - Associação de Doentes Obesos
+                    e Ex-Obesos de Portugal</a>
+                </li>
+                <li>
+                    <a href="#">American Association of Clinical
+                    Endocrinologistsal</a>
+                </li>
+                <li>
+                    <a href="#">American Diabetes Association</a>
+                </li>
+            </ul>
+        </article>
+
+        <article class="newsl">
+            <div class="newsl_container">
+
+                <h1>newsletter</h1>
+
+                <form action="#" class="form_container">
+                    <label for="user_mail">Receba a nossa Newsletter</label>
+                    <div class="input_box">
+                        <input type="text" id="user_mail" name="user_mail" placeholder="Email" class="input_user_mail">
+                        <input type="submit" value="" class="input_icon">
+                    </div>                
+                </form>
+            </div>
+            
+
+            <div class="social">
+                
+                <a href="#" class="icon_m-container"><figure class="icon_m icon_facebook"></figure></a>
+                <a href="#" class="icon_m-container icon_m-container2"><figure class="icon_m  icon_twiter"></figure></a>
+                <a href="#" class="icon_m-container"><figure class="icon_m  icon_youtube"></figure></a>
+               
+            </div>
+        </article>
+        
+        <article class="location">
+            <h1>onde estamos</h1>
+
+            <a href="mailto:speo@sapo.pt"><img src="images/icons/envelope_fff.svg" alt="mail" class="icon_s">speo@sapo.pt</a>
+            <a href="tel:+351213904065"><img src="images/icons/phone-solid.svg" alt="phone" class="icon_s">213904065</a> 
+            <a href="https://maps.app.goo.gl/VbWJ5hKexvT4D9z59"><img src="images/icons/location-dot-solid.svg" alt="location" class="icon_s">Rua Freitas Gazul 34, Loja 2
+                1350-149 Lisboa</a>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5235.658681880511!2d-9.178709854708009!3d38.71456527037108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19335c209af0ed%3A0xf1e7f4ee0e465182!2sR.%20Freitas%20Gazul%2034%202%2C%201350-148%20Lisboa!5e0!3m2!1sen!2spt!4v1740493623093!5m2!1sen!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+        </article>
+    </footer>    
+</body>
+</html>

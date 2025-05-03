@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index-flex.css">
+    <title>Biblioteca de Livros de JS</title>
+</head>
+<body>
+    <h1>JavaScript Books Library</h1>
+
+    <section class="filters" id="filters">
+
+        <h1>See: </h1>
+
+        <nav class="grid filterContainer" id="filterContainer">
+            
+            <button class="btn filter" id="allBtn">All</button>
+            <button class="btn filter" id="readBtn">Read</button>
+            <button class="btn filter" id="notReadBtn">Non Read</button>          
+        </nav>   
+         
+        <nav class="grid searchContainer" id="searchContainer">       
+            <label for="searchTxt">Search:</label> 
+            <input type="search" class="searchTxt" id="searchTxt" name="search">
+        </nav> 
+
+        <br>
+
+        <button class="btn filter" id="showForm">Add A New Book</button>
+          
+    </section>
+
+    <section class="addEditForm" id="addEditForm">
+        <h1>Edit or Add New Books</h1>
+        <form autocomplete="off">
+            <div>
+                <label for="title">tilte</label>
+                <input type="text" id="title">
+            </div>
+            <div>
+                <label for="author">author</label>
+                <input type="text" id="author">
+            </div>
+            <div>
+                <label for="imageUrl">image thumbnail</label>
+                <input type="text" id="imageUrl">
+            </div>
+            <div>
+                <label for="imageUrlGr">image popup</label>
+                <input type="text" id="imageUrlGr"></div>
+            <div class="checkBoxContainer">
+                <label for="alreadyRead">already read</label>
+                <input type="checkbox" id="alreadyRead" class="checkBox"></div>
+            <div class="buttonsContainer">
+                <button class="btn filter" id="addBookBtn">Add</button>
+                <button class="btn filter" id="updateBookBtn">Update</button>
+            </div>            
+        </form>
+    </section>
+
+
+    <section class="grid" id="grid">
+        <!--
+       <article>
+            <h1>titulo do livro</h1>
+            <h2>autor do livro</h2>
+            <img src="livros/joj.jpg" alt="titulo" class="bookcover" id="bookcover">
+            <p>Already read: ✅ ❌</p>
+            <button class="btn del" id="del">Delete</button>
+            <button class="btn edit" id="edit">Edit</button>
+        </article>
+        -->
+    </section>
+    
+    <section class="popup" id="popup">
+        <img src="livros/angularGr.png" alt="">
+    </section>      
+
+    
+    <script src="js/data.js"></script>
+    <script src="js/dom-utils.js"></script>
+    <script src="js/data-utils.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/events.js"></script>
+
+<!--
+    <script type="module" src="js/index.js"></script>
+        -->
+
+<!--
+    <script type="module" src="js/index.js"></script>
+-->
+</body>
+</html>

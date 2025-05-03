@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #bbb;
+
+            height: 100vh;
+        }
+
+        h1{
+            text-align: left;
+        }
+
+        main{
+            border: 4px double #333;
+            margin: 1em 2em;
+            padding: 2em;
+            border-radius: 12px;
+            background-color: #eee;
+        }
+
+        table{
+            border: 2px;
+        }
+    </style>
+    <title>JavaScript - Intro</title>
+</head>
+<body>
+    <h1>JS - </h1>
+    <main>
+        <section id="output"></section>
+    </main>
+
+    <script>
+        // variável para output:
+        let texto='';
+
+        // array para disciplinas:
+        let disciplinas=['fff', 'xxx', 'yyy'];
+
+        // array para notas:
+        let notas=[2, 4, 4,];
+/*
+        // perguntar nome de um aluno:
+        let nome = String(prompt('Qual o seu nome?'));
+
+        // perguntar quantidade de disciplinas:
+        let quantidadeDisciplinas = Number(prompt('Quantas disciplinas teve?'));
+
+        // variável para contandor, iniciado a zero:
+        let contador = 0;
+
+        // repete o processo mediante a quantidade de disciplinas:
+        do{
+            //perguntar pela disciplina:
+            disciplinas.push(prompt('Qual a disciplina?'));
+
+            // pergunta pela nota que teve na disciplina:
+            notas.push(prompt('Qual a nota que teve nesta disciplina?'));
+
+            // adiciona uma volta ao contador:
+            contador ++;  
+        // repete o processo enquanto o contador tiver um valor inferior àquele da quantidade de disciplinas:          
+        } while (contador < quantidadeDisciplinas);
+*/
+        
+        // variável com a contagem de notas:
+        let quantidadeNotas=notas.lenght;
+        texto += `QUANTIDADE DE NOTAS: ${notas.length}<br>`;
+
+        // extrai todos os valores das notas:
+        let todasNotas=notas;
+        texto += `TODAS AS NOTAS: ${todasNotas}<br>`;
+
+        // variável com a soma das notas:
+        /*
+        let somaNotas=todasNotas++;
+        texto += `SOMA TODAS AS NOTAS: ${notas.reduce}<br>`;
+        */
+
+        // function com a soma das notas ( https://www.youtube.com/watch?v=5G9gj_XVqJ8 ) :
+
+        function method1(notas){
+            let soma=0;
+            let i=0;
+            while(i<notas.lenght){
+                soma += notas[i];
+                i++;
+            }
+            return soma;
+        }
+
+        texto += ` ${soma}, <br>`;
+
+
+
+        // média:
+
+        // apresenta em HTML : nome do aluno; lista de disciplinas; respectivas notas; média final; se aprovou (>=10) ou reprovou (<10):
+
+        /*
+        texto += `${nome} <br>`;
+        texto += `${quantidadeDisciplinas} <br>`;
+        
+        texto += ` ${disciplinas}, <br>`;
+        texto += ` ${notas}, <br>`;
+        */
+
+        /*
+        texto = `
+            <h3>Nome do Formando:<h3>
+            <h1>${nome}<h1>
+
+            <table border=10px>
+                <tr>
+                    <th><h3>Disciplina<h3></th>
+                    <th><h3>Nota<h3></th>
+                </tr>
+                `                
+                    for (let Disciplina of disciplinas) {
+                    texto+=`
+                    <tr>
+                        <td>${Disciplina}</td>
+                    `;}
+
+                    for (let Nota of notas) {
+                    texto+=`
+                    <td>${Nota}</td>
+                    </tr>
+                    `;}
+
+                    `                
+            </table>
+            <h3>Média Final:</h3>`;
+        */
+        
+        // escrever dentro da section output:
+        
+        let output = document.getElementById('output');        
+        output.innerHTML = texto;
+
+    </script>  
+</body>
+</html>

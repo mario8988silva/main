@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo HTML</title>
+</head>
+<body>
+
+    <h1>Vídeo em HTML5</h1>
+    <hr>
+
+    <!-- 
+    chamada de vídeo;
+    controls invoca controlos;
+    width/largura é facultativo;
+    autoplay para reproduzir automaticamente
+    loop para fazer isso mesmo
+    muted para cortar o som do vídeo
+
+    É uma boa prática deixar um texto de aviso para browsers mais arcaicos que não sejam interpretem vídeo; este não surgirá caso o vídeo seja interpretado pelo browser
+    -->
+    <video src="video/puppy.mp4" controls width="500">
+
+        <p>Mostrar texto caso o browser desactualizado não suporte áudio</p>
+    </video>
+
+
+    <!-- caso o .mp4 não seja interpretado pelo broswer, irá imediatamente interpretar o ficheiro seguinte, .webm -->
+    <video controls width="500">
+
+        <source src="video/puppy.mp4">
+        <source src="video/puppy.webm">
+        
+        <p>Mostrar texto caso o browser desactualizado não suporte áudio</p>
+    </video>
+
+    <!-- poster define uma imagem descritiva do vídeo em questão -->
+    <video src="video/puppy.mp4" controls width="500" poster="images/puppy.jpg">
+
+        <p>Mostrar texto caso o browser desactualizado não suporte áudio</p>
+    </video>
+
+    <hr>
+
+    <!-- alocar link embebed a partir do youtube 
+    youtube > video > share > embed > copy > paste no código -->
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/org3q6kXgWc?si=nImqH8luerUUW887" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <hr>
+
+    <!-- tag iframe faz um género de canal entre o nosso site e a referência do link embebido;
+    a versão de breakpoint do site surge mediante a resolução inserida
+    -->
+    <iframe width="560" height="315" src="https://www.flag.pt"></iframe>
+
+    <!-- inserir mapa a partir do google maps -->
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d637.1226533396238!2d-8.83473825875816!3d38.56858693023306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2spt!4v1737715073945!5m2!1sen!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+</html>

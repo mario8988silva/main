@@ -1,0 +1,13 @@
+
+// animations/transforms : 
+
+%thumb_rest{
+    opacity: .7;
+    transition: all 0.3s ease-out;
+}
+
+%thumb_hover{
+    transform: scale(1.2);
+    opacity: 1;
+    cursor: pointer;
+}

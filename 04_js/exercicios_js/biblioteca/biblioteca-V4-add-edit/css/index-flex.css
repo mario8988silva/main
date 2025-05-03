@@ -1,0 +1,258 @@
+* {
+    FONT-WEIGHT: 500;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+section nav h1{
+    margin-bottom: 1em;
+}
+
+img {
+    max-width: 100%;
+}
+
+body > h1{
+    margin: 1em 0;
+    border-bottom: 2px solid gray;
+    padding: 1em;
+}
+
+/* section.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
+    padding: 1em;
+}
+
+section.grid article{
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 1em;
+
+} */
+
+section.grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    padding: 1em;
+}
+
+section.grid article{
+    flex: 0 1 300px;
+    padding: 1em;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+/* todos os elementos dentro do article à excepção daqueles que sejam button, têm este atributos: */
+section.grid article > *:not(button){
+    margin: .8em 0;
+}
+
+nav.filterContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 1em 0 3em;
+}
+
+section.filters{
+    padding: 2em;
+}
+
+label{
+    font-weight: 600;
+}
+
+input.searchTxt{
+    padding: .5em;
+    outline: 1px solid gray;
+    border-radius: 8px;
+    margin-left: .5em;
+    width: 300px;
+}
+
+section.addEditForm{
+    background-color: rgb(241, 241, 241);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 20px;
+
+    height: 0;
+    overflow: hidden;
+
+    transition: height 300ms ease-out;
+}
+
+section.addEditForm.open{
+    height: 400px;
+}
+
+section.addEditForm.div{
+    padding: .3em;
+}
+
+section.addEditForm input, section.addEditForm label{
+    display: block;
+}
+
+section.addEditForm form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+section.addEditForm input{
+    width: 300px;
+
+    padding: .5em;
+    outline: 1px solid gray;
+    border-radius: 8px;
+    margin-left: .5em;
+}
+
+section.addEditForm form div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+section.addEditForm .checkBoxContainer{
+    margin-left: 32px;
+    margin-right: auto;
+}
+
+section.addEditForm input.checkBox{
+    width: 20px;
+    outline: none;
+}
+
+section.addEditForm .buttonsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 20px;
+}
+
+.hide{
+    display: none;
+}
+
+section.softGreen{
+    background-color: rgb(232, 255, 225);
+}
+
+section.popup{
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    display: none;
+}
+
+section.popup.open{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+p.alreadyRead{
+    cursor: pointer;
+}
+
+img.thumbnail{
+    cursor: pointer;
+}
+
+button.btn{    
+    font-size: 16px;
+    font-weight: 600;
+    
+    padding: 1em 2em;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+
+button.filter{
+    background-color: #ddd;
+}
+
+button.del{
+    color: #fff;
+
+    background-color: #dd3434;
+}
+
+button.edit{
+    color: #fff;
+
+    background-color: #81db73;
+}
+
+button.btn:hover{
+    cursor: pointer;
+}
+
+button.filter:hover{
+    background-color: #aaa;
+}
+
+button.del:hover{
+    background-color: #ae2828;
+}
+
+button.edit:hover{
+    color: #fff;
+
+    background-color: #59a34d;
+}
+
+button.btn:active{
+    background-color: transparent;
+    border-width: 2px;
+    border-style: solid;
+}
+
+button.filter:active{
+    color: #666;
+
+    border-color: #999;
+}
+
+button.del:active{
+    color: #ae2828;
+
+    border-color: #ae2828;
+}
+
+button.edit:active{
+    color: #81db73;
+
+    border-color: #81db73;
+}
+

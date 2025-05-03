@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10 : Revisão</title>
+
+    <style>
+        /* global */
+        *{
+            margin:  0;
+            padding: 0;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-size: 16px;  /* default */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+            margin-top: 12vh;
+            margin-bottom: 12vh;
+        }
+
+        img, video, object{
+            max-width: 100%;
+        }
+
+        a.btn{
+            text-decoration: none;
+            color: #1b461b;
+
+            padding: .4em 1em;
+            border: 3px solid #1b461b;
+            border-radius: 12px;
+
+            align-items: flex-start;
+        }
+
+        /* header */
+        header{
+            background-color: #1b461b;
+
+            height: 10vh;
+            padding: 12px;
+
+            top: 0;
+            right: 0;
+            left: 0;            
+            position: fixed;
+
+            display: flex;
+        }
+
+        header a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        header figure{
+            flex: 1;
+
+            display:  flex;
+            align-items: center;
+        }
+
+        header nav{
+            flex: 2;
+
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        header ul{
+            display: flex;
+            align-items: center;
+            gap: 1em;
+
+            flex: 1;
+
+            list-style: none;
+
+            display: none;
+        }
+
+        header ul li:last-child{
+            margin-left: auto;
+        }
+
+        div.hamburguer{
+            font-size: 2em;
+            color: #fff;
+
+            display:  flex;
+            align-items: center;            
+        }
+
+
+        @media screen and (min-width: 720px) {
+            header ul{
+                display: flex;
+            }
+
+            div.hamburguer{
+                display: none;
+            }           
+        }
+
+        /* banner */
+
+        section.banner{
+            background-image: url(../images/landing-page-banner.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+
+            color: #fff;
+
+            height: 25vh;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 12px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        section.banner > *{
+            margin-top: 1em;
+
+        }
+
+        a.btnBanner{
+            color: #fff;
+            border-color: #fff;
+        }
+
+        /* services */
+
+        section.services{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            gap: 2em;
+        }
+
+        section.services article{
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding: 1em 4em;
+        }
+
+        section.services article h1{
+            height: 0;
+            text-indent: -10000px;
+        }
+
+        section.services article > p{
+            margin: -1em 1em 1em;
+        }
+
+        /* footer */
+
+        footer{
+            background-color: #1b461b;
+            color: #fff;
+
+            padding: 1em;
+
+            right: 0;
+            bottom: 0;
+            left: 0;
+            position: fixed;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;           
+        }
+
+        @media screen and (min-width:720px) {
+            footer{
+                flex-direction: column;
+            }
+
+            footer > *{
+                margin: .2em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="../images/ui/Logo.png" alt="logo Web Design">
+        </figure>
+
+        <nav>
+            <ul>
+                <li><a href="#">New Features</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="hamburguer">&#9776</div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="banner">
+            <h1>Responsive Web Design</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id pariatur ea ullam fugit at perspiciatis eos perferendis atque ex rem.</p>
+            <a href="#" class="btn btnBanner">New Features</a>
+        </section>
+
+        <section class="services">
+
+            <article>
+                <figure>
+                    <img src="../images/Responsive.png" alt="Responsive">
+                </figure>
+                <h1>Responsive</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, ipsum.</p>
+                <a href="#" class="btn btnMore">More</a>
+            </article>
+
+                
+            <article>
+                <figure>
+                    <img src="../images/Flexible.png" alt="Flexible">
+                </figure>
+                <h1>Flexible</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, ipsum.</p>
+                <a href="#" class="btn btnMore">More</a>
+            </article>
+                
+            <article>
+                <figure>
+                    <img src="../images/HTML5_+_CSS3.png" alt="HTML5_+_CSS3">
+                </figure>
+                <h1>HTML5_+_CSS3</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, ipsum.</p>
+                <a href="#" class="btn btnMore">More</a>
+            </article>
+                
+            <article>
+                <figure>
+                    <img src="../images/Launch_Ready.png" alt="Launch Ready">
+                </figure>
+                <h1>Launch Ready</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, ipsum.</p>
+                <a href="#" class="btn btnMore">More</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>        
+        <aside>
+            textto de Copyright &copy, 2025
+        </aside>
+
+        <aside>
+            <img src="../images/ui/icon_facebook.png" alt="icon facebook">
+            <img src="../images/ui/icon_google.png" alt="icon google">
+            <img src="../images/ui/icon_twitter.png" alt="icon twitter">
+        </aside>
+    </footer>
+</body>
+</html>

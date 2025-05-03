@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9 : Mário Silva</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border:  none;
+            box-sizing:  border-box;
+            
+        }
+
+        body *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        p {
+            display: flex;
+        }
+
+        main *{
+            padding: .6em 1em;
+
+            display: grid;
+            grid-template-columns: 1;
+            grid-auto-rows: auto;
+
+            justify-content: center;
+            display: flex; 
+        }
+
+        header{
+            background-color: orangered;    
+        }
+
+        article{
+            background-color: grey;  
+        }
+
+        aside.aside_1{
+            background-color: rgb(166, 69, 69);
+        }
+
+        aside.aside_2{
+            background-color: rgb(133, 95, 133);
+        }
+
+        footer{
+            background-color: orange;
+        }
+
+        @media screen and (min-width: 800px){            
+            
+            body *{
+                font-size: 1.1em;
+
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-auto-rows: auto;
+            }
+
+            p {
+                display: flex;
+                align-self: center;
+            }
+
+            header{
+                grid-column: span 2;
+                display: flex;
+            }
+
+            article{
+                grid-column: span 2;
+                display: flex;
+            }
+
+            aside.aside_1{
+                display: flex;     
+            }
+
+            aside.aside_2{
+                display: flex; 
+            }
+
+            footer{
+                grid-column: span 2;
+                display: flex;
+            }
+        }
+
+        @media screen and (min-width: 1240px){
+            body *{
+                font-size: 1.15em;
+
+                display: grid;
+                grid-template-columns: 20% 60% 20%;
+                grid-auto-rows: auto;
+            }
+
+            p {
+                display: flex;
+            }
+
+            header{
+                grid-column: span 3;
+                display: flex;
+            }
+
+            article{
+                grid-column: 2;
+                grid-row: 2;
+                display: flex;
+            }           
+
+            aside.aside_1{
+                display: 1; 
+                display: flex;
+            }
+
+            aside.aside_2{
+                display: 3; 
+                display: flex;
+            }
+
+            footer{
+                grid-column: span 3;
+                display: flex;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <main>
+        <header>
+            <p>Header</p>
+        </header>
+
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea explicabo expedita ratione, autem aliquam sint doloremque labore cum minima et. Asperiores expedita quibusdam cum velit perferendis atque, optio accusamus maxime.</p>
+        </article>
+
+        <aside class="aside_1">
+            <p>Aside 1</p>
+        </aside>
+
+        <aside class="aside_2">
+            <p>Aside 2</p>
+        </aside>
+
+        <footer>
+            <p>Footer</p>
+        </footer>   
+    </main>
+</body>
+</html>

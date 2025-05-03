@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #bbb;
+
+            height: 100vh;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        main{
+            border: 4px double #333;
+            margin: 1em 2em;
+            padding: 2em;
+            border-radius: 12px;
+            background-color: #eee;
+        }
+    </style>
+    <title>JavaScript - Intro</title>
+</head>
+<body>
+    <h1>JS - </h1>
+    <main>
+        <section id="output"></section>
+    </main>
+
+    <!-- CHAMA O FICHEIRO DE SCRIPT -->
+    <script src="../js/biblioteca.js"></script>
+    <script>
+        // variável para eventual output:
+        let texto='';
+
+        // CHAMA O FICHEIRO COM A FUNCTION QUE FAZ O RANDOM NUMBER. AQUI SÃO DEFINIDOS OS NÚMEROS VI E VF:
+        let numALeatorio = randomIntBetweenNumbers(0, 20);
+        
+        // pedir número ao utilizador:
+        let numero=Number(prompt('Adivinhe um número entre 0 e 20.'))
+
+        // número de tentativas:
+        let tentativas=1;
+
+        //Enquanto o numero inserido for diferente daquele aleatório
+        while(numero!==numALeatorio){
+            // se o numero inserido for superior àquele gerido:
+            if (numero < numALeatorio){
+                alert(`o número ${numero} é demasiado BAIXO`)
+            // caso contrário (se o numero inserido for superior àquele gerido:)
+            } else{
+                alert(`o número ${numero}, é demasiado ALTO`)
+            }
+            
+            // escreve o número inserido:
+            texto += `<h3>${numero}</h3><br>`;
+
+            // Volta a formular a questão/pedido de input:
+            numero=Number(prompt('Adivinhe um número entre 0 e 20.'))
+
+            //soma mais uma tentaiva:
+            tentativas ++;
+        }
+
+        texto += `
+            <hr>
+            <p> Parabéns acertou no número: ${numALeatorio} </p>
+            <p>Em ${tentativas} tentativas.</p>
+            `;        
+        
+        // escrever dentro da section output:        
+        let output = document.getElementById('output');        
+        output.innerHTML = texto;
+
+    </script>
+<!--
+    <script src="js/script.js"></script>
+-->    
+</body>
+</html>

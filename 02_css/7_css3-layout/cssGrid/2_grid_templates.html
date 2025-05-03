@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="basic.css">
+        <style>
+            /*
+            .container{
+
+                display: grid;
+                /* define a largura de cada uma das colunas *//*
+                grid-template-columns: 150px auto 100px;
+                /*define a altura de cada uma das linhas *//*
+                grid-template-rows: 100px 200px;
+
+                grid-gap: 3px;
+            }
+            */
+
+            .container{
+                display: grid;
+                /* fr é um tipo de medição */
+                /*
+                grid-template-columns: 2fr 1fr 1fr;
+                */
+                /* repete 3 vexes o valor x */
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 3px;
+
+                /* forma resumida de editar grid */
+                grid-template: repeat(2,100px) / repeat(3, 1fr);
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </body>
+</html>

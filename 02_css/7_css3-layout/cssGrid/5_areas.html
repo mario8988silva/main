@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="basic5.css">
+    <style>
+        
+        
+        .container {
+            height: 100%;
+            display: grid;
+            grid-gap: 3px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 80px auto 80px;
+
+            grid-template-areas:
+            /* faz mapeamento de cada uma das células existentes
+            serve para prototipagem de layouts */
+            "h h h h h h h h h h h ."
+            "m m c c c c c c c c c c"
+            ". f f f f f f f f f f f";
+        }
+        
+        .header {
+            grid-area: h;
+        }
+
+        .menu {
+            grid-area: m;
+        }
+
+        .content { 
+            grid-area: c;
+        }
+
+        .footer {
+           grid-area: f;            
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">HEADER</div>
+        <div class="menu">MENU</div>
+        <div class="content">CONTENT</div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>
+</html>
