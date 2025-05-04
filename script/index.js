@@ -1,3 +1,13 @@
+/*
+A FAZER:
+    > cards têm apenas background image;
+    > quando mouse hover, atenua background e mostra type; 
+    > ao clicar, type muda de cor;
+
+    > associar cada um dos botões a modos de fazer efeito de filtro mediante os conteúdos da array;
+
+    > acrescentar os restantes conteúdos, devidamente preenchidos;
+*/
 // definição de variáveis locais:
 const btn = document.querySelectorAll(".btn");
 const navigator_container = document.getElementById("navigator_container");
@@ -76,4 +86,5 @@ exercises.forEach(ex => {
     // Append the card to the container
     navigator_container.appendChild(a);
 });
+
 
