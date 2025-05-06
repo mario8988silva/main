@@ -7,10 +7,14 @@ A FAZER:
     > associar cada um dos botões a modos de fazer efeito de filtro mediante os conteúdos da array;
 
     > acrescentar os restantes conteúdos, devidamente preenchidos;
+
+    > fazer algo quanto aos botões, algo que mencione que o botão está activo ou não quando tem mouse:hover;
 */
 // definição de variáveis locais:
 const btn = document.querySelectorAll(".btn");
 const navigator_container = document.getElementById("navigator_container");
+
+document.getElementById('buttons_container').addEventListener('click', filterEvents, false);
 
 // definição de eventos:
 // ACTIVA CADA UM DOS BOTÕES:
@@ -18,53 +22,30 @@ btn.forEach(btn => {
     btn.addEventListener("click", () => {
         // MUDA A COR DO BOTÃO MEDIANTE CLIQUE:
         btn.classList.toggle("active");
-
         console.log(btn.textContent);
     });
 });
 
 // definição de funções:
-/*
-function filterEvents(e){
-    let el = e.target;
 
-    if (el.id == 'btnCSS'){
-        getCssExercises(getExercises());
+// filtragem:
+function filterEvents( {target:{id}}){
+
+    if ( id == 'btnHTML'){
+        showExercises(getHTMLExercises());
+        console.log('btnHTML confirm');       
+    }    
+
+    if ( id == 'btnCSS'){
+        showExercises(getCssExercises());
+        console.log('btnCSS confirm');       
     }
-}*/
-
-/*
-exercises.forEach(ex => {
-    const a = document.createElement("a");
-    a.href = ex.urlLink;
-    a.target = "_blank";
-    a.className = "card";
-    a.id = `card-${ex.id}`; // optional, for unique card ID
-
-    const p = document.createElement("p");
-    p.textContent = ex.name;
-
-    a.appendChild(p);
-    container.appendChild(a);
-});
-
-*/
-
-//showExercises(getExercises());
-/*
-function showExercises(arrayExercises){
-    navigator_container.innerHTML = "";
-
-    arrayExercises.map(ex => {
-        navigator_container.innerHTML += `
-            <a href="${ex.urlLink}" target="_blank" class="card" id="card_${ex.id}">
-                <p>${ex.name}</p>
-            </a>
-        `;
-    })
 }
-*/
 
+showExercises(getExercises());
+
+// fazer cards:
+/*
 exercises.forEach(ex => {
     const a = document.createElement("a");
     a.href = ex.urlLink;
@@ -86,5 +67,26 @@ exercises.forEach(ex => {
     // Append the card to the container
     navigator_container.appendChild(a);
 });
+*/
+
+function showExercises(arrayExercises){
+
+    navigator_container.innerHTML = '';
+
+    arrayExercises.map ( exe => {
+        navigator_container.innerHTML += `
+            <a 
+            href="${exe.urlLink}" 
+            target="_blank" 
+            class="card" 
+            id="card-${exe.id}"
+            style="background-image: url(${exe.imageLink});">
+                <p>${exe.name}</p>
+            </a>
+        `
+    })
+
+
+}
 
 
