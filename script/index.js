@@ -3,18 +3,28 @@ A FAZER:
     > cards têm apenas background image;
     > quando mouse hover, atenua background e mostra type; 
     > ao clicar, type muda de cor;
+    > isto apenas serve cards de exercicios - os outros, dado que não têm imagem, devem ficar com o texto;
 
-    > associar cada um dos botões a modos de fazer efeito de filtro mediante os conteúdos da array;
+    > cada um dos botões/filtros pode ser somado a outros botões/filtros;
+
+    > cada um dos botões deve ter toogle;
+
+    > botão All já vem seleccionado por defeito;
 
     > acrescentar os restantes conteúdos, devidamente preenchidos;
 
-    > fazer algo quanto aos botões, algo que mencione que o botão está activo ou não quando tem mouse:hover;
+    > organização dos botões:
+    >> temáticas divididas em linhas;
+    >> dispor em grid;
+
+    > navigator deve ficar fixed. banner deve ficar escondido mediante scroll down;
 */
 // definição de variáveis locais:
 const btn = document.querySelectorAll(".btn");
 const navigator_container = document.getElementById("navigator_container");
 
 document.getElementById('buttons_container').addEventListener('click', filterEvents, false);
+//document.getElementsByClassName('.card').addEventListener('hover', hoverCardEvents, false);
 
 // definição de eventos:
 // ACTIVA CADA UM DOS BOTÕES:
@@ -30,16 +40,57 @@ btn.forEach(btn => {
 
 // filtragem:
 function filterEvents( {target:{id}}){
+    
+    if ( id == 'btnAll'){
+        showExercises(getExercises());
+        console.log('btnAll confirm');       
+    }
 
+    if ( id == 'btnModule'){
+        showExercises(getTypeModule());
+        console.log('btnModule confirm');       
+    }
+
+    if ( id == 'btnExercise'){
+        showExercises(getTypeExercise());
+        console.log('btnExercise confirm');       
+    }
+
+    if ( id == 'btnRepository'){
+        showExercises(getTypeRepository());
+        console.log('btnRepository confirm');       
+    }
+
+    if ( id == 'btnProject'){
+        showExercises(getTypeProject());
+        console.log('btnProject confirm');       
+    }
+    
     if ( id == 'btnHTML'){
         showExercises(getHTMLExercises());
         console.log('btnHTML confirm');       
     }    
 
     if ( id == 'btnCSS'){
-        showExercises(getCssExercises());
+        showExercises(getCSSExercises());
         console.log('btnCSS confirm');       
     }
+
+    if ( id == 'btnProgrammingConcepts'){
+        showExercises(getprogrammingConcepts());
+        console.log('btnProgrammingConcepts confirm');       
+    }
+
+    if ( id == 'btnJavaScript'){
+        showExercises(getJavaScript());
+        console.log('btnJavaScript confirm');       
+    }
+
+    if ( id == 'btnReact'){
+        showExercises(getReact());
+        console.log('btnReact confirm');       
+    }
+    
 }
 
 showExercises(getExercises());

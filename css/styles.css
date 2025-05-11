@@ -94,6 +94,7 @@
     button{
         background-color: var(--c4);
         padding: 1em 2em;
+        border: 2px, solid, transparent;
 
         color: var(--c3);
         font-weight: 600;
@@ -103,6 +104,18 @@
         background-color: var(--c3);
 
         color: var(--c1);
+        
+        cursor: pointer;
+
+        transition: .2s;
+    }
+
+    button:active{
+        background-color: var(--c4);
+        border: 2px, solid, var(--c3);
+
+        color: var(--c3);
+
         cursor: pointer;
 
         transition: .2s;
@@ -168,17 +181,21 @@
         font-weight: 800;
 
         color: var(--c4);
-
     }
-
+    
     main nav a:hover{
         background-color: var(--c3);
     }
     
     main nav a p:hover{
         color: var(--c1);
+        text-shadow: var(--c3) 1px 0 10px;
+
+        transition: 150ms ease-in-out;
+
     }
 
+    
     .active{
         background-color: var(--c3);
 

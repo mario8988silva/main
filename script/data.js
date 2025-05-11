@@ -1,5 +1,5 @@
 let exercises = [
-
+    
     /*
     {
         id : 0,
@@ -17,8 +17,18 @@ let exercises = [
     },
     */
 
+   // ****************************************** HTML
+   {
+        id : 100,
+        name : 'html repository',
+        urlLink : 'https://github.com/mario8988silva/06_modulo-html',
+        imageLink : '',
+        languages : 'html',
+        type : 'repository',
+    },
+
     {
-        id : 11,
+        id : 129,
         name : 'recipes',
         urlLink : '01_html/exercicios/teste3/index.html',
         imageLink : 'images/07.jpg',
@@ -26,8 +36,18 @@ let exercises = [
         type : 'exercise',
     },
 
+    // ****************************************** CSS
     {
-        id : 12,
+        id : 200,
+        name : 'css repository',
+        urlLink : 'https://github.com/mario8988silva/07_modulo-css',
+        imageLink : '',
+        languages : 'css',
+        type : 'repository',
+    },
+
+    {
+        id : 283,
         name : 'box model',
         urlLink : '02_css/0_exercicios/1-exercicio-box-model-inicio/index.html',
         imageLink : 'images/08.png',
@@ -36,7 +56,7 @@ let exercises = [
     },
 
     {
-        id : 13,
+        id : 284,
         name : 'newsletter Flag',
         urlLink : '02_css/0_exercicios/2-newsletter-FLAG_2/2-newsletter-1-FLAG/index.html',
         imageLink : 'images/09.png',
@@ -45,7 +65,7 @@ let exercises = [
     },
 
     {
-        id : 14,
+        id : 285,
         name : 'newsletter EDP',
         urlLink : '02_css/0_exercicios/3-newsletter-EDP/3-newsletter-2-EDP/index.html',
         imageLink : 'images/10.png',
@@ -54,7 +74,7 @@ let exercises = [
     },
 
     {
-        id : 15,
+        id : 286,
         name : 'newsletter Teashop',
         urlLink : '02_css/0_exercicios/4-newsletter-Teashop/newsletter-Teashop/index.html',
         imageLink : 'images/11.png',
@@ -63,7 +83,7 @@ let exercises = [
     },
 
     {
-        id : 16,
+        id : 287,
         name : 'gallery grids',
         urlLink : '02_css/0_exercicios/5-gallery-grids-inicio/index.html',
         imageLink : 'images/12.png',
@@ -72,7 +92,7 @@ let exercises = [
     },
 
     {
-        id : 17,
+        id : 288,
         name : 'SPEO',
         urlLink : '02_css/0_exercicios/6-exercicoSPEO-inicio/index.html',
         imageLink : 'images/13.jpg',
@@ -81,7 +101,7 @@ let exercises = [
     },
 
     {
-        id : 18,
+        id : 289,
         name : 'SASS',
         urlLink : '02_css/0_exercicios/7-exercicio-newsletter-inicio-sass/index.html',
         imageLink : 'images/14.png',
@@ -90,7 +110,7 @@ let exercises = [
     },
 
     {
-        id : 19,
+        id : 290,
         name : 'gallery RWD',
         urlLink : '02_css/0_exercicios/8-gallery-RWD/index.html',
         imageLink : 'images/15.png',
@@ -99,7 +119,7 @@ let exercises = [
     },
 
     {
-        id : 20,
+        id : 291,
         name : 'responsive flex',
         urlLink : '02_css/0_exercicios/9-responsive-flex/7-responsive-flex/index.html',
         imageLink : 'images/16.png',
@@ -108,7 +128,7 @@ let exercises = [
     },
 
     {
-        id : 21,
+        id : 292,
         name : 'webdesign RWD',
         urlLink : '02_css/0_exercicios/10-rwdExercicio/index.html',
         imageLink : 'images/17.png',
@@ -116,8 +136,28 @@ let exercises = [
         type : 'exercise',
     },
 
+    // ****************************************** programmingConcepts
     {
-        id : 22,
+        id : 300,
+        name : 'programming concepts repository',
+        urlLink : 'https://github.com/mario8988silva/modulo_javascript/tree/23c2ce498561eb45df99b48e686f1b6ad2d81d8d/conceitos_programacao',
+        imageLink : '',
+        languages : 'programmingConcepts',
+        type : 'repository',
+    },  
+
+    // ****************************************** javaScript
+    {
+        id : 400,
+        name : 'javaScript repository',
+        urlLink : 'https://github.com/mario8988silva/modulo_javascript',
+        imageLink : '',
+        languages : 'javascript',
+        type : 'repository',
+    },
+
+    {
+        id : 424,
         name : 'form exercise',
         urlLink : '04_js/exercicios_js/exercicioForm/formExercicio.html',
         imageLink : 'images/18.jpg',
@@ -126,12 +166,40 @@ let exercises = [
     },
 
     {
-        id : 23,
-        name : 'library v.5',
+        id : 425,
+        name : 'library v.4',
         urlLink : '04_js/exercicios_js/biblioteca/biblioteca-V4-add-edit/index.html',
         imageLink : 'images/19.png',
         languages : 'javaScript',
         type : 'exercise',
     },
 
+    {
+        id : 426,
+        name : 'async random user',
+        urlLink : '04_js/exercicios_js/async-random-users-inicio/index.html',
+        imageLink : 'images/24.png',
+        languages : 'javaScript',
+        type : 'exercise',
+    },
+
+    // ****************************************** react
+    {
+        id : 500,
+        name : 'react repository',
+        urlLink : 'https://github.com/mario8988silva/modulo_react.git',
+        imageLink : '',
+        languages : 'react',
+        type : 'repository',
+    },  
+
+    // ****************************************** FrontEnd Project
+    {
+        id : 600,
+        name : 'front end devolpment',
+        urlLink : 'https://www.figma.com/design/Lw7uSBmUxGHirsgAKrOJPs/FrontEnd_Project?node-id=0-1&t=sBlTS0T3usb8CjHM-1',
+        imageLink : '',
+        languages : 'javaScript',
+        type : 'project',
+    },
 ]

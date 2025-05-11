@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Silva : Main Page</title>
+
+    <style>
+        /* reset de estilos */
+
+        *{
+            text-decoration: none;
+            text-align: center;
+            font-family: Helvetica, Arial, sans-serif;
+
+            list-style: none;
+
+            padding: 0;
+            border: none;
+            margin: 0;           
+            box-sizing: border-box;
+
+            /* variáveis */
+            /* cor */
+            --c1:#ffe;
+            --c2:#888;
+            --c3:#333;
+            --c4:#ccc;
+            --c5:#333;
+            --c6:#333;
+
+            /* font-size */
+            --fs1: 2em;
+            --fs2: 1.5em;
+            --fs3: 1.2em;
+            --fs4: 1em;
+            --fs5: .8em;
+            --fs6: .6em;
+            
+            /* medidas fixas */
+            --m1: 10px;
+            --m2: 25px;
+            --m3: 50px;
+            --m4: 100px;
+            --m5: 300px;
+            --m6: 600px;
+        }
+
+        html{
+            background-color: var(--c1);
+        }
+
+        /* tipografia */
+        h1, h2, a{
+            color: var(--c5);
+        }
+
+        h1{
+            font-size: var(--fs3);
+        }
+
+        h2 a{
+            font-size: 2.4em;
+        }
+
+        h2 a:hover{
+            color: var(--c2);
+        }
+
+        .long_txt{
+            font-size: var(--fs2);
+        }
+
+        .long_txt2{
+            font-size: var(--fs3);
+        }
+
+        .long_txt3{
+            font-size: var(--fs4);
+        }
+
+
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: var(--m4);
+
+            margin: 12% 6% 24% 6%;  
+        }
+
+        /* nav */
+        /* ul */
+
+        main nav ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 60px;      
+            
+            flex-wrap: wrap;
+            
+            width: 100%;
+            height: auto;
+        }
+
+        nav a{            
+            background-color: var(--c2);            
+
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+
+            font-size: var(--fs1);
+            font-weight: 600;           
+
+            padding: var(--fs6) var(--fs1);
+        }
+
+        nav a:hover{
+            background-color: var(--c3);
+        }
+
+        nav a.null{
+            background-color: var(--c4);
+            color: var(--c2);
+        }
+
+        nav a.null:hover{
+            background-color: var(--c4);
+        }
+
+        @media (min-width: 960px){
+
+            h2 a{
+                font-size: 3em;
+            }
+
+            main{
+                margin: 18vh 6vh 12vh 6vh;  
+            }
+
+            main nav ul{
+                flex-direction: row;
+                gap: 80px;
+            }
+            
+        }
+        
+    </style>
+</head>
+<body>
+
+    <main>
+        <article>
+            <h1>FLAG Fullstack Devolper</h1>
+            <h2><a href="https://github.com/mario8988silva">Mário Silva</a></h2>
+        </article>
+        
+        <nav>
+            <ul>
+                
+                <li><a href="https://github.com/mario8988silva/06_modulo-html" class="long_txt">html repository</a></li>    
+                <li><a href="https://github.com/mario8988silva/06_modulo-html/index.html">html</a></li>
+
+                <li><a href="https://github.com/mario8988silva/07_modulo-css"  class="long_txt">css repository</a></li>
+                <li><a href="https://mario8988silva.github.io/07_modulo-css/0_exercicios/index.html">css</a></li>
+
+                <li><a href="https://github.com/mario8988silva/modulo_javascript" class="long_txt2">JavaScript repository</a></li>                 
+                <li><a href="https://mario8988silva.github.io/modulo_javascript/index.html">JavaScript</a></li>
+
+                <li><a href="https://www.figma.com/design/Lw7uSBmUxGHirsgAKrOJPs/FrontEnd_Project?node-id=0-1&t=sBlTS0T3usb8CjHM-1" class="long_txt3">FrontEnd Project : Dev</a></li>                 
+                <li><a href="#" class="null long_txt2">FrontEnd Project</a></li>             
+            </ul>
+        </nav>   
+    </main>    
+</body>
+</html>
