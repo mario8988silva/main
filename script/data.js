@@ -141,7 +141,7 @@ let exercises = [
         id : 300,
         name : 'programming concepts repository',
         urlLink : 'https://github.com/mario8988silva/modulo_javascript/tree/23c2ce498561eb45df99b48e686f1b6ad2d81d8d/conceitos_programacao',
-        imageLink : '',
+        imageLink : 'images/github.png',
         languages : 'programmingConcepts',
         type : 'repository',
     },  
@@ -167,7 +167,7 @@ let exercises = [
 
     {
         id : 425,
-        name : 'library v.4',
+        name : 'library v.5',
         urlLink : '04_js/exercicios_js/biblioteca/biblioteca-V4-add-edit/index.html',
         imageLink : 'images/19.png',
         languages : 'javaScript',
