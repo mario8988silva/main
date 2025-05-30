@@ -227,6 +227,6 @@ let exercises = [
         urlLink : 'https://github.com/mario8988silva/frontEnd_project.git',
         imageLink : 'images/github.png',
         languages : 'javaScript',
-        type : 'repository',
+        type : 'project',
     },
 ]
