@@ -233,7 +233,7 @@ let exercises = [
         {
         id : 602,
         name : 'front end project',
-        urlLink : 'https://mario8988silva.github.io/frontEnd_project/',
+        urlLink : 'https://mario8988silva.github.io/frontend_project/',
         imageLink : '',
         languages : 'javaScript',
         type : 'project',
