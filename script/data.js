@@ -229,4 +229,13 @@ let exercises = [
         languages : 'javaScript',
         type : 'project',
     },
+
+        {
+        id : 602,
+        name : 'front end project',
+        urlLink : 'https://mario8988silva.github.io/frontEnd_project/',
+        imageLink : '',
+        languages : 'javaScript',
+        type : 'project',
+    },
 ]
