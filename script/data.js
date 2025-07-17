@@ -238,14 +238,4 @@ let exercises = [
         languages : 'javaScript',
         type : 'project',
     },
-
-    {
-        id : 603,
-        name : 'le meow',
-        urlLink : 'https://mariosilva.onrender.com/',
-        imageLink : '',
-        languages : 'javaScript',
-        type : 'project',
-    },
-
 ]
