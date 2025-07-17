@@ -230,9 +230,18 @@ let exercises = [
         type : 'project',
     },
 
-        {
+    {
         id : 602,
         name : 'front end project',
+        urlLink : 'https://mariosilva.onrender.com/',
+        imageLink : '',
+        languages : 'javaScript',
+        type : 'project',
+    },
+
+        {
+        id : 603,
+        name : 'le meow',
         urlLink : 'https://mariosilva.onrender.com/',
         imageLink : '',
         languages : 'javaScript',
