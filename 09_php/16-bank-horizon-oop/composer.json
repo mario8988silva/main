@@ -1,0 +1,26 @@
+{
+    "name": "flag/bank-horizon",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "src/Core",
+            "App\\": "src/App"
+        }
+    },
+    "authors": [
+        {
+            "name": "Francisco Costa",
+            "email": "jfcpcosta@gmail.com"
+        }
+    ],
+    "scripts": {
+        "dev": "php -S localhost:8080 -t public",
+        "db:migrate": "php database/migrate.php"
+    },
+    "config": {
+        "process-timeout": 0
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.11"
+    }
+}

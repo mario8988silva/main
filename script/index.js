@@ -23,74 +23,89 @@ A FAZER:
 const btn = document.querySelectorAll(".btn");
 const navigator_container = document.getElementById("navigator_container");
 
-document.getElementById('buttons_container').addEventListener('click', filterEvents, false);
+document
+  .getElementById("buttons_container")
+  .addEventListener("click", filterEvents, false);
 //document.getElementsByClassName('.card').addEventListener('hover', hoverCardEvents, false);
 
 // definição de eventos:
 // ACTIVA CADA UM DOS BOTÕES:
-btn.forEach(btn => {
-    btn.addEventListener("click", () => {
-        // MUDA A COR DO BOTÃO MEDIANTE CLIQUE:
-        btn.classList.toggle("active");
-        console.log(btn.textContent);
-    });
+btn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // MUDA A COR DO BOTÃO MEDIANTE CLIQUE:
+    btn.classList.toggle("active");
+    console.log(btn.textContent);
+  });
 });
 
 // definição de funções:
 
 // filtragem:
-function filterEvents( {target:{id}}){
-    
-    if ( id == 'btnAll'){
-        showExercises(getExercises());
-        console.log('btnAll confirm');       
-    }
+function filterEvents({ target: { id } }) {
+  if (id == "btnAll") {
+    showExercises(getExercises());
+    console.log("btnAll confirm");
+  }
 
-    if ( id == 'btnModule'){
-        showExercises(getTypeModule());
-        console.log('btnModule confirm');       
-    }
+  if (id == "btnModule") {
+    showExercises(getTypeModule());
+    console.log("btnModule confirm");
+  }
 
-    if ( id == 'btnExercise'){
-        showExercises(getTypeExercise());
-        console.log('btnExercise confirm');       
-    }
+  if (id == "btnExercise") {
+    showExercises(getTypeExercise());
+    console.log("btnExercise confirm");
+  }
 
-    if ( id == 'btnRepository'){
-        showExercises(getTypeRepository());
-        console.log('btnRepository confirm');       
-    }
+  if (id == "btnRepository") {
+    showExercises(getTypeRepository());
+    console.log("btnRepository confirm");
+  }
 
-    if ( id == 'btnProject'){
-        showExercises(getTypeProject());
-        console.log('btnProject confirm');       
-    }
-    
-    if ( id == 'btnHTML'){
-        showExercises(getHTMLExercises());
-        console.log('btnHTML confirm');       
-    }    
+  if (id == "btnProject") {
+    showExercises(getTypeProject());
+    console.log("btnProject confirm");
+  }
 
-    if ( id == 'btnCSS'){
-        showExercises(getCSSExercises());
-        console.log('btnCSS confirm');       
-    }
+  if (id == "btnHTML") {
+    showExercises(getHTMLExercises());
+    console.log("btnHTML confirm");
+  }
 
-    if ( id == 'btnProgrammingConcepts'){
-        showExercises(getprogrammingConcepts());
-        console.log('btnProgrammingConcepts confirm');       
-    }
+  if (id == "btnCSS") {
+    showExercises(getCSSExercises());
+    console.log("btnCSS confirm");
+  }
 
-    if ( id == 'btnJavaScript'){
-        showExercises(getJavaScript());
-        console.log('btnJavaScript confirm');       
-    }
+  if (id == "btnProgrammingConcepts") {
+    showExercises(getprogrammingConcepts());
+    console.log("btnProgrammingConcepts confirm");
+  }
 
-    if ( id == 'btnReact'){
-        showExercises(getReact());
-        console.log('btnReact confirm');       
-    }
-    
+  if (id == "btnJavaScript") {
+    showExercises(getJavaScript());
+    console.log("btnJavaScript confirm");
+  }
+
+  if (id == "btnReact") {
+    showExercises(getReact());
+    console.log("btnReact confirm");
+  }
+
+  if (id == "btnDbBasics") {
+    showExercises(getDbBasics());
+    console.log("btnDbBasics confirm");
+  }
+
+  if (id == "btnSQL") {
+    showExercises(getmySQL());
+    console.log("btnSQL confirm");
+  }
+
+  if (id == "btnPHP") {
+    showExercises(getPHP());
+    console.log("btnPHP confirm");
+  }
 }
 
 showExercises(getExercises());
@@ -120,12 +135,11 @@ exercises.forEach(ex => {
 });
 */
 
-function showExercises(arrayExercises){
+function showExercises(arrayExercises) {
+  navigator_container.innerHTML = "";
 
-    navigator_container.innerHTML = '';
-
-    arrayExercises.map ( exe => {
-        navigator_container.innerHTML += `
+  arrayExercises.map((exe) => {
+    navigator_container.innerHTML += `
             <a 
             href="${exe.urlLink}" 
             target="_blank" 
@@ -134,10 +148,6 @@ function showExercises(arrayExercises){
             style="background-image: url(${exe.imageLink});">
                 <p>${exe.name}</p>
             </a>
-        `
-    })
-
-
+        `;
+  });
 }
-
-

@@ -35,12 +35,23 @@ console.log('CSS filter: ', getCSSExercises());
 const getprogrammingConcepts = () => myExercises.filter(exe => exe.languages === 'programmingConcepts');
 console.log('Programming Concepts filter: ', getprogrammingConcepts());
 
-// metodo para mostrar exercicios ou relativos a  JavaScript:
+// metodo para mostrar exercicios ou relativos a JavaScript:
 const getJavaScript = () => myExercises.filter(exe => exe.languages === 'javaScript');
 console.log('JavaScript filter: ', getJavaScript());
 
-// metodo para mostrar exercicios ou relativos a  JavaScript:
+// metodo para mostrar exercicios ou relativos a React:
 const getReact = () => myExercises.filter(exe => exe.languages === 'react');
-console.log('React filter: ', getJavaScript());
+console.log('React filter: ', getReact());
 
+// metodo para mostrar exercicios ou relativos a Data Base basics:
+const getDbBasics = () => myExercises.filter(exe => exe.languages === 'dataBase');
+console.log('Data Base Basics filter: ', getDbBasics());
+
+// metodo para mostrar exercicios ou relativos a mySQL:
+const getmySQL = () => myExercises.filter(exe => exe.languages === 'mySQL');
+console.log('mySQL filter: ', getmySQL());
+
+// metodo para mostrar exercicios ou relativos a PHP:
+const getPHP = () => myExercises.filter(exe => exe.languages === 'PHP');
+console.log('PHP filter: ', getPHP());
 

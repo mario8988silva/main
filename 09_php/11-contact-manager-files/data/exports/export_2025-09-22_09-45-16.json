@@ -1,0 +1,12 @@
+[
+    {
+        "id": "68d1180781649",
+        "name": "Malaquias",
+        "email": "malaquias@example.com",
+        "phone": "123123123",
+        "photo": null,
+        "user_id": "68d10cf612bac",
+        "createdAt": 1758533639,
+        "updatedAt": 1758533639
+    }
+]

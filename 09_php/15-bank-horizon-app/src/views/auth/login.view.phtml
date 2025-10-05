@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banco Horizon · Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/global.css" /> 
+</head>
+<body class="bg-slate-950 text-slate-100">
+    <div class="flex min-h-screen">
+        <div class="flex w-full flex-col justify-center px-6 py-12 sm:px-10 lg:w-[44%] lg:px-16 xl:w-[40%]">
+            <a href="index-2.html" class="mb-10 flex items-center gap-3">
+                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-sky-400 to-violet-500 text-lg font-semibold text-slate-950">BH</div>
+                <div>
+                    <p class="text-sm font-medium text-slate-400">Banco Horizon</p>
+                    <h1 class="text-xl font-semibold text-slate-50">Área segura</h1>
+                </div>
+            </a>
+
+            <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-8 shadow-[0_25px_60px_-25px_rgba(15,23,42,0.65)]">
+                <div class="space-y-3">
+                    <h2 class="text-2xl font-semibold">Iniciar sessão</h2>
+                    <p class="text-sm text-slate-400">Aceda às suas contas com autenticação segura.</p>
+                </div>
+
+                <?php if (!empty($messages)): ?>
+                    <div class="mt-6 space-y-2">
+                        <?php foreach ($messages as $msg): ?>
+                            <div class="rounded-md <?= $msg['type'] === 'danger' ? 'bg-red-800/50 text-red-300' : 'bg-green-800/50 text-green-300'; ?> px-4 py-3 text-sm">
+                                <?= htmlspecialchars($msg['message']); ?>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+
+                <form class="mt-8 space-y-6" method="post">
+                    <div>
+                        <label for="email" class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">Email ou utilizador</label>
+                        <input id="email" name="email" type="email" autocomplete="username" placeholder="nome@horizon.pt" class="w-full rounded-xl border border-slate-800 bg-slate-950/70 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/30" />
+                    </div>
+                    <div>
+                        <div class="mb-2 flex items-center justify-between">
+                            <label for="password" class="block text-xs font-semibold uppercase tracking-wide text-slate-400">Palavra-passe</label>
+                            <a href="#" class="text-xs font-medium text-sky-400 hover:text-sky-300">Recuperar acesso</a>
+                        </div>
+                        <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" class="w-full rounded-xl border border-slate-800 bg-slate-950/70 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/30" />
+                    </div>
+                    <button type="submit" class="w-full rounded-xl bg-gradient-to-r from-sky-500 to-violet-500 px-4 py-3 text-sm font-semibold text-slate-950 shadow transition hover:brightness-110">Entrar</button>
+                </form>
+
+                <p class="mt-8 text-center text-xs text-slate-500">Novo por aqui? <a href="/register" class="font-medium text-sky-400 hover:text-sky-300">Criar conta</a></p>
+            </div>
+
+            <p class="mt-10 text-xs text-slate-500">© 2025 Banco Horizon. Todos os direitos reservados.</p>
+        </div>
+
+        <!-- Painel direito: imagem / conteúdo -->
+        <div class="relative hidden flex-1 overflow-hidden lg:block">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-sky-950 to-slate-950"></div>
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80" alt="Painel de trading" class="h-full w-full object-cover opacity-40" />
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-950/70 via-slate-950/40 to-transparent"></div>
+            <div class="absolute bottom-16 left-16 max-w-md space-y-6 text-slate-100">
+                <div class="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/50 px-3 py-1 text-xs font-medium uppercase tracking-wide text-sky-300">Segurança de nível bancário</div>
+                <h2 class="text-3xl font-semibold leading-tight">Controle a sua vida financeira com insights inteligentes e alertas em tempo real.</h2>
+                <p class="text-sm text-slate-300">Monitorização 24/7, confirmações biométricas e limitações configuráveis garantem proteção total.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

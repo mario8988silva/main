@@ -1,0 +1,19 @@
+# mysql -u root -p
+
+SHOW DATABASES;
+CREATE DATABASE escola;
+SHOW DATABASES;
+USE escola;
+SHOW TABLES;
+CREATE TABLE alunos (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR(100)
+);
+SHOW TABLES;
+SELECT * FROM alunos;
+INSERT INTO alunos VALUES (1, 'Maria');
+INSERT INTO alunos VALUES (2, 'Joao');
+INSERT INTO alunos VALUES (3, 'Zebedeu');
+SELECT * FROM allunos;
+DROP TABLE alunos;
+DROP DATABASE escola;

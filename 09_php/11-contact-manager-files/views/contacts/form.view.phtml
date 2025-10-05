@@ -1,0 +1,31 @@
+<h5 class="card-header">Create Contact</h5>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="nameInput" class="form-label">Name</label>
+            <input type="text" class="form-control" id="nameInput" name="name" required autofocus value="<?= $contact['name'] ?? '' ?>">
+        </div>
+        <div class="mb-3">
+            <label for="emailInput" class="form-label">Email</label>
+            <input type="email" class="form-control" id="emailInput" name="email" required value="<?= $contact['email'] ?? '' ?>">
+        </div>
+        <div class="mb-3">
+            <label for="phoneInput" class="form-label">Phone</label>
+            <input type="tel" class="form-control" id="phoneInput" name="phone" value="<?= $contact['phone'] ?? '' ?>">
+        </div>
+
+        <div class="mb-3">
+        <label for="photoInput" class="form-label">Photo</label>
+        <input type="file" name="photo" id="photoInput" class="form-control">
+
+        <?php if (isset($contact) && isset($contact['photo'])) : ?>
+            <img src="/<?= $contact['photo'] ?>" class="img-thumbnail mt-2" width="200">
+        <?php endif; ?>
+    </div>
+    </div>
+
+    <div class="card-footer d-flex justify-content-end">
+        <button type="submit" class="btn btn-primary btn-sm">Save</button>
+    </div>
+</form>    

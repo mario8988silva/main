@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        body {
+            padding: 2rem;
+            font-family: sans-serif;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<!-- 20.This is the table renderer. -->
+<body>
+    <h1>PHP Tables</h1>
+    <a href="/">Go back</a>
+    <hr>
+
+    <table>
+
+        <!-- 21.Loops through rows and columns -->
+        <?php for ($i = 0; $i < $rows; $i++): ?>
+            <tr>
+                <!-- 22.Fills each cell with a multiplication value -->
+                <?php for ($j = 0; $j < $cols; $j++): ?>
+                    <!-- 23.Applies a random background color -->
+                    <td style="background: <?= randomColor(false) ?>"><?= ($i + 1) * ($j + 1) ?></td>
+                <?php endfor; ?>
+            </tr>
+        <?php endfor; ?>
+    </table>
+</body>
+
+</html>

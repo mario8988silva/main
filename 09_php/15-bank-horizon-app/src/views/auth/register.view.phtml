@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banco Horizon · Criar conta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body class="bg-slate-950 text-slate-100">
+    <div class="flex min-h-screen">
+        <div class="flex w-full flex-col justify-center px-6 py-12 sm:px-10 lg:w-[44%] lg:px-16 xl:w-[40%]">
+            <a href="index-2.html" class="mb-10 flex items-center gap-3">
+                <div class="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 text-lg font-semibold text-slate-950">BH</div>
+                <div>
+                    <p class="text-sm font-medium text-slate-400">Banco Horizon</p>
+                    <h1 class="text-xl font-semibold">Abra a sua conta digital</h1>
+                </div>
+            </a>
+
+            <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-8 shadow-[0_25px_60px_-25px_rgba(15,23,42,0.65)]">
+                <div class="space-y-3">
+                    <h2 class="text-2xl font-semibold">Criar conta</h2>
+                    <p class="text-sm text-slate-400">Preencha os dados para começar.</p>
+                </div>
+
+                <form class="mt-8 space-y-6" method="post">
+                    <div class="grid gap-6 md:grid-cols-2">
+                        <div>
+                            <label for="firstname" class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">Nome próprio</label>
+                            <input id="firstname" name="first_name" type="text" autocomplete="given-name" placeholder="Joana" class="w-full rounded-xl border border-slate-800 bg-slate-950/70 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30" />
+                        </div>
+                        <div>
+                            <label for="lastname" class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">Apelido</label>
+                            <input id="lastname" name="last_name" type="text" autocomplete="family-name" placeholder="Fernandes" class="w-full rounded-xl border border-slate-800 bg-slate-950/70 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email" class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="joana.fernandes@empresa.pt" class="w-full rounded-xl border border-slate-800 bg-slate-950/70 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30" />
+                    </div>
+                    
+                    <div class="grid gap-6 md:grid-cols-2">
+                        <div>
+                            <label for="password" class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">Palavra-passe</label>
+                            <input id="password" name="password" type="password" autocomplete="new-password" placeholder="••••••••" class="w-full rounded-xl border border-slate-800 bg-slate-950/70 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30" />
+                            <div class="mt-2 flex items-center gap-2 text-xs text-slate-400">
+                                <span>Força:</span>
+                                <div class="h-1.5 w-24 rounded-full bg-slate-800">
+                                    <div class="h-full w-1/2 rounded-full bg-emerald-500"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="password-confirm" class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">Confirmar palavra-passe</label>
+                            <input id="password-confirm" name="password_confirmation" type="password" autocomplete="new-password" placeholder="••••••••" class="w-full rounded-xl border border-slate-800 bg-slate-950/70 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30" />
+                        </div>
+                    </div>
+                    
+                    <div class="rounded-2xl border border-slate-800 bg-slate-950/70 p-4 text-xs text-slate-400">
+                        <p class="font-medium text-slate-200">Benefícios imediatos</p>
+                        <ul class="mt-3 space-y-2">
+                            <li class="flex items-center gap-2"><span class="text-emerald-400">●</span>Aprovação digital em minutos</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-400">●</span>Cartões virtuais ilimitados</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-400">●</span>Alertas e insights personalizados</li>
+                        </ul>
+                    </div>
+
+                    <label class="flex items-start gap-3 text-xs text-slate-400">
+                        <input type="checkbox" name="terms" class="mt-1 h-4 w-4 rounded border-slate-700 bg-slate-900 text-emerald-500 focus:ring-emerald-500/30" />
+                        <span>Li e aceito os <a href="#" class="font-medium text-emerald-400 hover:text-emerald-300">Termos & Condições</a> e políticas de privacidade.</span>
+                    </label>
+                    <button type="submit" class="w-full rounded-xl bg-gradient-to-r from-emerald-500 to-sky-500 px-4 py-3 text-sm font-semibold text-slate-950 shadow transition hover:brightness-110">Criar conta gratuitamente</button>
+                </form>
+
+                <p class="mt-8 text-center text-xs text-slate-500">Já tem conta? <a href="/login" class="font-medium text-emerald-400 hover:text-emerald-300">Iniciar sessão</a></p>
+            </div>
+
+            <p class="mt-10 text-xs text-slate-500">© 2025 Banco Horizon. Regulamentado pelo Banco de Portugal.</p>
+        </div>
+
+        <div class="relative hidden flex-1 overflow-hidden lg:block">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-emerald-950 to-slate-950"></div>
+            <img src="https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=1600&q=80" alt="Equipa de consultores financeiros" class="h-full w-full object-cover opacity-35" />
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-950/70 via-slate-950/45 to-transparent"></div>
+            <div class="absolute bottom-16 left-16 max-w-lg space-y-6 text-slate-100">
+                <div class="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/50 px-3 py-1 text-xs font-medium uppercase tracking-wide text-emerald-300">Equipa à sua medida</div>
+                <h2 class="text-3xl font-semibold leading-tight">Consultores dedicados para expandir o seu património com confiança e inovação.</h2>
+                <p class="text-sm text-slate-300">Plano personalizado para investimento, proteção e crescimento, com monitorização ativa 24/7.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

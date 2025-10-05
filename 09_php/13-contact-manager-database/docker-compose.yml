@@ -1,0 +1,8 @@
+services:
+  database:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: docker
+      MYSQL_DATABASE: contact_manager
+    ports:
+      - "3306:3306"

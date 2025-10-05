@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 4. This is the UI for user input. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        body {
+            padding: 2rem;
+            font-family: sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 300px;
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PHP Tables</h1>
+
+    <!-- 5.Submits to draw.php using GET method -->
+    <form action="draw.php">
+        <div>
+            <label for="rows">Rows:</label>
+            <!-- 6.User inputs for table dimensions -->
+            <input type="number" id="rows" name="rows" min="1" required>
+        </div>
+        <div>
+            <label for="cols">Columns:</label>
+            <!-- 6.User inputs for table dimensions -->
+            <input type="number" id="cols" name="cols" min="1" required>
+        </div>
+
+        <button type="submit">Generate Table</button>
+    </form>
+
+    <ul>
+        <!-- 7.Generates quick links to pre-defined tables -->
+        <?php foreach ($defaultTableSizes as $size): ?>
+            <li>
+                <a href="draw.php?rows=<?= $size['rows'] ?>&cols=<?= $size['cols'] ?>">Generate <?= $size['rows'] ?>x<?= $size['cols'] ?> Table</a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</body>
+<!-- 8. draw.php -->
+
+</html>

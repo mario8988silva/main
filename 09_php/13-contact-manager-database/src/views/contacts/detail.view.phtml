@@ -1,0 +1,46 @@
+<h5 class="card-header"><?= $contact->name ?></h5>
+
+<div class="card-body">
+    <div class="row">
+        <div class="col-4">
+            <?php if (isset($contact->photo) && $contact->photo !== null) : ?>
+                <img src="/<?= $contact->photo ?>" class="img-thumbnail" width="100%">
+            <?php else : ?>
+                <img src="/images/no-photo.webp" class="img-thumbnail" width="100%">
+            <?php endif; ?>
+        </div>
+        <div class="col-8">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Email</strong> <?= $contact->email ?>
+                </li>
+                <li class="list-group-item">
+                    <strong>Phone</strong> <?= $contact->phone ?>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="card-footer d-flex justify-content-end">
+    <div class="btn-group">
+        <a href="/contacts/edit?id=<?= $contact->id ?>" class="btn btn-secondary btn-sm">Edit</a>
+        <a href="/contacts/delete?id=<?= $contact->id ?>" class="btn btn-danger btn-sm" id="removeLink">Remove</a>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('load', () => {
+        const link = document.querySelector('#removeLink');
+
+        function handleRemoveClick(event) {
+            event.preventDefault();
+
+            if (confirm('Remove?')) {
+                window.location = event.target.href;
+            }
+        }
+
+        link.addEventListener('click', handleRemoveClick);
+    });
+</script>

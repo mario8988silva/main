@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banco Horizon · Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body class="bg-slate-950 text-slate-100">
+    <header class="sticky top-0 z-50 border-b border-slate-800 bg-slate-900/60 backdrop-blur supports-[backdrop-filter]:bg-slate-900/50">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+            <a href="index-3.html" class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-sky-400 to-violet-500 text-base font-semibold text-slate-950">BH</div>
+                <div>
+                    <p class="text-xs font-medium text-slate-400">Banco Horizon</p>
+                    <p class="text-sm font-semibold text-slate-100">Área do Cliente</p>
+                </div>
+            </a>
+            <nav class="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+                <a class="text-slate-100" href="/dashboard">Dashboard</a>
+                <a class="hover:text-slate-100" href="/accounts/history">Movimentos</a>
+                <a class="hover:text-slate-100" href="/accounts">Contas</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <form action="/movements" class="relative hidden sm:block">
+                    <input type="search" name="search" placeholder="Pesquisar" class="w-56 rounded-full border border-slate-800 bg-slate-900/80 py-2 pl-10 pr-4 text-sm text-slate-100 placeholder:text-slate-500 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/40" />
+                    <span class="absolute inset-y-0 left-3 flex items-center text-slate-500">🔍</span>
+                </form>
+                <a href="/logout" class="rounded-full border border-slate-800 px-3 py-2 text-xs font-medium text-slate-300 hover:text-slate-100">Terminar sessão</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-6 py-10">

@@ -1,6 +1,5 @@
 let exercises = [
-    
-    /*
+  /*
     {
         id : 0,
         name : 'name',
@@ -17,225 +16,487 @@ let exercises = [
     },
     */
 
-   // ****************************************** HTML
-   {
-        id : 100,
-        name : 'html repository',
-        urlLink : 'https://github.com/mario8988silva/06_modulo-html',
-        imageLink : 'images/github.png',
-        languages : 'html',
-        type : 'repository',
-    },
+  // ****************************************** HTML
+  {
+    id: 100,
+    name: "html repository",
+    urlLink: "https://github.com/mario8988silva/06_modulo-html",
+    imageLink: "images/github.png",
+    languages: "html",
+    type: "repository",
+  },
+
+  {
+    id: 129,
+    name: "recipes",
+    urlLink: "01_html/exercicios/teste3/index.html",
+    imageLink: "images/07.jpg",
+    languages: "html",
+    type: "exercise",
+  },
+
+  // ****************************************** CSS
+  {
+    id: 200,
+    name: "css repository",
+    urlLink: "https://github.com/mario8988silva/07_modulo-css",
+    imageLink: "images/github.png",
+    languages: "css",
+    type: "repository",
+  },
+
+  {
+    id: 283,
+    name: "box model",
+    urlLink: "02_css/0_exercicios/1-exercicio-box-model-inicio/index.html",
+    imageLink: "images/08.png",
+    languages: "css",
+    type: "exercise",
+  },
+
+  {
+    id: 284,
+    name: "newsletter Flag",
+    urlLink:
+      "02_css/0_exercicios/2-newsletter-FLAG_2/2-newsletter-1-FLAG/index.html",
+    imageLink: "images/09.png",
+    languages: "css",
+    type: "exercise",
+  },
+
+  {
+    id: 285,
+    name: "newsletter EDP",
+    urlLink:
+      "02_css/0_exercicios/3-newsletter-EDP/3-newsletter-2-EDP/index.html",
+    imageLink: "images/10.png",
+    languages: "css",
+    type: "exercise",
+  },
+
+  {
+    id: 286,
+    name: "newsletter Teashop",
+    urlLink:
+      "02_css/0_exercicios/4-newsletter-Teashop/newsletter-Teashop/index.html",
+    imageLink: "images/11.png",
+    languages: "css",
+    type: "exercise",
+  },
+
+  {
+    id: 287,
+    name: "gallery grids",
+    urlLink: "02_css/0_exercicios/5-gallery-grids-inicio/index.html",
+    imageLink: "images/12.png",
+    languages: "css",
+    type: "exercise",
+  },
+
+  {
+    id: 288,
+    name: "SPEO",
+    urlLink: "02_css/0_exercicios/6-exercicoSPEO-inicio/index.html",
+    imageLink: "images/13.jpg",
+    languages: "css",
+    type: "exercise",
+  },
+
+  {
+    id: 289,
+    name: "SASS",
+    urlLink:
+      "02_css/0_exercicios/7-exercicio-newsletter-inicio-sass/index.html",
+    imageLink: "images/14.png",
+    languages: "css",
+    type: "exercise",
+  },
+
+  {
+    id: 290,
+    name: "gallery RWD",
+    urlLink: "02_css/0_exercicios/8-gallery-RWD/index.html",
+    imageLink: "images/15.png",
+    languages: "css",
+    type: "exercise",
+  },
+
+  {
+    id: 291,
+    name: "responsive flex",
+    urlLink:
+      "02_css/0_exercicios/9-responsive-flex/7-responsive-flex/index.html",
+    imageLink: "images/16.png",
+    languages: "css",
+    type: "exercise",
+  },
+
+  {
+    id: 292,
+    name: "webdesign RWD",
+    urlLink: "02_css/0_exercicios/10-rwdExercicio/index.html",
+    imageLink: "images/17.png",
+    languages: "css",
+    type: "exercise",
+  },
+
+  // ****************************************** programmingConcepts
+  {
+    id: 300,
+    name: "programming concepts repository",
+    urlLink:
+      "https://github.com/mario8988silva/modulo_javascript/tree/23c2ce498561eb45df99b48e686f1b6ad2d81d8d/conceitos_programacao",
+    imageLink: "images/github.png",
+    languages: "programmingConcepts",
+    type: "repository",
+  },
+
+  // ****************************************** javaScript
+  {
+    id: 400,
+    name: "javaScript repository",
+    urlLink: "https://github.com/mario8988silva/modulo_javascript",
+    imageLink: "images/github.png",
+    languages: "javascript",
+    type: "repository",
+  },
+
+  {
+    id: 424,
+    name: "form exercise",
+    urlLink: "04_js/exercicios_js/exercicioForm/formExercicio.html",
+    imageLink: "images/18.jpg",
+    languages: "javaScript",
+    type: "exercise",
+  },
+
+  {
+    id: 425,
+    name: "library v.5",
+    urlLink: "04_js/exercicios_js/biblioteca/biblioteca-V4-add-edit/index.html",
+    imageLink: "images/19.png",
+    languages: "javaScript",
+    type: "exercise",
+  },
+
+  {
+    id: 426,
+    name: "async random user",
+    urlLink: "04_js/exercicios_js/async-random-users-inicio/index.html",
+    imageLink: "images/24.png",
+    languages: "javaScript",
+    type: "exercise",
+  },
+
+  // ****************************************** react
+  {
+    id: 500,
+    name: "react repository",
+    urlLink: "https://github.com/mario8988silva/modulo_react.git",
+    imageLink: "images/github.png",
+    languages: "react",
+    type: "repository",
+  },
+
+  {
+    id: 501,
+    name: "voting app",
+    urlLink: "05_react/1-voting-app/index.html",
+    imageLink: "",
+    languages: "react",
+    type: "exercise",
+  },
+
+  {
+    id: 502,
+    name: "hooks",
+    urlLink: "05_react/2-hooks/index.html",
+    imageLink: "",
+    languages: "react",
+    type: "exercise",
+  },
+
+  // ****************************************** FrontEnd Project
+  {
+    id: 600,
+    name: "front end devolpment",
+    urlLink:
+      "https://www.figma.com/design/Lw7uSBmUxGHirsgAKrOJPs/FrontEnd_Project?node-id=0-1&t=sBlTS0T3usb8CjHM-1",
+    imageLink: "images/figma.png",
+    languages: "javaScript",
+    type: "project",
+  },
+
+  {
+    id: 601,
+    name: "front end repository",
+    urlLink: "https://github.com/mario8988silva/frontEnd_project.git",
+    imageLink: "images/github.png",
+    languages: "javaScript",
+    type: "project",
+  },
+
+  {
+    id: 602,
+    name: "front end project",
+    urlLink: "https://mariosilva.onrender.com/",
+    imageLink: "",
+    languages: "javaScript",
+    type: "project",
+  },
+
+  // ****************************************** Data Base basics
+  {
+    id: 701,
+    name: "1-videoclube",
+    urlLink: "07_db-basics/1-videoclube.mwb",
+    imageLink: "",
+    languages: "dataBase",
+    type: "exercise",
+  },
+
+  {
+    id: 702,
+    name: "2-escola",
+    urlLink: "07_db-basics/2-escola.mwb",
+    imageLink: "",
+    languages: "dataBase",
+    type: "exercise",
+  },
+
+  {
+    id: 703,
+    name: "3-loja",
+    urlLink: "07_db-basics/3-loja.mwb",
+    imageLink: "",
+    languages: "dataBase",
+    type: "exercise",
+  },
+
+  {
+    id: 703,
+    name: "4-discoteca",
+    urlLink: "07_db-basics/4-discoteca.mwb",
+    imageLink: "",
+    languages: "dataBase",
+    type: "exercise",
+  },
+
+  // ****************************************** mySQL
+  {
+    id: 801,
+    name: "1-comandos-teste-mysql",
+    urlLink: "08_sql/1-comandos-teste-mysql.sql",
+    imageLink: "",
+    languages: "mySQL",
+    type: "exercise",
+  },
+
+  {
+    id: 802,
+    name: "1-comandos-teste-mysql",
+    urlLink: "08_sql/1-exemplos.sql",
+    imageLink: "",
+    languages: "mySQL",
+    type: "exercise",
+  },
+
+  {
+    id: 803,
+    name: "2-exercicio-ddl-realizadores",
+    urlLink: "08_sql/2-exercicio-ddl-realizadores.sql",
+    imageLink: "",
+    languages: "mySQL",
+    type: "exercise",
+  },
+
+  {
+    id: 804,
+    name: "3-escola-ddl.sql",
+    urlLink: "08_sql/3-escola-ddl.sql",
+    imageLink: "",
+    languages: "mySQL",
+    type: "exercise",
+  },
+
+  {
+    id: 805,
+    name: "4-medicos",
+    urlLink: "08_sql/4-medicos.sql",
+    imageLink: "",
+    languages: "mySQL",
+    type: "exercise",
+  },
+
+  {
+    id: 806,
+    name: "exercicio-medicos",
+    urlLink: "08_sql/exercicio-medicos.sql",
+    imageLink: "",
+    languages: "mySQL",
+    type: "exercise",
+  },
+
+  {
+    id: 807,
+    name: "exercicios-sessao03",
+    urlLink: "08_sql/exercicios-sessao03.sql",
+    imageLink: "",
+    languages: "mySQL",
+    type: "exercise",
+  },
+
+  {
+    id: 808,
+    name: "exercicios-sessao04",
+    urlLink: "08_sql/exercicios-sessao04.sql",
+    imageLink: "",
+    languages: "mySQL",
+    type: "exercise",
+  },
+
+  // ****************************************** PHP
+  {
+    id: 901,
+    name: "1-hello-world",
+    urlLink: "09_php/1-hello-world/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
+
+  {
+    id: 902,
+    name: "2-exercicio-calculadora",
+    urlLink: "09_php/2-exercicio-calculadora/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
+
+  {
+    id: 903,
+    name: "3-exercicio-tabelas",
+    urlLink: "09_php/3-exercicio-tabelas/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
+
+  {
+    id: 904,
+    name: "4-cookies",
+    urlLink: "09_php/4-cookies/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
+
+  {
+    id: 905,
+    name: "5-exercicio-cookies",
+    urlLink: "09_php/5-exercicio-cookies/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
+
+  {
+    id: 906,
+    name: "6-sessions",
+    urlLink: "09_php/6-sessions/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
+
+  {
+    id: 907,
+    name: "7-login-example",
+    urlLink: "09_php/7-login-example/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
+
+  {
+    id: 908,
+    name: "8-login-example-mvc",
+    urlLink: "09_php/8-login-example-mvc/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
+
+  {
+    id: 909,
+    name: "9-contact-manager-sessions",
+    urlLink: "09_php/9-contact-manager-sessions/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
+
+  {
+    id: 910,
+    name: "10-files",
+    urlLink: "09_php/10-files/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
+
+  {
+    id: 911,
+    name: "11-contact-manager-files",
+    urlLink: "09_php/11-contact-manager-files/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
+
+  {
+    id: 912,
+    name: "12-database",
+    urlLink: "09_php/12-database/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
+
+  {
+    id: 913,
+    name: "13-contact-manager-database",
+    urlLink: "09_php/13-contact-manager-database/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
+
+  {
+    id: 914,
+    name: "14-oop",
+    urlLink: "09_php/14-oop/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
 
     {
-        id : 129,
-        name : 'recipes',
-        urlLink : '01_html/exercicios/teste3/index.html',
-        imageLink : 'images/07.jpg',
-        languages : 'html',
-        type : 'exercise',
-    },
-
-    // ****************************************** CSS
-    {
-        id : 200,
-        name : 'css repository',
-        urlLink : 'https://github.com/mario8988silva/07_modulo-css',
-        imageLink : 'images/github.png',
-        languages : 'css',
-        type : 'repository',
-    },
+    id: 915,
+    name: "15-bank-horizon-app",
+    urlLink: "09_php/15-bank-horizon-app/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
 
     {
-        id : 283,
-        name : 'box model',
-        urlLink : '02_css/0_exercicios/1-exercicio-box-model-inicio/index.html',
-        imageLink : 'images/08.png',
-        languages : 'css',
-        type : 'exercise',
-    },
-
-    {
-        id : 284,
-        name : 'newsletter Flag',
-        urlLink : '02_css/0_exercicios/2-newsletter-FLAG_2/2-newsletter-1-FLAG/index.html',
-        imageLink : 'images/09.png',
-        languages : 'css',
-        type : 'exercise',
-    },
-
-    {
-        id : 285,
-        name : 'newsletter EDP',
-        urlLink : '02_css/0_exercicios/3-newsletter-EDP/3-newsletter-2-EDP/index.html',
-        imageLink : 'images/10.png',
-        languages : 'css',
-        type : 'exercise',
-    },
-
-    {
-        id : 286,
-        name : 'newsletter Teashop',
-        urlLink : '02_css/0_exercicios/4-newsletter-Teashop/newsletter-Teashop/index.html',
-        imageLink : 'images/11.png',
-        languages : 'css',
-        type : 'exercise',
-    },
-
-    {
-        id : 287,
-        name : 'gallery grids',
-        urlLink : '02_css/0_exercicios/5-gallery-grids-inicio/index.html',
-        imageLink : 'images/12.png',
-        languages : 'css',
-        type : 'exercise',
-    },
-
-    {
-        id : 288,
-        name : 'SPEO',
-        urlLink : '02_css/0_exercicios/6-exercicoSPEO-inicio/index.html',
-        imageLink : 'images/13.jpg',
-        languages : 'css',
-        type : 'exercise',
-    },
-
-    {
-        id : 289,
-        name : 'SASS',
-        urlLink : '02_css/0_exercicios/7-exercicio-newsletter-inicio-sass/index.html',
-        imageLink : 'images/14.png',
-        languages : 'css',
-        type : 'exercise',
-    },
-
-    {
-        id : 290,
-        name : 'gallery RWD',
-        urlLink : '02_css/0_exercicios/8-gallery-RWD/index.html',
-        imageLink : 'images/15.png',
-        languages : 'css',
-        type : 'exercise',
-    },
-
-    {
-        id : 291,
-        name : 'responsive flex',
-        urlLink : '02_css/0_exercicios/9-responsive-flex/7-responsive-flex/index.html',
-        imageLink : 'images/16.png',
-        languages : 'css',
-        type : 'exercise',
-    },
-
-    {
-        id : 292,
-        name : 'webdesign RWD',
-        urlLink : '02_css/0_exercicios/10-rwdExercicio/index.html',
-        imageLink : 'images/17.png',
-        languages : 'css',
-        type : 'exercise',
-    },
-
-    // ****************************************** programmingConcepts
-    {
-        id : 300,
-        name : 'programming concepts repository',
-        urlLink : 'https://github.com/mario8988silva/modulo_javascript/tree/23c2ce498561eb45df99b48e686f1b6ad2d81d8d/conceitos_programacao',
-        imageLink : 'images/github.png',
-        languages : 'programmingConcepts',
-        type : 'repository',
-    },  
-
-    // ****************************************** javaScript
-    {
-        id : 400,
-        name : 'javaScript repository',
-        urlLink : 'https://github.com/mario8988silva/modulo_javascript',
-        imageLink : 'images/github.png',
-        languages : 'javascript',
-        type : 'repository',
-    },
-
-    {
-        id : 424,
-        name : 'form exercise',
-        urlLink : '04_js/exercicios_js/exercicioForm/formExercicio.html',
-        imageLink : 'images/18.jpg',
-        languages : 'javaScript',
-        type : 'exercise',
-    },
-
-    {
-        id : 425,
-        name : 'library v.5',
-        urlLink : '04_js/exercicios_js/biblioteca/biblioteca-V4-add-edit/index.html',
-        imageLink : 'images/19.png',
-        languages : 'javaScript',
-        type : 'exercise',
-    },
-
-    {
-        id : 426,
-        name : 'async random user',
-        urlLink : '04_js/exercicios_js/async-random-users-inicio/index.html',
-        imageLink : 'images/24.png',
-        languages : 'javaScript',
-        type : 'exercise',
-    },
-
-    // ****************************************** react
-    {
-        id : 500,
-        name : 'react repository',
-        urlLink : 'https://github.com/mario8988silva/modulo_react.git',
-        imageLink : 'images/github.png',
-        languages : 'react',
-        type : 'repository',
-    },  
-
-    {
-        id : 501,
-        name : 'voting app',
-        urlLink : '05_react/1-voting-app/index.html',
-        imageLink : '',
-        languages : 'react',
-        type : 'exercise',
-    },
-
-    {
-        id : 502,
-        name : 'hooks',
-        urlLink : '05_react/2-hooks/index.html',
-        imageLink : '',
-        languages : 'react',
-        type : 'exercise',
-    },
-
-    // ****************************************** FrontEnd Project
-    {
-        id : 600,
-        name : 'front end devolpment',
-        urlLink : 'https://www.figma.com/design/Lw7uSBmUxGHirsgAKrOJPs/FrontEnd_Project?node-id=0-1&t=sBlTS0T3usb8CjHM-1',
-        imageLink : 'images/figma.png',
-        languages : 'javaScript',
-        type : 'project',
-    },
-
-    {
-        id : 601,
-        name : 'front end repository',
-        urlLink : 'https://github.com/mario8988silva/frontEnd_project.git',
-        imageLink : 'images/github.png',
-        languages : 'javaScript',
-        type : 'project',
-    },
-
-    {
-        id : 602,
-        name : 'front end project',
-        urlLink : 'https://mariosilva.onrender.com/',
-        imageLink : '',
-        languages : 'javaScript',
-        type : 'project',
-    },
-]
+    id: 916,
+    name: "16-bank-horizon-oop - 2",
+    urlLink: "09_php/16-bank-horizon-oop/",
+    imageLink: "",
+    languages: "PHP",
+    type: "exercise",
+  },
+];

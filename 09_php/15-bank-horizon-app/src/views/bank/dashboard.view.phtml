@@ -1,0 +1,218 @@
+<section class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+    <div>
+        <p class="text-sm font-medium text-slate-400">Bem-vindo de volta</p>
+        <h1 class="text-3xl font-semibold text-slate-50">Olá, <?= $user->getFirstName() ?> 👋</h1>
+    </div>
+    <div class="grid gap-3 sm:grid-cols-3">
+        <a href="/transfers" class="rounded-xl border border-sky-500/40 bg-sky-500/10 px-4 py-2 text-center text-xs font-semibold text-sky-300 hover:bg-sky-500/15">Transferir</a>
+        <a href="#modal-add" class="rounded-xl border border-emerald-500/40 bg-emerald-500/10 px-4 py-2 text-center text-xs font-semibold text-emerald-300 hover:bg-emerald-500/15">Adicionar €</a>
+        <a href="#modal-withdraw" class="rounded-xl border border-rose-500/40 bg-rose-500/10 px-4 py-2 text-center text-xs font-semibold text-rose-300 hover:bg-rose-500/15">Levantar €</a>
+    </div>
+</section>
+
+<section class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+    <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 shadow-[0_25px_60px_-25px_rgba(15,23,42,0.65)]">
+        <div class="flex items-center justify-between">
+            <p class="text-sm font-medium text-slate-400">Saldo total</p>
+            <span class="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-semibold text-emerald-300">+12.4%</span>
+        </div>
+        <p class="mt-4 text-3xl font-semibold">€ <?= number_format($totalBalance, 2, ',', '.') ?></p>
+        <p class="mt-2 text-xs text-slate-500">Atualizado há <?= $lastUpdatedAccount?->updatedAt()->format('d/m/Y H:i') ?></p>
+    </div>
+
+    <!-- <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 shadow-[0_25px_60px_-25px_rgba(15,23,42,0.65)]">
+        <div class="flex items-center justify-between">
+            <p class="text-sm font-medium text-slate-400">Entradas este mês</p>
+            <span class="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-semibold text-emerald-300">+8.2%</span>
+        </div>
+        <p class="mt-4 text-3xl font-semibold">€ 12 450,00</p>
+        <p class="mt-2 text-xs text-slate-500">vs mês anterior</p>
+    </div>
+
+    <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 shadow-[0_25px_60px_-25px_rgba(15,23,42,0.65)]">
+        <div class="flex items-center justify-between">
+            <p class="text-sm font-medium text-slate-400">Saídas este mês</p>
+            <span class="rounded-full bg-rose-500/15 px-3 py-1 text-xs font-semibold text-rose-300">-4.6%</span>
+        </div>
+        <p class="mt-4 text-3xl font-semibold">€ 8 730,55</p>
+        <p class="mt-2 text-xs text-slate-500">Pagamentos fixos e variáveis</p>
+    </div> -->
+</section>
+
+<section id="contas" class="mt-10 grid gap-6 lg:grid-cols-[1.3fr_1fr]">
+    <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6">
+        <div class="mb-4 flex items-center justify-between">
+            <div>
+                <h2 class="text-lg font-semibold">Contas</h2>
+                <p class="text-sm text-slate-400">Saldos e ações rápidas</p>
+            </div>
+            <a href="/transfers" class="text-xs font-semibold text-sky-300 hover:text-sky-200">Transferir entre contas</a>
+        </div>
+        <div class="space-y-4">
+            <?php foreach ($accounts as $account) : ?>
+                <article class="flex items-center justify-between rounded-2xl border border-slate-800 bg-slate-950/60 p-4">
+                    <div>
+                        <p class="text-sm font-medium"><?= $account->name()  ?> · <?= $account->accountNumber(true) ?></p>
+                        <p class="text-xs text-slate-400"><?= $account->description() ?> · <?= $account->status() ?></p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-sm text-slate-400">Saldo</p>
+                        <p class="text-lg font-semibold">€ <?= number_format($account->balance(), 2, ',', '.') ?></p>
+                    </div>
+                </article>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6">
+        <div class="mb-4 flex items-center justify-between">
+            <div>
+                <h2 class="text-lg font-semibold">Ações rápidas</h2>
+                <p class="text-sm text-slate-400">Poupe tempo com atalhos</p>
+            </div>
+        </div>
+        <div class="space-y-3">
+            <a href="#modal-add" class="flex items-center justify-between rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-4 hover:bg-emerald-500/10">
+                <div class="text-sm">
+                    <p class="font-medium text-emerald-200">Adicionar dinheiro</p>
+                    <p class="text-slate-400">Depósito instantâneo</p>
+                </div>
+                <span>➕</span>
+            </a>
+            <a href="#modal-withdraw" class="flex items-center justify-between rounded-2xl border border-rose-500/30 bg-rose-500/5 p-4 hover:bg-rose-500/10">
+                <div class="text-sm">
+                    <p class="font-medium text-rose-200">Levantar dinheiro</p>
+                    <p class="text-slate-400">Reservar/transferir</p>
+                </div>
+                <span>➖</span>
+            </a>
+            <a href="/transfers" class="flex items-center justify-between rounded-2xl border border-slate-800 bg-slate-950/60 p-4 hover:bg-slate-900">
+                <div class="text-sm">
+                    <p class="font-medium">Transferir para terceiros</p>
+                    <p class="text-slate-400">IBAN ou nº de conta</p>
+                </div>
+                <span>➔</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="movimentos" class="mt-10">
+    <div class="mb-4 flex items-center justify-between">
+        <div>
+            <h2 class="text-lg font-semibold">Movimentos recentes</h2>
+            <p class="text-sm text-slate-400">Últimos lançamentos</p>
+        </div>
+        <a href="/movements" class="text-xs font-semibold text-sky-300 hover:text-sky-200">Ver tudo</a>
+    </div>
+    <div class="overflow-hidden rounded-2xl border border-slate-800">
+        <table class="min-w-full divide-y divide-slate-800 text-sm">
+            <thead class="bg-slate-900/60 text-xs uppercase text-slate-400">
+                <tr>
+                    <th class="py-3 pl-6 pr-4 text-left font-medium">Descrição</th>
+                    <th class="px-4 py-3 text-left font-medium">Conta</th>
+                    <th class="px-4 py-3 text-right font-medium">Montante</th>
+                    <th class="px-6 py-3 text-right font-medium">Data</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800 bg-slate-950/40">
+                <?php foreach ($transactions as $transaction) : ?>
+                    <tr>
+                        <td class="py-4 pl-6 pr-4">
+                            <div class="font-medium"><?= $transaction->type ?></div>
+                            <div class="text-xs text-slate-500"><?= $transaction->description ?></div>
+                        </td>
+                        <td class="px-4 py-4 text-slate-400"><?= $transaction->account_origin ?></td>
+                        <td class="px-4 py-4 text-right font-semibold <?= $transaction->amount > 0 ? 'text-emerald-400' : 'text-rose-400' ?>"><?= number_format($transaction->amount, 2, ',', '.') ?> €</td>
+                        <td class="px-6 py-4 text-right text-slate-400"><?= date('d M Y', strtotime($transaction->created_at)) ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<!-- Modal: Adicionar dinheiro -->
+<div id="modal-add" class="modal">
+    <!-- overlay fecha ao clicar -->
+    <a href="#" class="modal-overlay bg-slate-950/70 backdrop-blur-sm"></a>
+    <div class="modal-panel mx-auto grid min-h-full place-items-center p-4">
+        <div class="w-full max-w-lg rounded-2xl border border-slate-800 bg-slate-900/90 p-6 shadow-2xl">
+            <div class="mb-4 flex items-center justify-between">
+                <div>
+                    <h3 class="text-lg font-semibold">Adicionar dinheiro</h3>
+                    <p class="text-sm text-slate-400">Depósito instantâneo numa das suas contas</p>
+                </div>
+                <a href="#" class="rounded-full border border-slate-800 px-3 py-1 text-sm text-slate-300 hover:bg-slate-800/60">✕</a>
+            </div>
+            <form action="/accounts/deposit" method="post" class="space-y-4">
+                <div>
+                    <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">Conta destino</label>
+                    <select name="target" class="w-full rounded-xl border border-slate-800 bg-slate-950/70 px-4 py-3 text-sm text-slate-100 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30">
+                        <?php foreach ($accounts as $account) : ?>
+                            <option value="<?= $account->accountNumber() ?>"><?= $account->name() ?> · <?= $account->accountNumber(true) ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div>
+                    <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">Montante</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-3 flex items-center text-slate-500">€</span>
+                        <input type="number" name="amount" step="0.01" placeholder="0,00" class="w-full rounded-xl border border-slate-800 bg-slate-950/70 px-4 py-3 pl-8 text-sm text-slate-100 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30" />
+                    </div>
+                </div>
+                <div>
+                    <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">Nota (opcional)</label>
+                    <input type="text" name="note" placeholder="Depósito salário extra" class="w-full rounded-xl border border-slate-800 bg-slate-950/70 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30" />
+                </div>
+
+                <div class="flex items-center justify-end gap-3 pt-2">
+                    <a href="#" class="rounded-xl border border-slate-800 px-4 py-2 text-sm font-semibold text-slate-200 hover:bg-slate-900">Cancelar</a>
+                    <button type="submit" class="rounded-xl bg-gradient-to-r from-emerald-500 to-sky-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:brightness-110">Confirmar depósito</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Levantar dinheiro -->
+<div id="modal-withdraw" class="modal">
+    <!-- overlay fecha ao clicar -->
+    <a href="#" class="modal-overlay bg-slate-950/70 backdrop-blur-sm"></a>
+    <div class="modal-panel mx-auto grid min-h-full place-items-center p-4">
+        <div class="w-full max-w-lg rounded-2xl border border-slate-800 bg-slate-900/90 p-6 shadow-2xl">
+            <div class="mb-4 flex items-center justify-between">
+                <div>
+                    <h3 class="text-lg font-semibold">Levantar dinheiro</h3>
+                    <p class="text-sm text-slate-400">Reserve para ATM ou transfira para outra conta</p>
+                </div>
+                <a href="#" class="rounded-full border border-slate-800 px-3 py-1 text-sm text-slate-300 hover:bg-slate-800/60">✕</a>
+            </div>
+            <form action="/accounts/withdraw" method="post" class="space-y-4">
+                <div>
+                    <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">Conta de origem</label>
+                    <select name="origin" class="w-full rounded-xl border border-slate-800 bg-slate-950/70 px-4 py-3 text-sm text-slate-100 focus:border-rose-500 focus:outline-none focus:ring-2 focus:ring-rose-500/30">
+                        <?php foreach ($accounts as $account) : ?>
+                            <option value="<?= $account->accountNumber() ?>"><?= $account->name() ?> · <?= $account->accountNumber(true) ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div>
+                    <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">Montante</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-3 flex items-center text-slate-500">€</span>
+                        <input type="number" name="amount" step="0.01" placeholder="0,00" class="w-full rounded-xl border border-slate-800 bg-slate-950/70 px-4 py-3 pl-8 text-sm text-slate-100 focus:border-rose-500 focus:outline-none focus:ring-2 focus:ring-rose-500/30" />
+                    </div>
+                </div>   
+                <div>
+                    <label class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">Referência (opcional)</label>
+                    <input type="text" name="note" placeholder="Levantamento férias" class="w-full rounded-xl border border-slate-800 bg-slate-950/70 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-rose-500 focus:outline-none focus:ring-2 focus:ring-rose-500/30" />
+                </div>
+                <div class="flex items-center justify-end gap-3 pt-2">
+                    <a href="#" class="rounded-xl border border-slate-800 px-4 py-2 text-sm font-semibold text-slate-200 hover:bg-slate-900">Cancelar</a>
+                    <button type="submit" class="rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:brightness-110">Confirmar levantamento</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

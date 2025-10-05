@@ -1,0 +1,17 @@
+<h5 class="card-header">Contacts List</h5>
+
+<div class="list-group list-group-flush">
+    <?php if (count($contacts) > 0) : foreach ($contacts as $contact) : ?>
+        <a href="/contacts/detail?id=<?= $contact['id'] ?>" class="list-group-item list-group-item-action">
+            <?= $contact['name'] ?>
+        </a>    
+    <?php endforeach; else : ?>
+        <a href="/contacts/create" class="list-group-item">
+            No contacts found, create your first contact.
+        </a>
+    <?php endif; ?>
+</div>
+
+<div class="card-footer">
+    <a href="/contacts/export" class="btn btn-secondary btn-sm">Export Contacts</a>
+</div>
